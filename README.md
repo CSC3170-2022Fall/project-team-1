@@ -10,7 +10,7 @@ This is our implementation for the course project of CSC3170, 2022 Fall, CUHK(SZ
 - [x] **Application with Database System(s)**
 - [ ] **Implementation of a Database System**
 
-## Team Members
+## Team Members 
 
 Our team consists of the following members, listed in the table below (the team leader is shown in the first row, and is marked with 🚩 behind his/her name):
 
