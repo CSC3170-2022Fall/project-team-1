@@ -40,3 +40,11 @@ As for Option 2, our topic background specification can be found in [background-
 ## Project Abstract
 
 <!-- TODO -->
+
+### Function Points
+
+- Register the package information that is released by some consumer
+- Allow the consumer to appoint some plant for some package manually
+- The assignment and the start-time of some operation with some machine could be further set under the constraint of plant appointment
+- Once some operation is successfully finished, the processing record in end-time and expense could be written back.
+- The production information, like manufacture capacity of some plant, or the demand changes of some consumer within some period of time can be calculated
