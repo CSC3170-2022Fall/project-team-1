@@ -23,7 +23,7 @@ Our team consists of the following members, listed in the table below (the team 
 | 120090843  | 郭好          | 726827048@qq.com            |                  |
 | 120090644  | 乔雨柔         | 120090644@link.cuhk.edu.cn |                  |
 | 120090327  | 宫燕亮         | gongdashhuai@gmail.com     |                 |
-| 120090543  | 谭金镇         | 342335897@qq.com           |                  |
+| 120090543  | 谭金镇         | 342335897@qq.com           | yishan-13|
 
 ## Project Specification
 
