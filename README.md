@@ -19,7 +19,7 @@ Our team consists of the following members, listed in the table below (the team 
 | Student ID | Student Name | GitHub Account (in Email)   | GitHub Username |
 | ---------- | ------------ | --------------------------- | --------------- |
 | 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | arydinesen      |
-| 120090410  | 颜钰劼        | 120090410@link.cuhk.edu.cn |                   |
+| 120090410  | 颜钰劼        | 120090410@link.cuhk.edu.cn |  ZYPRESSEN000                 |
 | 120090843  | 郭好          | 726827048@qq.com            |     Annaaaa997     |
 | 120090644  | 乔雨柔         | 120090644@link.cuhk.edu.cn |                  |
 | 120090327  | 宫燕亮         | gongdashhuai@gmail.com     |                 |
