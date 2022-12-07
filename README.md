@@ -43,6 +43,7 @@ As for Option 2, our topic background specification can be found in [background-
 
 ### Function Points
 
+- A cousumer can log in to configure and release a package
 - Register the package information that is released by some consumer
 - Allow the consumer to appoint some plant for some package manually
 - The assignment and the start-time of some operation with some machine could be further set under the constraint of plant appointment
