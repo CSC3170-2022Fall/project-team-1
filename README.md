@@ -35,18 +35,25 @@ After thorough discussion, our team made the choice and the specification inform
 - Our branch choice is: **Branch 1**
 - The difficulty level is: **Normal**
 
-As for Option 2, our topic background specification can be found in [background-specification.md](background-specification.md).
-
 ## Project Abstract
 
 <!-- TODO -->
 
-### Function Points
+### Function Points (Temporary)
 
+- The following are fixed (unchangable by consumers or plant owners):
+  - Possible operations: design-import, etch, bond, drill, test
+  - Possible chip types: chip A, chip B, chip C, chip D
 - What consumers can do:
-  - Configure packages
-  - Release packages
-  - Appoints plants for packages
-- What consumers can see:
-  - The industry information, such as manufacture capacity of each plant
-  - The processing record of all operations in the past, which helps consumers make better decision
+	- Log in
+	- Appoint plants for configurable packages
+- What plant owners can do:
+	- Log in
+	- Publish machines
+	- Accept appointments
+- What everybody can see:
+  - Chip type introduction (different chip types have different operation precedency) 
+	- Plant information (machines)
+	- Plants' machine information (feasibility, time, and expense on every possible operation)
+	- Packages in the market (with their information: time budget, expense budget, and consumer name)
+	- Processing record (visualization; start time, end time, and expense)
