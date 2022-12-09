@@ -42,7 +42,7 @@ After thorough discussion, our team made the choice and the specification inform
 ### Function Points (Temporary)
 
 - The following are fixed (unchangable by consumers or plant owners):
-	- Possible operations: 
+	- Possible operation types: 
 		- design-import A, etch A, bond A, drill A, test A
 		- design-import B, etch B, bond B, drill B, test B
 		- design-import C, etch C, bond C, drill C, test C
