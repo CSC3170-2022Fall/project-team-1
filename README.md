@@ -50,16 +50,13 @@ After thorough discussion, our team made the choice and the specification inform
 		- design-import C, etch C, bond C, drill C, test C
 	- Possible chip models: chip A, chip B, chip C
 - What consumers can do:
-	- Register
-	- Log in
+	- Register and log in
 	- Appoint plants for configurable packages
 - What plant owners can do:
-	- Register
-	- Log in
-	- Publish machines
+	- Register and log in
 	- Accept appointments
+	- Publish machines 
 - What everybody can see:
 	- Chip type introduction (different chip types have different operations, which are of different types) 
 	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Packages in the market (with their information: time budget, expense budget, and consumer name)
 	- Processing record (visualization; start time, end time, and expense) (display non-ending operations too)
