@@ -5,29 +5,77 @@
     <title>My test page</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/index.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Mozilla is cool</h1>
-    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+    <!-- header start -->
+    <div class="header">
+      <div class="header_c inner_c">
+        <!-- logo -->
+        <h1>logo</h1>
+        <!-- all product -->
+        <div class="all">
 
-    <p>At Mozilla, we’re a global community of</p>
+          <!-- triangle -->
+          <a href="#">look at all<span></span></a>
+          <!-- 下拉栏 -->
+          <div class="product">
+            <div class="pro_inner inner_c">
+              <ul class="inner_nav">
+                <li><a href="#">111</a></li>
+                <li><a href="#">222</a></li>
+                <li><a href="#">333</a></li>
+                <li><a href="#">444</a></li>
+                <li><a href="#">555</a></li>
+              </ul>
+              <ul class="inner_detail">
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
 
-    <ul> <!-- changed to list in the tutorial -->
-      <li>technologists</li>
-      <li>thinkers</li>
-      <li>builders</li>
-    </ul>
+        </div>
+      
+        <!-- nav in header  -->
+        <div class="header_nav">
+          <!-- 4 functions in header -->
+          <ul>
+            <li><a href="#">home page</a></li>
+            <li><a href="#">function 1</a></li>
+            <li><a href="#">function 2</a></li>
+            <li><a href="#">function 3</a></li>
+            
+            <!-- search in header -->
+            <div class="search"></div>
 
-    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+            <!-- login & register -->
+            <div class="login">
+              <a href="#">login</a>
+              <span>|</span>
+              <a href="#">register</a>
+              <a href="#" class="shopping_car">0</a>
+            </div>
+          </ul>
 
-    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+        </div>
+      </div>
+    </div>
+    <!-- header finish -->
 
-    <button name="Appointment">Appoint plants for your package</button>
-    <script src="scripts/main.js"></script>
+    <!-- banner start -->
+    <div class="banner">
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <!-- banner finish -->
 
 
-    <a href="consumer-register.php">Consumer Register</a>
-    <a href="consumer-login.php">Consumer Login</a>
+
+
+
 
     <?php
       //connect to DBMS      
