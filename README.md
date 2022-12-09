@@ -37,7 +37,9 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Project Abstract
 
-<!-- TODO -->
+## Database Design (Temporary)
+
+<img width="1391" alt="Screenshot 2022-12-09 at 16 07 38" src="https://user-images.githubusercontent.com/90801772/206654887-34e64697-d33b-42b0-9a90-3463c8e7c01d.png">
 
 ### Function Points (Temporary)
 
