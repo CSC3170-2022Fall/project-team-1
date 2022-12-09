@@ -39,7 +39,7 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Database Design (Temporary)
 
-<img width="1391" alt="Screenshot 2022-12-09 at 16 07 38" src="https://user-images.githubusercontent.com/90801772/206654887-34e64697-d33b-42b0-9a90-3463c8e7c01d.png">
+<img width="1399" alt="Screenshot 2022-12-09 at 18 54 28" src="https://user-images.githubusercontent.com/90801772/206686674-bfbc096a-7dbb-4861-b69e-86b356fda04d.png">
 
 ### Function Points (Temporary)
 
