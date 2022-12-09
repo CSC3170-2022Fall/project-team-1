@@ -30,6 +30,12 @@ if (!localStorage.getItem("name")) {
   myHeading.textContent = `Mozilla is cool, ${storedName}`;
 }
 
+function appointment() {
+  if (myButton.getAttribute("name") === "appointment") {
+    
+  }
+}
+
 myButton.onclick = () => {
-    setUserName();
+    appointment();
 };  
