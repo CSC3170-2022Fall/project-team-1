@@ -45,10 +45,10 @@ After thorough discussion, our team made the choice and the specification inform
 
 - The following are fixed (unchangable by consumers or plant owners):
 	- Possible operation types: 
-		- design-import A, etch A, bond A, drill A, test A
-		- design-import B, etch B, bond B, drill B, test B
-		- design-import C, etch C, bond C, drill C, test C
-	- Possible chip models: chip A, chip B, chip C
+		- design-import i5, etch i5, bond i5, drill i5, test i5
+		- design-import i7, etch i7, bond i7, drill i7, test i7
+		- design-import i9, etch i9, bond i9, drill i9, test i9
+	- Possible chip models: chip i5, chip i7, chip i9
 - What consumers can do:
 	- Register and log in
 	- Appoint plants for configurable packages
@@ -57,6 +57,6 @@ After thorough discussion, our team made the choice and the specification inform
 	- Accept appointments
 	- Publish machines 
 - What everybody can see:
-	- Chip type introduction (different chip types have different operations, which are of different types) 
+	- Chip model introduction (different chip models have different operations, which are of different types) 
 	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
 	- Processing record (visualization; start time, end time, and expense) (display non-ending operations too)
