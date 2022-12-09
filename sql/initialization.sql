@@ -37,16 +37,6 @@ CREATE TABLE Plants
   PRIMARY KEY (plant_name)
 );
 
-CREATE TABLE Chips
-(
-  chip_ID INT NOT NULL,
-  package_ID INT NOT NULL,
-  chip_model CHAR(20) NOT NULL,
-  PRIMARY KEY (chip_ID, package_ID),
-  FOREIGN KEY (package_ID) REFERENCES Packages(package_ID),
-  FOREIGN KEY (chip_model) REFERENCES Chip_Models(chip_model)
-);
-
 CREATE TABLE Operations_on_Chip_Models
 (
   `order` INT NOT NULL,
@@ -55,17 +45,6 @@ CREATE TABLE Operations_on_Chip_Models
   PRIMARY KEY (operation_type, chip_model),
   FOREIGN KEY (operation_type) REFERENCES Operation_Types(operation_type),
   FOREIGN KEY (chip_model) REFERENCES Chip_Models(chip_model)
-);
-
-CREATE TABLE Operations_on_Packages_in_Plants
-(
-  operation_type CHAR(20) NOT NULL,
-  package_ID INT NOT NULL,
-  plant_name CHAR(20) NOT NULL,
-  PRIMARY KEY (operation_type, package_ID),
-  FOREIGN KEY (operation_type) REFERENCES Operation_Types(operation_type),
-  FOREIGN KEY (package_ID) REFERENCES Packages(package_ID),
-  FOREIGN KEY (plant_name) REFERENCES Plants(plant_name)
 );
 
 CREATE TABLE Machine_Models
@@ -84,7 +63,7 @@ CREATE TABLE Machines_in_Plants
   FOREIGN KEY (machine_model) REFERENCES Machine_Models(machine_model)
 );
 
-CREATE TABLE Operations_on_Machines_Models
+CREATE TABLE Operations_on_Machine_Models
 (
   feasibility INT NOT NULL,
   `time` INT NOT NULL,
@@ -98,17 +77,21 @@ CREATE TABLE Operations_on_Machines_Models
 
 CREATE TABLE Processing_Records
 (
-  start_time INT NOT NULL,
-  end_time INT NOT NULL,
+  start_time INT,
+  end_time INT,
   chip_ID INT NOT NULL,
-  expense INT NOT NULL,
+  expense INT,
   operation_type CHAR(20) NOT NULL,
-  plant_name CHAR(20) NOT NULL,
-  machine_ID INT NOT NULL,
-  machine_model CHAR(20) NOT NULL,
-  PRIMARY KEY (chip_ID, operation_type),
+  plant_name CHAR(20),
+  machine_ID INT,
+  machine_model CHAR(20),
+  package_ID INT NOT NULL,
+  chip_model CHAR(20) NOT NULL,
+  PRIMARY KEY (chip_ID, operation_type, package_ID),
   FOREIGN KEY (operation_type) REFERENCES Operation_Types(operation_type),
-  FOREIGN KEY (plant_name, machine_ID, machine_model) REFERENCES Machines_in_Plants(plant_name, machine_ID, machine_model)
+  FOREIGN KEY (plant_name, machine_ID, machine_model) REFERENCES Machines_in_Plants(plant_name, machine_ID, machine_model),
+  FOREIGN KEY (package_ID) REFERENCES Packages(package_ID),
+  FOREIGN KEY (chip_model) REFERENCES Chip_Models(chip_model)
 );
 
 
@@ -180,15 +163,14 @@ INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) 
 INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i9', 'chip_i9', '4');
 
 
-
 INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('aaa', '123');
 
 INSERT INTO Plants (`plant_name`, `password`) VALUES ('apple', '123');
 INSERT INTO Machine_Models (`machine_model`) VALUES ('boy');
 INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`) VALUES ('apple', '1', 'boy');
 INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`) VALUES ('apple', '2', 'boy');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import_i5', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch_i5', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond_i5', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill_i5', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test_i5', 'boy', '1', '10', '10');
