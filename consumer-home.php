@@ -69,7 +69,18 @@
 			$mysqli->query("INSERT INTO Operations_on_Packages_in_Plants (`package_ID`, `operation_type`, `plant_name`) VALUES ('$package_ID', 'etch_i9', '$etch_plant_i9')"); 
 			$mysqli->query("INSERT INTO Operations_on_Packages_in_Plants (`package_ID`, `operation_type`, `plant_name`) VALUES ('$package_ID', 'bond_i9', '$bond_plant_i9')"); 
 			$mysqli->query("INSERT INTO Operations_on_Packages_in_Plants (`package_ID`, `operation_type`, `plant_name`) VALUES ('$package_ID', 'drill_i9', '$drill_plant_i9')"); 
-			$mysqli->query("INSERT INTO Operations_on_Packages_in_Plants (`package_ID`, `operation_type`, `plant_name`) VALUES ('$package_ID', 'test_i9', '$test_plant_i9')"); 
+			$mysqli->query("INSERT INTO Operations_on_Packages_in_Plants (`package_ID`, `operation_type`, `plant_name`) VALUES ('$package_ID', 'test_i9', '$test_plant_i9')");
+
+			for ($i = 1; $i <= $num_chip_i5; $i++) {
+				$mysqli->query("INSERT INTO Chips (`chip_ID`, `package_ID`, `chip_model`) VALUES ('$i', '$package_ID', 'chip_i5')");
+			}
+			for ($i = $num_chip_i5 + 1; $i <= $num_chip_i5 + $num_chip_i7; $i++) {
+				$mysqli->query("INSERT INTO Chips (`chip_ID`, `package_ID`, `chip_model`) VALUES ('$i', '$package_ID', 'chip_i7')");
+			}
+			for ($i = $num_chip_i5 + $num_chip_i7 + 1; $i <= $num_chip_i5 + $num_chip_i7 + $num_chip_i9; $i++) {
+				$mysqli->query("INSERT INTO Chips (`chip_ID`, `package_ID`, `chip_model`) VALUES ('$i', '$package_ID', 'chip_i9')");
+			}
+
 			Print '<script>alert("Successfully appointed!");</script>';
 			Print '<script>window.location.assign("consumer-home.php");</script>';
 		}
