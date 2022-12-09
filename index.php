@@ -47,7 +47,7 @@
       //select database
       $mysqli->select_db('chip_website');
 
-      //create tabels by loading the SQL file
+      //create tabels by loading the SQL file (note: this CAN'T work on SQL comments)
       $filename = "sql/initialization.sql";
       // Temporary variable, used to store current query
       $templine = '';
