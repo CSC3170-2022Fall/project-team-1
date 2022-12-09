@@ -10,9 +10,9 @@ CREATE TABLE Packages
   time_budget INT NOT NULL,
   expense_budget INT NOT NULL,
   package_ID INT NOT NULL,
-  num_chip_A INT NOT NULL,
-  num_chip_B INT NOT NULL,
-  num_chip_C INT NOT NULL,
+  num_chip_i5 INT NOT NULL,
+  num_chip_i7 INT NOT NULL,
+  num_chip_i9 INT NOT NULL,
   consumer_name CHAR(20) NOT NULL,
   PRIMARY KEY (package_ID),
   FOREIGN KEY (consumer_name) REFERENCES Consumers(consumer_name)
@@ -112,43 +112,74 @@ CREATE TABLE Processing_Records
 );
 
 
+INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_i5');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('etch_i5');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('bond_i5');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('drill_i5');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('test_i5');
 
-INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_A');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('etch_A');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('bond_A');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('drill_A');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('test_A');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_i7');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('etch_i7');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('bond_i7');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('drill_i7');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('test_i7');
 
-INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_B');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('etch_B');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('bond_B');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('drill_B');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('test_B');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_i9');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('etch_i9');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('bond_i9');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('drill_i9');
+INSERT INTO Operation_Types (`operation_type`) VALUES ('test_i9');
 
-INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_C');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('etch_C');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('bond_C');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('drill_C');
-INSERT INTO Operation_Types (`operation_type`) VALUES ('test_C');
+INSERT INTO Chip_Models (`chip_model`) VALUES ('chip_i5');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i5', 'chip_i5', '0');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i5', 'chip_i5', '1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i5', 'chip_i5', '2');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i5', 'chip_i5', '3');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i5', 'chip_i5', '4');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i7', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i7', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i7', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i7', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i7', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i9', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i9', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i9', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i9', 'chip_i5', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i9', 'chip_i5', '-1');
+INSERT INTO Chip_Models (`chip_model`) VALUES ('chip_i7');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i5', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i5', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i5', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i5', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i5', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i7', 'chip_i7', '0');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i7', 'chip_i7', '1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i7', 'chip_i7', '2');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i7', 'chip_i7', '3');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i7', 'chip_i7', '4');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i9', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i9', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i9', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i9', 'chip_i7', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i9', 'chip_i7', '-1');
+INSERT INTO Chip_Models (`chip_model`) VALUES ('chip_i9');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i5', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i5', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i5', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i5', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i5', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i7', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i7', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i7', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i7', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i7', 'chip_i9', '-1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_i9', 'chip_i9', '0');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_i9', 'chip_i9', '1');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_i9', 'chip_i9', '2');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_i9', 'chip_i9', '3');
+INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_i9', 'chip_i9', '4');
 
-INSERT INTO Chip_Models (`chip_model`) VALUES ('chip_A');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_A', 'chip_A', '0');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_A', 'chip_A', '1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_A', 'chip_A', '2');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_A', 'chip_A', '3');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_A', 'chip_A', '4');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_B', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_B', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_B', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_B', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_B', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('design-import_C', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('etch_C', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('bond_C', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('drill_C', 'chip_A', '-1');
-INSERT INTO Operations_on_Chip_Models (`operation_type`, `chip_model`, `order`) VALUES ('test_C', 'chip_A', '-1');
-INSERT INTO Chip_Models (`chip_model`) VALUES ('chip_B');
-INSERT INTO Chip_Models (`chip_model`) VALUES ('chip_C');
+
 
 INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('aaa', '123');
 
@@ -156,8 +187,8 @@ INSERT INTO Plants (`plant_name`, `password`) VALUES ('apple', '123');
 INSERT INTO Machine_Models (`machine_model`) VALUES ('boy');
 INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`) VALUES ('apple', '1', 'boy');
 INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`) VALUES ('apple', '2', 'boy');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import_A', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch_A', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond_A', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill_A', 'boy', '1', '10', '10');
-INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test_A', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill_i5', 'boy', '1', '10', '10');
+INSERT INTO Operations_on_Machines_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test_i5', 'boy', '1', '10', '10');

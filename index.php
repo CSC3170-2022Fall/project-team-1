@@ -36,13 +36,12 @@
         printf("Connect failed: %s<br />", $mysqli->connect_error);
         exit();
       }
-      printf('Connected successfully.<br />');
       //create database
       if ($mysqli->query("CREATE DATABASE chip_website")) {
-          printf("Database chip_website created successfully.<br />");
+        printf("Database chip_website created successfully.<br />");
       }
       if ($mysqli->errno) {
-          printf("Could not create database: %s<br />", $mysqli->error);
+        printf("Could not create database: %s<br />", $mysqli->error);
       }
       //select database
       $mysqli->select_db('chip_website');
@@ -68,19 +67,7 @@
           $templine = '';
         }
       }
-      echo "Tables imported successfully";
-
-      $sql = "INSERT INTO Consumers (consumer_name, `password`) VALUES ('ary', '1234')";
-      if (!$mysqli->query($sql)) {
-        echo "Could not insert record into table: %s<br />" . $mysqli->error;
-      } else {
-        printf("Record inserted successfully.<br />");
-      }
-      if (!$mysqli->errno) {
-        echo "Record inserted successfully.<br />";
-      } else {
-        echo "Could not insert record into table: %s<br />" . $mysqli->error;
-      }
+      echo "Table created successfully";
     ?>
   </body>
 </html>
