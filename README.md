@@ -46,16 +46,18 @@ After thorough discussion, our team made the choice and the specification inform
 		- design-import A, etch A, bond A, drill A, test A
 		- design-import B, etch B, bond B, drill B, test B
 		- design-import C, etch C, bond C, drill C, test C
-	- Possible chip types: chip A, chip B, chip C
+	- Possible chip models: chip A, chip B, chip C
 - What consumers can do:
+	- Register
 	- Log in
 	- Appoint plants for configurable packages
 - What plant owners can do:
+	- Register
 	- Log in
 	- Publish machines
 	- Accept appointments
 - What everybody can see:
 	- Chip type introduction (different chip types have different operations, which are of different types) 
-	- Plant information (their machines' feasibility, time, and expense on every possible operation)
+	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
 	- Packages in the market (with their information: time budget, expense budget, and consumer name)
 	- Processing record (visualization; start time, end time, and expense) (display non-ending operations too)
