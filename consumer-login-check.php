@@ -21,7 +21,7 @@
 			if($password == $table_password)
 			{
 				$_SESSION['consumer'] = $consumer_name; //set the consumer_name in a session. This serves as a global variable
-				header("location: consumer-home.php"); // redirects the user to the authenticated home page
+				header("location: consumer-appoint.php"); // redirects the user to the authenticated home page
 			}
 		}
 		else

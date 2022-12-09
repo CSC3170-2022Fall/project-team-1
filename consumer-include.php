@@ -1,4 +1,4 @@
-<form action="consumer-home.php" method="post">
+<form action="consumer-appoint.php" method="post">
 	Enter package ID: <input type="text" name="package_ID" required="required"/> <br/>
 	Enter time budget: <input type="text" name="time_budget" required="required"/> <br/>
 	Enter expense budget: <input type="text" name="expense_budget" required="required"/> <br/>

@@ -56,6 +56,7 @@ CREATE TABLE Machine_Models
 CREATE TABLE Machines_in_Plants
 (
   machine_ID INT NOT NULL,
+  available INT NOT NULL,
   plant_name CHAR(20) NOT NULL,
   machine_model CHAR(20) NOT NULL,
   PRIMARY KEY (machine_ID, plant_name, machine_model),
@@ -77,8 +78,8 @@ CREATE TABLE Operations_on_Machine_Models
 
 CREATE TABLE Processing_Records
 (
-  start_time INT,
-  end_time INT,
+  start_time DATE,
+  end_time DATE,
   chip_ID INT NOT NULL,
   expense INT,
   operation_type CHAR(20) NOT NULL,
@@ -93,6 +94,7 @@ CREATE TABLE Processing_Records
   FOREIGN KEY (package_ID) REFERENCES Packages(package_ID),
   FOREIGN KEY (chip_model) REFERENCES Chip_Models(chip_model)
 );
+
 
 
 INSERT INTO Operation_Types (`operation_type`) VALUES ('design-import_i5');
@@ -167,8 +169,8 @@ INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('aaa', '123');
 
 INSERT INTO Plants (`plant_name`, `password`) VALUES ('apple', '123');
 INSERT INTO Machine_Models (`machine_model`) VALUES ('boy');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`) VALUES ('apple', '1', 'boy');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`) VALUES ('apple', '2', 'boy');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '1', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '2', 'boy', '1');
 INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import_i5', 'boy', '1', '10', '10');
 INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch_i5', 'boy', '1', '10', '10');
 INSERT INTO Operations_on_Machine_Models (`operation_type`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond_i5', 'boy', '1', '10', '10');
