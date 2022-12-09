@@ -42,8 +42,8 @@ After thorough discussion, our team made the choice and the specification inform
 ### Function Points (Temporary)
 
 - The following are fixed (unchangable by consumers or plant owners):
-  - Possible operations: design-import, etch, bond, drill, test
-  - Possible chip types: chip A, chip B, chip C, chip D
+	- Possible operations: design-import, etch, bond, drill, test
+	- Possible chip types: chip A, chip B, chip C, chip D
 - What consumers can do:
 	- Log in
 	- Appoint plants for configurable packages
@@ -52,7 +52,7 @@ After thorough discussion, our team made the choice and the specification inform
 	- Publish machines
 	- Accept appointments
 - What everybody can see:
-  - Chip type introduction (different chip types have different operation precedency) 
+	- Chip type introduction (different chip types have different operation precedency) 
 	- Plant information (machines)
 	- Plants' machine information (feasibility, time, and expense on every possible operation)
 	- Packages in the market (with their information: time budget, expense budget, and consumer name)
