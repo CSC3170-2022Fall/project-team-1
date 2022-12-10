@@ -39,17 +39,13 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Database Design (Temporary)
 
-<img width="1317" alt="Screenshot 2022-12-10 at 15 48 52" src="https://user-images.githubusercontent.com/90801772/206839368-57c4087e-7552-4889-8787-1a8d1c8c8216.png">
-
+<img width="1391" alt="Screenshot 2022-12-10 at 23 23 10" src="https://user-images.githubusercontent.com/90801772/206862434-3955da66-df28-470e-b57c-592855904b3b.png">
 
 ### Function Points (Temporary)
 
 - The following are fixed (unchangable by consumers or plant owners):
-	- Possible operation types: 
-		- design-import i5, etch i5, bond i5, drill i5, test i5
-		- design-import i7, etch i7, bond i7, drill i7, test i7
-		- design-import i9, etch i9, bond i9, drill i9, test i9
-	- Possible chip models: chip i5, chip i7, chip i9
+	- Possible chip models: i5, i7, i9
+	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types 
 - What consumers can do:
 	- Register and log in
 	- Appoint plants for configurable packages
