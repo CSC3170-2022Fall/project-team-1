@@ -3,17 +3,19 @@
 		<title>My first PHP website</title>
 	</head>
 	<?php
-	session_start(); //starts the session
-	if (!$_SESSION['consumer']) { //checks if consumer is logged in
-		header("location:index.php"); // redirects if consumer is not logged in
-	}
-	$consumer = $_SESSION['consumer']; //assigns consumer value
-	$mysqli = new mysqli("localhost", 'root', '', 'chip_website');
+		session_start(); //starts the session
+		if (!$_SESSION['consumer']) { //checks if consumer is logged in
+			header("location:index.php"); // redirects if consumer is not logged in
+		}
+		$consumer = $_SESSION['consumer']; //assigns consumer value
+		$mysqli = new mysqli("localhost", 'root', '', 'chip_website');
 	?>
 	<body>
 		<h2>Home Page</h2>
 		<p>Hello <?php Print "$consumer"?>!</p> <!--Displays consumer's name-->
 		<a href="logout.php">Click here to logout</a><br/><br/>
+
+		<p>Note: Research before appointing as some plants may not the machines to finish some operations.<p>
 
 		<?php include "consumer-include.php" ?>
 	</body>
@@ -57,25 +59,25 @@
 			$mysqli->query("INSERT INTO Packages (`package_ID`, `time_budget`, `expense_budget`, `consumer_name`) VALUES ('$package_ID', '$time_budget', '$expense_budget', '$consumer')"); 
 
 			for ($chip_ID = 1; $chip_ID <= $num_i5; $chip_ID++) {
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('design-import_i5', '$chip_ID', '$package_ID', '$design_import_plant_i5', 'i5', '10')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('etch_i5', '$chip_ID', '$package_ID', '$etch_plant_i5', 'i5', '20')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('bond_i5', '$chip_ID', '$package_ID', '$bond_plant_i5', 'i5', '30')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('drill_i5', '$chip_ID', '$package_ID', '$drill_plant_i5', 'i5', '40')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('test_i5', '$chip_ID', '$package_ID', '$test_plant_i5', 'i5', '50')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('design-import', '$chip_ID', '$package_ID', '$design_import_plant_i5', 'i5')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('etch', '$chip_ID', '$package_ID', '$etch_plant_i5', 'i5')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('bond', '$chip_ID', '$package_ID', '$bond_plant_i5', 'i5')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('drill', '$chip_ID', '$package_ID', '$drill_plant_i5', 'i5')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('test', '$chip_ID', '$package_ID', '$test_plant_i5', 'i5')");
 			}
 			for ($chip_ID = $num_i5 + 1; $chip_ID <= $num_i5 + $num_i7; $chip_ID++) {
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('design-import_i7', '$chip_ID', '$package_ID', '$design_import_plant_i7', 'i7', '10')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('etch_i7', '$chip_ID', '$package_ID', '$etch_plant_i7', 'i7', '20')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('bond_i7', '$chip_ID', '$package_ID', '$bond_plant_i7', 'i7', '30')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('drill_i7', '$chip_ID', '$package_ID', '$drill_plant_i7', 'i7', '40')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('test_i7', '$chip_ID', '$package_ID', '$test_plant_i7', 'i7', '50')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('design-import', '$chip_ID', '$package_ID', '$design_import_plant_i7', 'i7')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('etch', '$chip_ID', '$package_ID', '$etch_plant_i7', 'i7')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('bond', '$chip_ID', '$package_ID', '$bond_plant_i7', 'i7')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('drill', '$chip_ID', '$package_ID', '$drill_plant_i7', 'i7')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('test', '$chip_ID', '$package_ID', '$test_plant_i7', 'i7')");
 			}
 			for ($chip_ID = $num_i5 + $num_i7 + 1; $chip_ID <= $num_i5 + $num_i7 + $num_i9; $chip_ID++) {
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('design-import_i9', '$chip_ID', '$package_ID', '$design_import_plant_i9', 'i9', '10')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('etch_i9', '$chip_ID', '$package_ID', '$etch_plant_i9', 'i9', '20')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('bond_i9', '$chip_ID', '$package_ID', '$bond_plant_i9', 'i9', '30')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('drill_i9', '$chip_ID', '$package_ID', '$drill_plant_i9', 'i9', '40')");
-				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`, `priority`) VALUES ('test_i9', '$chip_ID', '$package_ID', '$test_plant_i9', 'i9', '50')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('design-import', '$chip_ID', '$package_ID', '$design_import_plant_i9', 'i9')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('etch', '$chip_ID', '$package_ID', '$etch_plant_i9', 'i9')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('bond', '$chip_ID', '$package_ID', '$bond_plant_i9', 'i9')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('drill', '$chip_ID', '$package_ID', '$drill_plant_i9', 'i9')");
+				$mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('test', '$chip_ID', '$package_ID', '$test_plant_i9', 'i9')");
 			}
 
 			Print '<script>alert("Successfully appointed!");</script>';
