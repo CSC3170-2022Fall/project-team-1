@@ -52,9 +52,9 @@
 
             <!-- login & register -->
             <div class="login">
-              <a href="#">login</a>
+              <a href="consumer-login.php">login</a>
               <span>|</span>
-              <a href="#">register</a>
+              <a href="consumer-register.php">register</a>
               <a href="#" class="shopping_car">0</a>
             </div>
           </ul>
