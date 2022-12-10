@@ -2,9 +2,9 @@
 	Enter package ID: <input type="text" name="package_ID" required="required"/> <br/>
 	Enter time budget: <input type="text" name="time_budget" required="required"/> <br/>
 	Enter expense budget: <input type="text" name="expense_budget" required="required"/> <br/>
-	Enter numer of chip model i5: <input type="text" name="num_chip_i5" required="required"/> <br/>
-	Enter numer of chip model i7: <input type="text" name="num_chip_i7" required="required"/> <br/>
-	Enter numer of chip model i9: <input type="text" name="num_chip_i9" required="required"/> <br/>
+	Enter numer of chip model i5: <input type="text" name="num_i5" required="required"/> <br/>
+	Enter numer of chip model i7: <input type="text" name="num_i7" required="required"/> <br/>
+	Enter numer of chip model i9: <input type="text" name="num_i9" required="required"/> <br/>
 	Choose plant for design-import i5:  
 	<select name="design_import_plant_i5" required="required">
 		<?php 
