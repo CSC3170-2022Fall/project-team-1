@@ -39,7 +39,7 @@
                     <p>Hi! Welcome to <strong>Chip Land</strong>! I am your personal assitant <strong>CCC</strong>. You can get your chips just by retrieving in our database based on your personal needs. 
                         We will provide the optimal plants that satisfy your condition. If you own a plant, hurry up to sign up and get your order. <strong>Come and Join Us!</strong>
                         Click the following buttons to sign in or sign up.</p>
-                    <a class="btn btn-outline-primary" role="button" href="#">I'm a consumer</a>
+                    <a class="btn btn-outline-primary" role="button" href="consumer-login.php">I'm a consumer</a>
                     <a class="btn btn-outline-primary" role="button" href="#">I'm a plant owner</a>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <div class="d-flex justify-content-center align-items-center content">
                     <h3>Login to get more plants resources.</h3>
                     
-                    <a class="btn btn-outline-primary" role="button" href="#">I'm a consumer</a>
+                    <a class="btn btn-outline-primary" role="button" href="consumer-login.php">I'm a consumer</a>
                     <a class="btn btn-outline-primary" role="button" href="#">I'm a plant owner</a>
                 </div>
             </div>
