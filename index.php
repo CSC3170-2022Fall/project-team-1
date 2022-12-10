@@ -1,78 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+
+<head>
     <meta charset="utf-8">
-    <title>My test page</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="styles/index.css" rel="stylesheet" type="text/css">
-  </head>
-  <body>
-    <!-- header start -->
-    <div class="header">
-      <div class="header_c inner_c">
-        <!-- logo -->
-        <h1>logo</h1>
-        <!-- all product -->
-        <div class="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <style>
+        #iii{
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
 
-          <!-- triangle -->
-          <a href="#">look at all<span></span></a>
-          <!-- 下拉栏 -->
-          <div class="product">
-            <div class="pro_inner inner_c">
-              <ul class="inner_nav">
-                <li><a href="#">111</a></li>
-                <li><a href="#">222</a></li>
-                <li><a href="#">333</a></li>
-                <li><a href="#">444</a></li>
-                <li><a href="#">555</a></li>
-              </ul>
-              <ul class="inner_detail">
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="#">Chip Land</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects-grid-cards.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hire-me.html">I'm a consumer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hire-me.html">I'm a plant owner</a></li>
+                </ul>
             </div>
-          </div>
-
         </div>
-      
-        <!-- nav in header  -->
-        <div class="header_nav">
-          <!-- 4 functions in header -->
-          <ul>
-            <li><a href="#">home page</a></li>
-            <li><a href="#">function 1</a></li>
-            <li><a href="#">function 2</a></li>
-            <li><a href="#">function 3</a></li>
-            
-            <!-- search in header -->
-            <div class="search"></div>
-
-            <!-- login & register -->
-            <div class="login">
-              <a href="consumer-login.php">login</a>
-              <span>|</span>
-              <a href="consumer-register.php">register</a>
-              <a href="#" class="shopping_car">0</a>
+    </nav>
+    <main class="page lanidng-page">
+        <section class="portfolio-block block-intro">
+            <div class="container">
+                <div class="avatar" style="background-image:url(images/index/robot1.png);"></div>
+                <div class="about-me">
+                    <p>Hi! Welcome to <strong>Chip Land</strong>! I am your personal assitant <strong>CCC</strong>. You can get your chips just by retrieving in our database based on your personal needs. 
+                        We will provide the optimal plants that satisfy your condition. If you own a plant, hurry up to sign up and get your order. <strong>Come and Join Us!</strong>
+                        Click the following buttons to sign in or sign up.</p>
+                    <a class="btn btn-outline-primary" role="button" href="#">I'm a consumer</a>
+                    <a class="btn btn-outline-primary" role="button" href="#">I'm a plant owner</a>
+                </div>
             </div>
-          </ul>
-
+        </section>
+        <section class="portfolio-block photography">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-md-5 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="images/index//i5.jpg"></a></div>
+                    <div class="col-md-5 col-lg-4 item zoom-on-hover"><a href="#"><img class="img-fluid image" src="images/index//i7.jpg"></a></div>
+                    <div class="col-md-5 col-lg-4 item zoom-on-hover" id="iii"><a href="#"><img class="img-fluid image" src="images/index//i9.jpg"></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block call-to-action border-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content">
+                    <h3>Login to get more plants resources.</h3>
+                    
+                    <a class="btn btn-outline-primary" role="button" href="#">I'm a consumer</a>
+                    <a class="btn btn-outline-primary" role="button" href="#">I'm a plant owner</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block skills">
+            <div class="container">
+                <div class="heading">
+                    <h2>Special Skills</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-star-outline"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">ALL FREE!</h3>
+                                <p class="card-text">All the resources including plants information and consumer posts are available for free. 
+                                    You can easily get what you need by using Chip Land.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-lightbulb-outline"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">DIAPLAY IN VISUAL DIAGRAM!</h3>
+                                <p class="card-text">You can check the plants information, machine and operation types, expense all in
+                                    dynamic visual diagrams. It is more convenient and this may help you decide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-gear-outline"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">REAL-TIME MONITORING!</h3>
+                                <p class="card-text">The processing records are available both for consumers and owners of plants.
+                                    You can monitor the process of an order after login. If you have any questions about the processing
+                                    record you can contact the consumer/owner of plants at once.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="portfolio-block website gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-5 offset-lg-1 text">
+                    <h3>Contact Us</h3>
+                    <p>
+                        Contact us directly if you have any suggestions 
+                        about our website.<br>
+                        Phone directory: 0755-88886666<br>
+                        Email: notexist@bye.com<br>
+                        Address: notexist road 1, mainland China
+                        </p>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="portfolio-laptop-mockup">
+                        <div class="screen">
+                            <div class="screen-content" style="background-image:url(&quot;images/tech/image6.png&quot;);"></div>
+                        </div>
+                        <div class="keyboard"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- header finish -->
-
-    <!-- banner start -->
-    <div class="banner">
-      <ul>
-        <li></li>
-      </ul>
-    </div>
-    <!-- banner finish -->
-
-
+    </section>
+    <footer class="page-footer">
+        <div class="container">
+            <span>// No product or component can be absolutely secure. 
+            // Your costs and results may vary.  
+            // See our complete legal Notices and Disclaimers. 
+            // Chip Land is committed to respecting human rights and 
+            avoiding complicity in human rights abuses. 
+            See Chip Land's Global Human Rights Principles. 
+            Chip Land's products and software are intended only to be 
+            used in applications that do not cause or contribute to a 
+            violation of an internationally recognized human right.Copyright @ 2022</span><br>
+            <div class="links"><a href="#">About me</a></div>
+            <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-instagram-outline"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a></div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 
 
 
