@@ -53,7 +53,7 @@
                                     <img src="images/index/robot1.png" alt="" height="35">
                                 </span>
                             </a>
-							<div>Chip Land</div>
+							<p>Hello <?php Print "$plant_name"?>!</p>
                         </div>
 
                         <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">

@@ -47,7 +47,7 @@
                                     <img src="images/index/robot1.png" alt="" height="35">
                                 </span>
                             </a>
-							<div>Chip Land</div>
+							<p>Hello <?php Print "$plant_name"?>!</p>
                         </div>
 
                         <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
@@ -526,19 +526,6 @@
 
 </html>
 
-<<<<<<< HEAD
-</html>
-
-
-=======
-		<?php include "consumer-appoint-include-form.php" ?>
-	</body>
-</html>
-
-
-
-
->>>>>>> a7eeb2bd92d98b65616cec0425dac7a759f33648
 <!-- backend: insert new records into processing records -->
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
