@@ -47,13 +47,13 @@
                                     <img src="images/index/robot1.png" alt="" height="35">
                                 </span>
                             </a>
-							<p>Hello <?php Print "$plant_name"?>!</p>
+							<div>Chip Land</div>
                         </div>
 
                         <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
                             <i class="mdi mdi-menu"></i>
                         </button>
-
+                        <!--
                         <div class="d-none d-sm-block">
                             <div class="dropdown dropdown-topbar pt-3 mt-1 d-inline-block">
                                 <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,12 +68,12 @@
                                     <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="d-flex">
 
-                        <!-- App Search-->
+                        <!-- App Search--><!--
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
                                 <input type="text" class="form-control" placeholder="Search...">
@@ -98,49 +98,17 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div>-->
 
 
-
-                        <div class="dropdown d-none d-md-block ms-2">
-                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="me-2" src="assets/picture/us_flag.jpg" alt="Header Language" height="16"> English <span class="mdi mdi-chevron-down"></span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-end">
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/picture/germany_flag.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle"> German </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/picture/italy_flag.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Italian </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/picture/french_flag.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle"> French </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/picture/spain_flag.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Spanish </span>
-                                </a>
-
-                                <!-- item-->
-                                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/picture/russia_flag.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle"> Russian </span>
-                                </a>
-                            </div>
-                        </div>
-
+                        
+                        
                         <div class="dropdown d-none d-lg-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
                                 <i class="mdi mdi-fullscreen font-size-24"></i>
                             </button>
                         </div>
-
+                        <!--
                         <div class="dropdown d-inline-block ms-1">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="ti-bell"></i>
@@ -241,9 +209,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-            
-
+                        </div>-->
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="assets/picture/user-4.jpg" alt="Header Avatar">
@@ -276,18 +242,26 @@
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
 
-                            <li class="menu-title">Main</li>
+                            <!--<li class="menu-title">Main</li>-->
 
                             <li>
-                                <a href="javascript: void(0);" class="waves-effect">
+                                <a href="#" class="waves-effect">
                                     <i class="mdi mdi-clipboard-outline"></i>
                                     <span>Appoint</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
+                                <!--<ul class="sub-menu" aria-expanded="false">
                                     <li><a href="">Appointment</a></li>
-                                </ul>
+                                </ul>-->
                             </li>
-
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="mdi mdi-clipboard-outline"></i>
+                                    <span>Processing Record</span>
+                                </a>
+                                <!--<ul class="sub-menu" aria-expanded="false">
+                                    <li><a href="">Appointment</a></li>
+                                </ul>-->
+                            </li>
                         </ul>
                     </div>
                     <!-- Sidebar -->
@@ -307,12 +281,12 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="page-title-box">
-                                    <h4>Order Form</h4>
-                                        <ol class="breadcrumb m-0">
+                                    <h2>Hello <?php Print "$consumer"?>! <!--Displays plant's name--></h2>
+                                        <!--<ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Chip Land</a></li>
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">Appoint</a></li>
                                             <li class="breadcrumb-item active">Appointment</li>
-                                        </ol>
+                                        </ol>-->
                                 </div>
                             </div>
                         </div>
@@ -333,7 +307,7 @@
                                                 <div class="mt-4" >
                                                     <h5 class="font-size-14 mb-4"><i class="mdi mdi-arrow-right text-primary me-1"></i> Appoint form</h5>
                                                     <!-- form start -->
-                                                    <form>
+                                                    <form action="consumer-appoint.php" method="post">
                                                         <div class="row mb-4">
                                                             <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">package ID</label>
                                                             <div class="col-sm-9">
@@ -370,18 +344,154 @@
                                                               <input type="text" class="form-control" id="horizontal-firstname-input" name="num_i9" required="required"/>
                                                             </div>
                                                         </div>
-            
-                                                        <div class="row justify-content-end">
-                                                            <div class="col-sm-9">
-                                                                <div class="form-check mb-4">
-                                                                    <input type="checkbox" class="form-check-input" id="horizontal-customCheck">
-                                                                    <label class="form-check-label" for="horizontal-customCheck">Remember me</label>
-                                                                </div>
-            
-                                                                <div>
-                                                                    <button type="submit" class="btn btn-primary w-md">Submit</button>
-                                                                </div>
-                                                            </div>
+                                                    
+                                                    <h5 class="font-size-14 mb-4"><i class="mdi mdi-arrow-right text-primary me-1"></i> Choose plants.</h5>
+                                                    <!-- form start -->
+                                                    
+                                                        <!--i5-->
+                                                        <div class="mb-3">
+                                                        <label class="form-label">design_import_plant_i5</label>
+                                                        <select name="design_import_plant_i5" class="form-control" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">etch_plant_i5</label>
+                                                        <select name="etch_plant_i5" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">bond_plant_i5</label>
+                                                        <select name="bond_plant_i5" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">drill_plant_i5</label>
+                                                        <select name="drill_plant_i5" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">test_plant_i5</label>
+                                                        <select name="test_plant_i5" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <!--i7-->
+                                                        <div class="mb-3">
+                                                        <label class="form-label">design_import_plant_i7</label>
+                                                        <select name="design_import_plant_i7" class="form-control" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">etch_plant_i7</label>
+                                                        <select name="etch_plant_i7" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">bond_plant_i7</label>
+                                                        <select name="bond_plant_i7" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">drill_plant_i7</label>
+                                                        <select name="drill_plant_i7" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">test_plant_i7</label>
+                                                        <select name="test_plant_i7" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <!--i9-->
+                                                        <div class="mb-3">
+                                                        <label class="form-label">design_import_plant_i9</label>
+                                                        <select name="design_import_plant_i9" class="form-control" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">etch_plant_i9</label>
+                                                        <select name="etch_plant_i9" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">bond_plant_i9</label>
+                                                        <select name="bond_plant_i9" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">drill_plant_i9</label>
+                                                        <select name="drill_plant_i9" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <label class="form-label">test_plant_i9</label>
+                                                        <select name="test_plant_i9" class="form-control select2" required="required">
+                                                            <?php 
+                                                                $sql = $mysqli->query("SELECT plant_name FROM Plants");
+                                                                while ($row = mysqli_fetch_array($sql)){
+                                                                    echo "<option>" . $row['plant_name'] . "</option>";
+                                                                }
+                                                            ?>
+                                                        </select>
+                                                        <div class="row"> </div><br/>
+                                                        <div>
+                                                            <button type="submit" class="btn btn-primary w-md">Submit My Appointment</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -392,87 +502,6 @@
                                     </div>
                                 </div>
 								<!-- containing single select -->
-
-                                <div class="card">
-                                    <div class="card-body">
-
-                                        <h4 class="card-title">Select2</h4>
-                                        <p class="card-title-desc">A mobile and touch friendly input spinner component for Bootstrap
-                                        </p>
-
-                                        <form>
-                                            <div class="mb-3">
-                                                <label class="form-label">Single Select</label>
-                                                <select class="form-control select2">
-                                                    <option>Select</option>
-                                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                        <option value="AK">Alaska</option>
-                                                        <option value="HI">Hawaii</option>
-                                                    </optgroup>
-                                                    <optgroup label="Pacific Time Zone">
-                                                        <option value="CA">California</option>
-                                                        <option value="NV">Nevada</option>
-                                                        <option value="OR">Oregon</option>
-                                                        <option value="WA">Washington</option>
-                                                    </optgroup>
-                                                    <optgroup label="Mountain Time Zone">
-                                                        <option value="AZ">Arizona</option>
-                                                        <option value="CO">Colorado</option>
-                                                        <option value="ID">Idaho</option>
-                                                        <option value="MT">Montana</option>
-                                                        <option value="NE">Nebraska</option>
-                                                        <option value="NM">New Mexico</option>
-                                                        <option value="ND">North Dakota</option>
-                                                        <option value="UT">Utah</option>
-                                                        <option value="WY">Wyoming</option>
-                                                    </optgroup>
-                                                    <optgroup label="Central Time Zone">
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="AR">Arkansas</option>
-                                                        <option value="IL">Illinois</option>
-                                                        <option value="IA">Iowa</option>
-                                                        <option value="KS">Kansas</option>
-                                                        <option value="KY">Kentucky</option>
-                                                        <option value="LA">Louisiana</option>
-                                                        <option value="MN">Minnesota</option>
-                                                        <option value="MS">Mississippi</option>
-                                                        <option value="MO">Missouri</option>
-                                                        <option value="OK">Oklahoma</option>
-                                                        <option value="SD">South Dakota</option>
-                                                        <option value="TX">Texas</option>
-                                                        <option value="TN">Tennessee</option>
-                                                        <option value="WI">Wisconsin</option>
-                                                    </optgroup>
-                                                    <optgroup label="Eastern Time Zone">
-                                                        <option value="CT">Connecticut</option>
-                                                        <option value="DE">Delaware</option>
-                                                        <option value="FL">Florida</option>
-                                                        <option value="GA">Georgia</option>
-                                                        <option value="IN">Indiana</option>
-                                                        <option value="ME">Maine</option>
-                                                        <option value="MD">Maryland</option>
-                                                        <option value="MA">Massachusetts</option>
-                                                        <option value="MI">Michigan</option>
-                                                        <option value="NH">New Hampshire</option>
-                                                        <option value="NJ">New Jersey</option>
-                                                        <option value="NY">New York</option>
-                                                        <option value="NC">North Carolina</option>
-                                                        <option value="OH">Ohio</option>
-                                                        <option value="PA">Pennsylvania</option>
-                                                        <option value="RI">Rhode Island</option>
-                                                        <option value="SC">South Carolina</option>
-                                                        <option value="VT">Vermont</option>
-                                                        <option value="VA">Virginia</option>
-                                                        <option value="WV">West Virginia</option>
-                                                    </optgroup>
-                                                </select>
-                                            </div>
-
-                                        </form>
-
-                                    </div>
-                                </div>
-								<!-- select end -->
 
                             </div>
                         </div>
@@ -525,6 +554,9 @@
     </body>
 
 </html>
+
+</html>
+
 
 <!-- backend: insert new records into processing records -->
 <?php
