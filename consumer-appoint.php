@@ -17,10 +17,14 @@
 
 		<p>Note: Research before appointing as some plants may not the machines to finish some operations.<p>
 
-		<?php include "consumer-include.php" ?>
+		<?php include "consumer-appoint-include-form.php" ?>
 	</body>
 </html>
 
+
+
+
+<!-- backend: insert new records into processing records -->
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$package_ID = $mysqli->real_escape_string($_POST['package_ID']);
@@ -46,16 +50,17 @@
 		$drill_plant_i9 = $mysqli->real_escape_string($_POST['drill_plant_i9']);
 		$test_plant_i9 = $mysqli->real_escape_string($_POST['test_plant_i9']);
 
-		$not_existing = true;
+		$package_ID_not_existing = true;
 		$query = $mysqli->query("SELECT package_ID from Packages");
-		while ($row = mysqli_fetch_array($query)) {
-			if ($package_ID == $row['package_ID']) {
-				$not_existing = false; 
+		while ($package_ID_row = mysqli_fetch_array($query)) {
+			if ($package_ID == $package_ID_row['package_ID']) {
+				$package_ID_not_existing = false; 
 				Print '<script>alert("package_ID has been taken!");</script>';
 				Print '<script>window.location.assign("consumer-appoint.php");</script>';
 			}
 		}
-		if ($not_existing) {
+
+		if ($package_ID_not_existing) {
 			$mysqli->query("INSERT INTO Packages (`package_ID`, `time_budget`, `expense_budget`, `consumer_name`) VALUES ('$package_ID', '$time_budget', '$expense_budget', '$consumer')"); 
 
 			for ($chip_ID = 1; $chip_ID <= $num_i5; $chip_ID++) {

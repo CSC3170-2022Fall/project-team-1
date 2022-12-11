@@ -151,45 +151,47 @@
     <script src="assets/js/theme.js"></script>
 
 
+    
 
-
+<!-- backend: create database -->
     <?php
-      //connect to DBMS      
-      $mysqli = new mysqli("localhost", 'root', '');
-      if($mysqli->connect_errno ) { 
+        //connect to DBMS      
+        $mysqli = new mysqli("localhost", 'root', '');
+        if($mysqli->connect_errno ) { 
         printf("Connect failed: %s<br />", $mysqli->connect_error);
         exit();
-      }
-      //create database
+        }
+        //create database
         $mysqli->query("CREATE DATABASE chip_website");
-      if ($mysqli->errno) {
+        if ($mysqli->errno) {
         printf("Could not create database: %s<br />", $mysqli->error);
-      }
-      //select database
-      $mysqli->select_db('chip_website');
+        }
+        //select database
+        $mysqli->select_db('chip_website');
 
-      //create tabels by loading the SQL file (note: this CAN'T work on SQL comments)
-      $filename = "sql/initialization.sql";
-      // Temporary variable, used to store current query
-      $templine = '';
-      // Read in entire file
-      $lines = file($filename);
-      // Loop through each line
-      foreach ($lines as $line) {
+        //create tabels by loading the SQL file (note: this CAN'T work on SQL comments)
+        $filename = "sql/initialization.sql";
+        // Temporary variable, used to store current query
+        $templine = '';
+        // Read in entire file
+        $lines = file($filename);
+        // Loop through each line
+        foreach ($lines as $line) {
         // Skip it if it's a comment
         if (substr($line, 0, 2) == '--' || $line == '')
-          continue;
+            continue;
         // Add this line to the current segment
         $templine .= $line;
         // If it has a semicolon at the end, it's the end of the query
         if (substr(trim($line), -1, 1) == ';') {
-          // Perform the query
-          $mysqli->query($templine);
-          // Reset temp variable to empty
-          $templine = '';
+            // Perform the query
+            $mysqli->query($templine);
+            // Reset temp variable to empty
+            $templine = '';
         }
-      }
-      echo "Table created successfully";
+        }
+        echo "Table created successfully";
     ?>
+
   </body>
 </html>

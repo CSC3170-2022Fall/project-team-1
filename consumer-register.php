@@ -13,6 +13,10 @@
 	</body>
 </html>
 
+
+
+
+<!-- backend: insert consumer info into database -->
 <?php
 	$mysqli = new mysqli("localhost", 'root', '', "chip_website");
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {

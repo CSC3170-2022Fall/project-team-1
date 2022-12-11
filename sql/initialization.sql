@@ -57,8 +57,8 @@ CREATE TABLE Machines_in_Plants
 CREATE TABLE Operations_on_Machine_Models
 (
   feasibility INT NOT NULL,
-  `time` INT NOT NULL,
-  expense INT NOT NULL,
+  `time` INT,
+  expense INT,
   machine_model CHAR(20) NOT NULL,
   chip_model CHAR(20) NOT NULL,
   operation_type CHAR(20) NOT NULL,

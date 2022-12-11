@@ -28,7 +28,7 @@
 	
 		<table border='2px' align='left'>
 			<th>Package ID</th>
-			<th>Chip Model`</th>
+			<th>Chip Model</th>
 			<th>Chip ID</th>
 			<th>Operation Type</th>
 			<?php
@@ -50,6 +50,8 @@
 </html>
 
 
+
+<!-- backend: update processing records -->
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$appointed_operations = $mysqli->query("SELECT p.package_ID, p.chip_ID, p.operation_type, p.chip_model FROM Processing_Records As p INNER JOIN Operation_Types AS o ON p.chip_model = o.chip_model AND p.operation_type = o.operation_type WHERE p.plant_name = '$plant' AND p.start_time IS NULL ORDER BY o.priority ASC, o.chip_model ASC");
