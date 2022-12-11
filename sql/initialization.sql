@@ -112,6 +112,14 @@ INSERT INTO Plants (`plant_name`, `password`) VALUES ('apple', '123');
 INSERT INTO Machine_Models (`machine_model`) VALUES ('boy');
 INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '1', 'boy', '1');
 INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '2', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '3', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '4', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '5', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '6', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '7', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '8', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '9', 'boy', '1');
+INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '10', 'boy', '1');
 
 INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import', 'i5', 'boy', '1', '10', '100');
 INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch', 'i5', 'boy', '1', '10', '100');

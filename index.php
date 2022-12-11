@@ -161,9 +161,7 @@
         exit();
       }
       //create database
-      if ($mysqli->query("CREATE DATABASE chip_website")) {
-        printf("Database chip_website created successfully.<br />");
-      }
+        $mysqli->query("CREATE DATABASE chip_website");
       if ($mysqli->errno) {
         printf("Could not create database: %s<br />", $mysqli->error);
       }
