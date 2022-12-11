@@ -2,7 +2,7 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-		<title>consumer login website</title>
+		<title>plant_registration</title>
 		<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
 		<link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -25,22 +25,22 @@
 			<section class="portfolio-block project">
 				<div class="container">
 					<div class="heading">
-						<h2>Consumer sign in</h2>
+						<h2>Plant sign up</h2>
 					</div>
 					<div class="row">
 						<div class="col-12 col-md-6 offset-md-1 info">
 						
-						<form action="consumer-login.php" method="post">
+						<form action="plant-register.php" method="post">
 						<div class="mb-3">
-							<label for="exampleInputEmail1" class="form-label">Consumer name</label>
-							<input type="text" class="form-control" name="consumer_name" required="required">
+							<label for="exampleInputEmail1" class="form-label">Plant name</label>
+							<input type="text" class="form-control" name="plant_name" required="required">
 							
 						</div>
 						<div class="mb-3">
 							<label for="exampleInputPassword1" class="form-label">Password</label>
 							<input type="password" class="form-control" name="password" required="required">
 						</div>
-						<button type="submit" class="btn btn-primary" value="Login">Login</button>  <a href="consumer-register.php">Sign Up</a>
+						<button type="submit" class="btn btn-primary" value="Register">Sign up</button>
 
 						</form>
 						</div>
@@ -50,7 +50,7 @@
 		</main>
 		<footer class="page-footer">
 			<div class="container">
-			<div class="links"><a href="consumer-register.php">Sign Up</a><a href="index.php">Home</a><a href="#">Login</a></div>
+				<div class="links"><a href="#">Sign Up</a><a href="index.php">Home</a><a href="plant-login.php">Login</a></div>
 			</div>
 		</footer>
 		<script src="assets/bootstrap/bootstrap.min.js"></script>
@@ -62,36 +62,26 @@
 
 
 
-<!-- backend: check login -->
+<!-- backend: insert plant info into database -->
 <?php
+	$mysqli = new mysqli("localhost", 'root', '', "chip_website");
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$mysqli = new mysqli("localhost", 'root', '', "chip_website");
-
-		session_start();
-		$consumer_name = $mysqli->real_escape_string($_POST['consumer_name']);
+		$plant_name = $mysqli->real_escape_string($_POST['plant_name']);
 		$password = $mysqli->real_escape_string($_POST['password']);
+		$not_existing = true;
+		$query = $mysqli->query("SELECT * from Plants");
 
-		$query = $mysqli->query("SELECT * from Consumers WHERE consumer_name='$consumer_name'"); //Query the users table if there are matching rows equal to $consumer_name
-		$exists = mysqli_num_rows($query); //Checks if consumer_name exists
-		$table_users = "";
-		$table_password = "";
-		if ($exists > 0) { //IF there are no returning rows or no existing consumer_name
-			while ($row = mysqli_fetch_assoc($query)) { //display all rows from query
-				$table_users = $row['consumer_name']; // the first consumer_name row is passed on to $table_users, and so on until the query is finished
-				$table_password = $row['password']; // the first password row is passed on to $table_users, and so on until the query is finished
+		while ($row = mysqli_fetch_array($query)) {
+			if ($plant_name == $row['plant_name']) {
+				$not_existing = false; 
+				Print '<script>alert("plant_name has been taken!");</script>';
+				Print '<script>window.location.assign("plant-register.php");</script>';
 			}
-			if (($consumer_name == $table_users) && ($password == $table_password)) { // checks if there are any matching fields
-				if ($password == $table_password) {
-					$_SESSION['consumer'] = $consumer_name; //set the consumer_name in a session. This serves as a global variable
-					header("location: consumer-appoint.php"); // redirects the user to the authenticated home page
-				}
-			} else {
-				print '<script>alert("Incorrect Password!");</script>'; //Prompts the user
-				print '<script>window.location.assign("index.php");</script>'; // redirects to login.php
-			}
-		} else {
-			print '<script>alert("Incorrect consumer_name!");</script>'; //Prompts the user
-			print '<script>window.location.assign("consumer-login.php");</script>'; // redirects to login.php
+		}
+		if ($not_existing) {
+			$mysqli->query("INSERT INTO Plants (`plant_name`, `password`) VALUES ('$plant_name','$password')"); 
+			Print '<script>alert("Successfully Registered!");</script>';
+			Print '<script>window.location.assign("plant-register.php");</script>';
 		}
 	}
 ?>

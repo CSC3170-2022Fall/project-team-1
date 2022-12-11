@@ -526,7 +526,19 @@
 
 </html>
 
+<<<<<<< HEAD
+</html>
 
+
+=======
+		<?php include "consumer-appoint-include-form.php" ?>
+	</body>
+</html>
+
+
+
+
+>>>>>>> a7eeb2bd92d98b65616cec0425dac7a759f33648
 <!-- backend: insert new records into processing records -->
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {

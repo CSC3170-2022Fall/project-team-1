@@ -39,7 +39,7 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Database Design (Temporary)
 
-<img width="1391" alt="Screenshot 2022-12-10 at 23 23 10" src="https://user-images.githubusercontent.com/90801772/206862434-3955da66-df28-470e-b57c-592855904b3b.png">
+<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
 
 ### Function Points (Temporary)
 
@@ -56,4 +56,4 @@ After thorough discussion, our team made the choice and the specification inform
 - What everybody can see:
 	- Chip model introduction (different chip models have different operations, which are of different types) 
 	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Processing record (visualization; start time, end time, and expense) (display non-ending operations too)
+	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
