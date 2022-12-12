@@ -47,10 +47,10 @@ After thorough discussion, our team made the choice and the specification inform
 	- Possible chip models: i5, i7, i9
 	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types 
 - What consumers can do:
-	- Register and log in
+	- Sign up and log in
 	- Appoint plants for configurable packages
 - What plant owners can do:
-	- Register and log in
+	- Sign up and log in
 	- Accept appointments
 	- Publish machines 
 - What everybody can see:
