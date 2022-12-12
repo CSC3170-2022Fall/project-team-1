@@ -11,7 +11,7 @@
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Model number</label>
         <div class="col-sm-9">
-            <input type="range" min="1" max="100" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="machine_model_num" required="required"/>
+            <input type="range" min="1" max="100" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="machine_model_num" required="required"/> 
             <output>10</output>
         </div>
     </div>
@@ -38,8 +38,8 @@
                 } 
             ?>
         </table>
-        <div class="col-sm-9" style="margin-top:20px;">
-            <button type="submit" class="btn btn-primary w-md">Publish</button>
+        <div class="col-sm-9"; >
+            <button type="submit" style="margin-top:20px; margin-left:120px; font-size:larger;" class="btn btn-primary w-md">Publish</button>
         </div>
     </div>
 

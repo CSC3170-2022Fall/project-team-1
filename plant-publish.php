@@ -280,13 +280,14 @@
                             <li class="menu-title">Main</li>
 
                             <li>
-                                <a href="javascript: void(0);" class="waves-effect">
+                                <a href="plant-accept.php" class="waves-effect">
+                                    <i class="mdi mdi-clipboard-outline"></i>
+                                    <span>Accept</span>
+                                </a>
+                                <a href="plant-publish.php" class="waves-effect">
                                     <i class="mdi mdi-clipboard-outline"></i>
                                     <span>Publish</span>
                                 </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="">Publishment</a></li>
-                                </ul>
                             </li>
 
                         </ul>
@@ -416,6 +417,9 @@
 
             $mysqli->query("INSERT INTO Machine_Models (`machine_model`) VALUES ('$machine_model_name')");
 
+            $plant_name = $_SESSION['plant_name'];
+
+            echo $plant_name;
             for ($machine_ID = 1; $machine_ID <= $machine_model_num; $machine_ID++) 
                 $mysqli->query("INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('$plant_name', '$machine_ID', '$machine_model_name', '1')");
 

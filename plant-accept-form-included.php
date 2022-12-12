@@ -25,6 +25,6 @@
 		?>
 	</table>
 	<div class="col-sm-9">
-		<button type="submit" class="btn btn-primary w-md" style="margin-top:20px; font-size:large;">Accept as many as possible!</button>
+		<button type="submit" class="btn btn-primary w-md" style="margin-top:20px; font-size:large;">Accept using full capacity!</button>
 	</div>
 </div>
