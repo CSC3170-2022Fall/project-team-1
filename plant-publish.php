@@ -22,15 +22,10 @@
     
     <!-- between head and body -->
     <?php
-            /*
-            session_start(); //starts the session
-            if (!$_SESSION['consumer']) { //checks if consumer is logged in
-                header("location:index.php"); // redirects if consumer is not logged in
-            }
-            $consumer = $_SESSION['consumer']; //assigns consumer value
-            */
-            $plant_name = "apple";
-            $mysqli = new mysqli("localhost", 'root', '', 'chip_website');
+		session_start(); 
+		if (!$_SESSION['plant_name']) print '<script>window.location.assign("plant-login.php");</script>';
+		$plant_name = $_SESSION['plant_name'];
+		$mysqli = new mysqli("localhost", 'root', '', 'chip_website');
     ?>
 
 
@@ -53,7 +48,7 @@
                                     <img src="images/index/robot1.png" alt="" height="35">
                                 </span>
                             </a>
-							<p>Hello <?php Print "$plant_name"?>!</p>
+							<p>Hello <?php echo "$plant_name"?>!</p>
                         </div>
 
                         <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
@@ -337,168 +332,10 @@
 											<div class="col-lg-3"></div>
                                             <div class="col-lg-6">
                                                 <div class="mt-4" >
-                                                    <h5 class="font-size-14 mb-4"><i class="mdi mdi-arrow-right text-primary me-1"></i> Publish form</h5>
                                                     <!-- form start -->
-                                                    <form>
-                                                        <div class="row mb-4">
-                                                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Name of the Machine Model</label>
-                                                            <div class="col-sm-9">
-                                                              <input type="text" class="form-control" id="horizontal-firstname-input" name="package_ID" required="required"/>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-4">
-                                                            <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Number of the Machine Model</label>
-                                                            <div class="col-sm-9">
-                                                                <input type="text" class="form-control" id="horizontal-firstname-input" name="time_budget" required="required"/>
-                                                            </div>
-                                                        </div>
-            
-                                                        <div class="row justify-content-end">
-                                                            <div class="col-sm-9">
-                                                                <div class="form-check mb-4">
-                                                                    <input type="checkbox" class="form-check-input" id="horizontal-customCheck">
-                                                                    <label class="form-check-label" for="horizontal-customCheck">Remember me</label>
-                                                                </div>
-            
-                                                                <div>
-                                                                    <button type="submit" class="btn btn-primary w-md">Submit</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
+                                                    <?php include "plant-publish-form-included.php" ?>
                                                     <!-- form end -->
-                                                    <table border='2px' align='left'>
-                                                        <th>Chip Model</th>
-                                                        <th>Operation Type</th>
-                                                        <th>Time</th>
-                                                        <th>Expense</th>
-                                                        <?php
-                                                            $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
 
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="design-import_i5_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="design-import_i5_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="etch_i5_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="etch_i5_expense"/>' . "</td>";
-                                                            Print "</tr>";
-                                                            
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="bond_i5_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="bond_i5_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="drill_i5_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="drill_i5_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="test_i5_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="test_i5_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="design-import_i7_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="design-import_i7_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="etch_i7_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="etch_i7_expense"/>' . "</td>";
-                                                            Print "</tr>";
-                                                            
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="bond_i7_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="bond_i7_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="drill_i7_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="drill_i7_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="test_i7_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="test_i7_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="design-import_i9_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="design-import_i9_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="etch_i9_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="etch_i9_expense"/>' . "</td>";
-                                                            Print "</tr>";
-                                                            
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="bond_i9_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="bond_i9_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="drill_i9_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="drill_i9_expense"/>' . "</td>";
-                                                            Print "</tr>";
-
-                                                            $operation_type_row = mysqli_fetch_array($operation_types);
-                                                            Print "<tr>";
-                                                                Print '<td align="center">'. $operation_type_row['chip_model'] . "</td>";
-                                                                Print '<td align="center">'. $operation_type_row['operation_type'] . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="test_i9_time"/>' . "</td>";
-                                                                Print '<td align="center">'. '<input type="text" name="test_i9_expense"/>' . "</td>";
-                                                            Print "</tr>";
-                                                        ?>
-                                                    <input type="submit" value="Publish"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -554,10 +391,10 @@
         <!-- App js -->
         <script src="assets/js/js/app.js"></script>
 
-		<?php include "plant-publish-include-form.php" ?>
     </body>
 
 </html>
+
 
 
 
@@ -565,90 +402,40 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$machine_model_name = $mysqli->real_escape_string($_POST['machine_model_name']);
-        $machine_model_num = $mysqli->real_escape_string($_POST['machine_model_num']);
 
-        $time_expense_submitted = array();
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['design-import_i5_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['design-import_i5_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['etch_i5_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['etch_i5_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['bond_i5_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['bond_i5_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['drill_i5_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['drill_i5_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['test_i5_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['test_i5_expense']));
+		$query = $mysqli->query("SELECT `machine_model` FROM Machine_Models WHERE `machine_model` = '$machine_model_name'");
+		$num_row = mysqli_num_rows($query);
+		if ($num_row == 1) { 
+            echo '<script>alert("Machine model exists!");</script>';
+            echo '<script>window.location.assign("plant-publish.php");</script>';
+        } else {
+            $machine_model_num = $mysqli->real_escape_string($_POST['machine_model_num']);
 
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['design-import_i7_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['design-import_i7_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['etch_i7_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['etch_i7_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['bond_i7_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['bond_i7_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['drill_i7_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['drill_i7_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['test_i7_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['test_i7_expense']));
+            $time_expense_submitted = array();
+            for ($i = 1; $i <= 30; $i++) array_push($time_expense_submitted, $mysqli->real_escape_string($_POST["$i"]));    
 
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['design-import_i9_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['design-import_i9_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['etch_i9_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['etch_i9_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['bond_i9_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['bond_i9_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['drill_i9_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['drill_i9_expense']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['test_i9_time']));
-        array_push($time_expense_submitted, $mysqli->real_escape_string($_POST['test_i9_expense']));
-
-        $size = sizeof($time_expense_submitted);
-        echo "<p>size: $size</p>";
-
-		$machine_model_not_existing = true;
-		$query = $mysqli->query("SELECT `machine_model` from Machine_Models");
-		while ($machine_model_row = mysqli_fetch_array($query)) {
-			if ($machine_model_name == $machine_model_row['machine_model']) {
-				$machine_model_not_existing = false; 
-				Print '<script>alert("Machine model exists!");</script>';
-				Print '<script>window.location.assign("plant-publish.php");</script>';
-			}
-		}
-
-        if ($machine_model_not_existing) {
             $mysqli->query("INSERT INTO Machine_Models (`machine_model`) VALUES ('$machine_model_name')");
 
-            for ($machine_ID = 1; $machine_ID <= $machine_model_num; $machine_ID++) {
+            for ($machine_ID = 1; $machine_ID <= $machine_model_num; $machine_ID++) 
                 $mysqli->query("INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('$plant_name', '$machine_ID', '$machine_model_name', '1')");
-            }
 
             for ($i = 0; $i <= 28; $i = $i + 2) {
-                if ($i < 10) {
-                    $chip_model = 'i5';
-                } else if ($i < 20) {
-                    $chip_model = 'i7';
-                } else {
-                    $chip_model = 'i9';
-                }
+                if ($i < 10) $chip_model = 'i5';
+                else if ($i < 20) $chip_model = 'i7';
+                else $chip_model = 'i9';
 
-                if ($i % 10 == 0) {
-                    $operation_type = 'design-import';
-                } else if ($i % 10 == 2) {
-                    $operation_type = 'etch';
-                } else if ($i % 10 == 4) {
-                    $operation_type = 'bond';
-                } else if ($i % 10 == 6) {
-                    $operation_type = 'drill';
-                } else {
-                    $operation_type = 'test';
-                }
+                if ($i % 10 == 0) $operation_type = 'design-import';
+                else if ($i % 10 == 2) $operation_type = 'etch';
+                else if ($i % 10 == 4) $operation_type = 'bond';
+                else if ($i % 10 == 6) $operation_type = 'drill';
+                else $operation_type = 'test';
 
                 $j = $i + 1;
-                if ($time_expense_submitted[$i] != null) {
-                    $mysqli->query("INSERT INTO Operations_on_Machine_Models (`machine_model`, `chip_model`, `operation_type`, `feasibility`, `time`, `expense`) VALUES ('$machine_model_name', '$chip_model', '$operation_type', '1', '$time_expense_submitted[$i]', '$time_expense_submitted[$j]')");
-                } else {
-                    $mysqli->query("INSERT INTO Operations_on_Machine_Models (`machine_model`, `chip_model`, `operation_type`, `feasibility`) VALUES ('$machine_model_name', '$chip_model', '$operation_type', '0')");
-                }
+                if ($time_expense_submitted[$i] != null) $mysqli->query("INSERT INTO Operations_on_Machine_Models (`machine_model`, `chip_model`, `operation_type`, `feasibility`, `time`, `expense`) VALUES ('$machine_model_name', '$chip_model', '$operation_type', '1', '$time_expense_submitted[$i]', '$time_expense_submitted[$j]')");
+                else $mysqli->query("INSERT INTO Operations_on_Machine_Models (`machine_model`, `chip_model`, `operation_type`, `feasibility`) VALUES ('$machine_model_name', '$chip_model', '$operation_type', '0')");
             }
+            echo '<script>alert("Successfully published!");</script>';
+            echo '<script>window.location.assign("plant-publish.php");</script>';
         }
     }
 ?>
