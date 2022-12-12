@@ -11,8 +11,8 @@
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Machine number</label>
         <div class="col-sm-9">
-            <input type="range" min="1" max="100" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="machine_model_num" required="required"/> 
-            <output>10</output>
+            <input type="range" min="100" max="10000" value="1000" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="machine_model_num" required="required"/> 
+            <output>1000</output>
         </div>
     </div>
 

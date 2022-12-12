@@ -23,7 +23,7 @@
     <?php
 		session_start(); 
 		if (!$_SESSION['consumer_name']) print '<script>window.location.assign("consumer-login.php");</script>';
-		$plant_name = $_SESSION['consumer_name'];
+		$consumer_name = $_SESSION['consumer_name'];
 		$mysqli = new mysqli("localhost", 'root', '', 'chip_website');
     ?>
 

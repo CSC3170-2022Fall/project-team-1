@@ -4,31 +4,36 @@
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Time budget</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="horizontal-firstname-input" name="time_budget" required="required"/>
+            <input type="range" min="100" max="1000" value="300" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="time_budget" required="required"/> 
+            <output>300</output>
         </div>
     </div>
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Expense budget</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="horizontal-firstname-input" name="expense_budget" required="required"/>
+            <input type="range" min="100000" max="10000000" value="1000000" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="expense_budget" required="required"/> 
+            <output>1000000</output>
         </div>
     </div>
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Number of model i5</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="horizontal-firstname-input" name="num_i5" required="required"/>
+            <input type="range" min="1" max="10000" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="num_i5" required="required"/> 
+            <output>10</output>
         </div>
     </div>
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Number of model i7</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="horizontal-firstname-input" name="num_i7" required="required"/>
+            <input type="range" min="1" max="10000" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="num_i7" required="required"/> 
+            <output>10</output>
         </div>
     </div>
     <div class="row mb-4">
         <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Number of model i9</label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="horizontal-firstname-input" name="num_i9" required="required"/>
+            <input type="range" min="1" max="10000" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="num_i9" required="required"/> 
+            <output>10</output>
         </div>
     </div>
 
@@ -45,7 +50,6 @@
                     echo "<td align='center'>". "$operation_type_row[chip_model]". "</td>";
                     echo "<td align='center'>". "$operation_type_row[operation_type]". "</td>";
                     echo "<td align='center'>";
-                        $name = array_shift($submited_names);
                         echo "<select name='$name' class='form-control' required='required'>";
                             $name++;
                             $plants = $mysqli->query("SELECT plant_name FROM Plants");
