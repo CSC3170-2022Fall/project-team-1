@@ -1,5 +1,0 @@
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import', 'i9', 'boy', '0', '100', '10');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test', 'i9', 'boy', '0', '10', '100');
