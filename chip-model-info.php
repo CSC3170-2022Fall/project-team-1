@@ -4,17 +4,19 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Directory | Lexa - Admin & Dashboard Template</title>
+        <title>Form Elements | Lexa - Admin & Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
+		<style>
+		</style>
         
         <!-- Bootstrap Css -->
-        <link href="static/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
         <!-- Icons Css -->
-        <link href="static/css/icons.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
         <!-- App Css-->
-        <link href="static/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
 
     </head>
 
@@ -28,6 +30,23 @@
                 <div class="navbar-header">
 
                     <div class="d-flex">
+                        <!-- LOGO -->
+                        <div class="navbar-brand-box">
+
+                            <a href="index.php" class="logo logo-light">
+                                <span class="logo-sm">
+                                    <img src="images/index/robot1.png" alt="" height="45">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="images/index/robot1.png" alt="" height="35">
+                                </span>
+                            </a>
+							<div>Chip Land</div>
+                        </div>
+
+                        <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
 
                         <!--Back to index-->
                         </div class = "Back to index">
@@ -35,13 +54,37 @@
                                 <h4>Back to Index</h4>
                             </button>
                         </div>
+
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="dropdown d-none d-lg-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                                <i class="mdi mdi-fullscreen font-size-24"></i>
+                            </button>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="assets/picture/user-4.jpg" alt="Header Avatar">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="index.php"><i class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                                <i class="mdi mdi-spin mdi-cog"></i>
+                            </button>
+                        </div>      
+
                     </div>
                 </div>
             </header> 
             
             <!-- ========== Left Sidebar Start ========== -->
-            
-            <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->
             <!-- Start right Content here -->
