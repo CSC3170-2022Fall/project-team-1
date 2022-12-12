@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="row mb-4">
-        <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Model number</label>
+        <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Machine number</label>
         <div class="col-sm-9">
             <input type="range" min="1" max="100" value="10" oninput="this.nextElementSibling.value = this.value" class="form-control" id="horizontal-firstname-input" name="machine_model_num" required="required"/> 
             <output>10</output>
@@ -24,16 +24,19 @@
             <th>Expense</th>
             <?php
                 $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
-                $time_expense_submitted = range(1, 30, 1);
-
+                $name = 1;
+                $time = 10;
+                $expense = 100;
                 while ($operation_type_row = mysqli_fetch_array($operation_types)) {
                     echo "<tr>";
                         echo "<td align='center'>". "$operation_type_row[chip_model]". "</td>";
                         echo "<td align='center'>". "$operation_type_row[operation_type]". "</td>";
-                        $time_expense = array_shift($time_expense_submitted);
-                        echo "<td align='center'>". "<input type='range' min='1' max='100' value='10' oninput='this.nextElementSibling.value = this.value' name='$time_expense'/>" . "<output>10</output>". "</td>";
-                        $time_expense = array_shift($time_expense_submitted);
-                        echo "<td align='center'>". "<input type='range' min='10' max='1000' value='100' oninput='this.nextElementSibling.value = this.value' name='$time_expense'/>" . "<output>100</output>". "</td>";
+                        echo "<td align='center'>". "<input type='range' min='1' max='100' value='$time' oninput='this.nextElementSibling.value = this.value' name='$name'/>" . "<output>$time</output>". "</td>";
+                        $name++;
+                        $time = $time + 5;
+                        echo "<td align='center'>". "<input type='range' min='10' max='1000' value='$expense' oninput='this.nextElementSibling.value = this.value' name='$name'/>" . "<output>$expense</output>". "</td>";
+                        $name++;
+                        $expense = $expense + 50;
                     echo "</tr>";
                 } 
             ?>

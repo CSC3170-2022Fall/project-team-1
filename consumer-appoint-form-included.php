@@ -39,8 +39,7 @@
             <th align='center'>Plant</th>
             <?php 
                 $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
-                $submited_names = range(1, 15, 1);
-
+                $name = 1;
                 while ($operation_type_row = mysqli_fetch_array($operation_types)) {
                 echo "<tr>";
                     echo "<td align='center'>". "$operation_type_row[chip_model]". "</td>";
@@ -48,6 +47,7 @@
                     echo "<td align='center'>";
                         $name = array_shift($submited_names);
                         echo "<select name='$name' class='form-control' required='required'>";
+                            $name++;
                             $plants = $mysqli->query("SELECT plant_name FROM Plants");
                             while ($plant_row = mysqli_fetch_array($plants)) 
                                 echo '<option>'. $plant_row['plant_name']. '</option>';

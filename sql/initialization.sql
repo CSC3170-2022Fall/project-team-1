@@ -86,6 +86,8 @@ CREATE TABLE Processing_Records
 );
 
 
+
+
 INSERT INTO Chip_Models (`chip_model`) VALUES ('i5');
 INSERT INTO Chip_Models (`chip_model`) VALUES ('i7');
 INSERT INTO Chip_Models (`chip_model`) VALUES ('i9');
@@ -107,34 +109,4 @@ INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES 
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'test', '50');
 
 INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('aaa', '123');
-
 INSERT INTO Plants (`plant_name`, `password`) VALUES ('apple', '123');
-INSERT INTO Machine_Models (`machine_model`) VALUES ('boy');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '1', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '2', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '3', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '4', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '5', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '6', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '7', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '8', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '9', 'boy', '1');
-INSERT INTO Machines_in_Plants (`plant_name`, `machine_ID`, `machine_model`, `available`) VALUES ('apple', '10', 'boy', '1');
-
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import', 'i5', 'boy', '1', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch', 'i5', 'boy', '1', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond', 'i5', 'boy', '1', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill', 'i5', 'boy', '1', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test', 'i5', 'boy', '1', '10', '100');
-
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import', 'i7', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch', 'i7', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond', 'i7', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill', 'i7', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test', 'i7', 'boy', '0', '10', '100');
-
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('design-import', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('etch', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('bond', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('drill', 'i9', 'boy', '0', '10', '100');
-INSERT INTO Operations_on_Machine_Models (`operation_type`, `chip_model`, `machine_model`, `feasibility`, `time`, `expense`) VALUES ('test', 'i9', 'boy', '0', '10', '100');
