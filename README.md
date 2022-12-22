@@ -57,3 +57,21 @@ After thorough discussion, our team made the choice and the specification inform
 	- Chip model introduction (different chip models have different operations, which are of different types) 
 	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
 	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
+
+## Contribution (Temporary)
+
+- Database design
+	- 王广
+	- 颜钰劼
+- Frontend
+	- 郭好
+	- 宫燕亮
+	- 颜钰劼
+- Backend
+	- 王广
+	- 宫燕亮
+- Visluzation
+	- 乔雨柔	
+	- 王广
+- Presentation
+- Report
