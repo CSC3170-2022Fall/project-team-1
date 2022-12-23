@@ -1,3 +1,9 @@
+<html>
+	<head>
+		<title>Plant Login</title>
+	</head>
+</html>
+
 <?php
 	$includer_file_name = basename(__FILE__);
 	include "login-signup-universal-frontend.php"
