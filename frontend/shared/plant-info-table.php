@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ";
     while ($operation_info = mysqli_fetch_array($machine_model_info)) {
         $operation_type = $operation_info['operation_type'];
-        $feasibility = $operation_info['feasibility'];
+        $feasibility = $operation_info['feasibility'] == 1 ? "Yes" : "No";
         $time = $operation_info['time'];
         $expense = $operation_info['expense'];
         echo "<tr>
