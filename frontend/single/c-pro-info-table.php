@@ -51,6 +51,8 @@
             <th>Chip Model</th>
             <th>Chip ID</th>
             <th>Operation Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
             <th>Expense</th>
             <th>Plant</th>
             <th>Machine Model</th>
@@ -64,6 +66,8 @@
                 <td>' . $processing_records_row['chip_model'] . '</td>
                 <td>' . $processing_records_row['chip_ID'] . '</td>
                 <td>' . $processing_records_row['operation_type'] . '</td>
+                <td>' . $processing_records_row['start_time'] . '</td>
+                <td>' . $processing_records_row['end_time'] . '</td>
                 <td>' . $processing_records_row['expense'] . '</td>
                 <td>' . $processing_records_row['plant_name'] . '</td>
                 <td>' . $processing_records_row['machine_model'] . '</td>
