@@ -57,7 +57,7 @@
                                 class="img-fluid image" src="images/index//i5.jpg"></a></div>
                     <div class="col-md-5 col-lg-4 item zoom-on-hover"><a href="chip-model-info.php"><img
                                 class="img-fluid image" src="images/index//i7.jpg"></a></div>
-                    <div class="col-md-5 col-lg-4 item zoom-on-hover" id="iii""><a href=" chip-model-info.php">
+                    <div class="col-md-5 col-lg-4 item zoom-on-hover" id="iii"><a href=" chip-model-info.php">
                         <img class="img-fluid image" src="images/index//i9.jpg"></a>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
 <!-- backend: create database -->
 <?php
 //connect to DBMS
-$mysqli = new mysqli("localhost", 'root', '');
+$mysqli = new mysqli("localhost:3316", 'root', '');
 if ($mysqli->connect_errno) {
     printf("Failed to connect: %s<br />", $mysqli->connect_error);
     exit();

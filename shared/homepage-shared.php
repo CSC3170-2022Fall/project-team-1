@@ -44,7 +44,7 @@ if ($client == "consumer") {
     $name = $_SESSION['plant_name'];
 }
 
-$mysqli = new mysqli("localhost", 'root', '', "chip_website");
+$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 ?>
 
 

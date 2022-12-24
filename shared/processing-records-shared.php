@@ -10,7 +10,7 @@ if ($_SESSION['consumer_name']) {
     echo '<script>window.location.assign("index.php");</script>';
 }
 
-$mysqli = new mysqli("localhost", 'root', '', "chip_website");
+$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 ?>
 
 

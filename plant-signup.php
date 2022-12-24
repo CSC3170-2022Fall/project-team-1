@@ -9,7 +9,7 @@ include "shared/signin-signup-shared.php"
 <!-- backend: insert into database -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$mysqli = new mysqli("localhost", 'root', '', "chip_website");
+	$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 	session_start();
 	$plant_name = $mysqli->real_escape_string($_POST['username']);
 	$password = $mysqli->real_escape_string($_POST['password']);
