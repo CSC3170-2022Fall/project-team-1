@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $num_row = mysqli_num_rows($query);
     if ($num_row == 1) {
         echo '<script>alert("Machine model exists!");</script>';
-        echo '<script>window.location.assign("plant-publish.php");</script>';
+        echo '<script>window.location.assign("p-publish.php");</script>';
     } else {
         $machine_model_num = $mysqli->real_escape_string($_POST['machine_model_num']);
 
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
         echo '<script>alert("Successfully published!");</script>';
-        echo '<script>window.location.assign("plant-publish.php");</script>';
+        echo '<script>window.location.assign("p-publish.php");</script>';
     }
 }
 ?>

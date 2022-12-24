@@ -1,3 +1,36 @@
+<!-- backend: create database if not exists -->
+<?php
+session_start();
+if (!array_key_exists("consumer_name", $_SESSION)) {
+    $_SESSION['consumer_name'] = null;
+}
+if (!array_key_exists("plant_name", $_SESSION)) {
+    $_SESSION['plant_name'] = null;
+}
+
+$mysqli = mysqli_connect("localhost", 'root', '', 'chip_website'); //connect to database
+if (!$mysqli) {
+    $mysqli = mysqli_connect("localhost", 'root', ''); //connect to DBMS
+    $mysqli->query("CREATE DATABASE chip_website"); //create database
+    $mysqli->select_db('chip_website'); //select database
+    $lines = file("sql/initialization.sql"); //create tables by loading the SQL file (Note: the SQL CAN'T can't contain comments)
+    $templine = '';
+    foreach ($lines as $line) { //loop through each line
+        if (substr($line, 0, 2) == '--' || $line == '') {
+            continue; //skip it if it's a comment
+        }
+        $templine .= $line; //add this line to the current segment
+        if (substr(trim($line), -1, 1) == ';') { //if it has a semicolon at the end, it's the end of the query
+            $mysqli->query($templine);
+            $templine = ''; //reset temp variable to empty
+        }
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -55,8 +88,8 @@
                     </p>
                     <a class="btn btn-outline-primary" role="button" href="c-appoint.php"
                         style="margin-right: 10px;">I'm a consumer</a>
-                    <a class="btn btn-outline-primary" role="button" href="p-publish.php"
-                        style="margin-left: 10px;">I'm a plant owner</a>
+                    <a class="btn btn-outline-primary" role="button" href="p-publish.php" style="margin-left: 10px;">I'm
+                        a plant owner</a>
                 </div>
             </div>
         </section>
@@ -171,43 +204,6 @@
     <script src="assets/bootstrap/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
     <script src="assets/js/theme.js"></script>
-
-</body>
-
-</html>
-
-
-
-
-<!-- backend: create database -->
-<?php
-//connect to DBMS
-$mysqli = new mysqli("localhost", 'root', '');
-if ($mysqli->connect_errno) {
-    printf("Failed to connect: %s<br />", $mysqli->connect_error);
-    exit();
-}
-//create database
-$mysqli->query("CREATE DATABASE chip_website");
-if ($mysqli->errno) {
-    printf("Could not create database: %s<br />", $mysqli->error);
-}
-//select database
-$mysqli->select_db('chip_website');
-
-//create tables by loading the SQL file (Note: the SQL CAN'T can't contain comments)
-$lines = file("sql/initialization.sql");
-$templine = '';
-foreach ($lines as $line) { //loop through each line
-    if (substr($line, 0, 2) == '--' || $line == '')
-        continue; //skip it if it's a comment
-    $templine .= $line; //add this line to the current segment
-    if (substr(trim($line), -1, 1) == ';') { //if it has a semicolon at the end, it's the end of the query
-        $mysqli->query($templine);
-        $templine = ''; //reset temp variable to empty
-    }
-}
-?>
 
 </body>
 

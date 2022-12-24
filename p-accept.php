@@ -28,6 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     echo '<script>alert("Successfully accepted with available machines!");</script>';
-    echo '<script>window.location.assign("plant-accept.php");</script>';
+    echo '<script>window.location.assign("p-accept.php");</script>';
 }
 ?>

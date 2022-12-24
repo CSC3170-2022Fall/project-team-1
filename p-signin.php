@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-require "frontend/shared/signin-signup.php"
+require_once "frontend/shared/signin-signup.php"
 ?>
 
 
@@ -9,9 +9,8 @@ require "frontend/shared/signin-signup.php"
 <!-- backend: check login -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$mysqli = new mysqli("localhost", 'root', '', "chip_website");
-	session_start();
-	$plant_name = $mysqli->real_escape_string($_POST['username']);
+	$mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
+	$plant_name = $mysqli->real_escape_string($_POST['username']);	
 	$password = $mysqli->real_escape_string($_POST['password']);
 
 	$query = $mysqli->query("SELECT * FROM Plants WHERE `plant_name` = '$plant_name'");

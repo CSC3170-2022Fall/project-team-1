@@ -51,6 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mysqli->query("INSERT INTO Processing_Records (`operation_type`, `chip_ID`, `package_ID`, `plant_name`, `chip_model`) VALUES ('test', '$chip_ID', '$new_package_ID', '$plants[14]', 'i9')");
     }
     print '<script>alert("Successfully appointed!");</script>';
-    print '<script>window.location.assign("consumer-appoint.php");</script>';
+    print '<script>window.location.assign("c-appoint.php");</script>';
 }
 ?>

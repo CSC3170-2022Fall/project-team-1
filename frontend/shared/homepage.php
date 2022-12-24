@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $client = "consumer";
 
 if ($requiring_file_name == "c-appoint.php") {
@@ -6,7 +8,7 @@ if ($requiring_file_name == "c-appoint.php") {
     $required_file_name = "frontend/single/c-appoint-table.php";
 } elseif ($requiring_file_name == "c-plant-info.php") {
     $title = "Plant Information";
-    $required_file_name = "frontend/single/c-plant-info-table.php";
+    $required_file_name = "frontend/shared/plant-info-table.php";
 } elseif ($requiring_file_name == "c-pro-records.php") {
     $title = "Consumer Processing Records";
     $required_file_name = "frontend/shared/pro-records-chart.php";
@@ -21,6 +23,10 @@ if ($requiring_file_name == "c-appoint.php") {
     $client = "plant";
     $title = "Plant Accept";
     $required_file_name = "frontend/single/p-accept-table.php";
+} elseif ($requiring_file_name == "p-plant-info.php") {
+    $client = "plant";
+    $title = "Plant Information";
+    $required_file_name = "frontend/shared/plant-info-table.php";
 } elseif ($requiring_file_name == "p-pro-records.php") {
     $client = "plant";
     $title = "Plant Processing Records";
@@ -32,22 +38,24 @@ if ($requiring_file_name == "c-appoint.php") {
 }
 
 if ($client == "consumer") {
-    session_start();
-    if (!$_SESSION['consumer_name']) {
+    if ($_SESSION['consumer_name']) {
+        $_SESSION['plant_name'] = null;
+        $consumer_name = $_SESSION['consumer_name'];
+    } else {
         echo '<script>window.location.assign("c-signin.php");</script>';
     }
-    $_SESSION['plant_name'] = null;
-    $name = $_SESSION['consumer_name'];
 } elseif ($client == "plant") {
-    session_start();
-    if (!$_SESSION['plant_name']) {
+    if ($_SESSION['plant_name']) {
+        $_SESSION['consumer_name'] = null;
+        $plant_name = $_SESSION['plant_name'];
+    } else {
         echo '<script>window.location.assign("p-signin.php");</script>';
     }
-    $_SESSION['consumer_name'] = null;
-    $name = $_SESSION['plant_name'];
+} else {
+    echo '<script>window.location.assign("index.php");</script>';
 }
 
-$mysqli = new mysqli("localhost", 'root', '', "chip_website");
+$mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
 ?>
 
 
@@ -70,8 +78,6 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
 </head>
-
-
 
 <body data-sidebar="dark">
 
@@ -113,7 +119,7 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="signout.php"><i
+                            <a class="dropdown-item text-danger" href="backend/signout.php"><i
                                     class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i>
                                 Sign out</a>
                         </div>
@@ -169,7 +175,7 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
                                         </a>
                                     </li>
                                 ';
-                        } elseif ($client == "plant") {
+                        } else {
                             echo '
                                     <li>
                                         <a href="p-publish.php" class="waves-effect">
@@ -181,6 +187,12 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
                                         <a href="p-accept.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Accept</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="p-plant-info.php" class="waves-effect">
+                                            <i class="mdi mdi-clipboard-outline"></i>
+                                            <span>Plant Information</span>
                                         </a>
                                     </li>
                                     <li>
@@ -217,7 +229,14 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="page-title-box">
-                                <h2>Hello <?php echo "$name" ?>! <!--Displays plant's name--></h2>
+                                <?php
+                                if ($client == "consumer") {
+                                    $name = $_SESSION['consumer_name'];
+                                } else {
+                                    $name = $_SESSION['plant_name'];
+                                }
+                                ?>
+                                <h2>Hello, <?php echo "$name" ?>! <!--Displays plant's name--></h2>
                             </div>
                         </div>
                     </div>

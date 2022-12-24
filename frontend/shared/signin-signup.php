@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($requiring_file_name == "c-signin.php") {
 	$signup_file_name = "c-signup.php";
 	$title = "Consumer Signin";
@@ -11,6 +13,7 @@ if ($requiring_file_name == "c-signin.php") {
 	$title = "Plant Signup";
 }
 ?>
+
 
 
 

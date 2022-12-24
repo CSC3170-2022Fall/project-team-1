@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-include "frontend/shared/signin-signup.php"
+require_once "frontend/shared/signin-signup.php"
 ?>
 
 
@@ -9,8 +9,7 @@ include "frontend/shared/signin-signup.php"
 <!-- backend: insert into database -->
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$mysqli = new mysqli("localhost", 'root', '', "chip_website");
-	session_start();
+	$mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
 	$consumer_name = $mysqli->real_escape_string($_POST['username']);
 	$password = $mysqli->real_escape_string($_POST['password']);
 

@@ -1,21 +1,5 @@
-<?php
-$client = "consumer";
-session_start();
-if ($_SESSION['consumer_name']) {
-    $consumer_name = $_SESSION['consumer_name'];
-} elseif ($_SESSION['plant_name']) {
-    $plant_name = $_SESSION['plant_name'];
-    $client = "plant";
-} else {
-    echo '<script>window.location.assign("index.php");</script>';
-}
-
-$mysqli = new mysqli("localhost", 'root', '', "chip_website");
-?>
-
-
-
-<h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of Your Packages</h5>
+<h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of
+    Your Packages</h5>
 
 <div class="row justify-content-end">
     <table border='2px' style="margin-left:150px; font-size:medium">
@@ -25,7 +9,6 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
         <th>Expense Budget</th>
         <th>Expense Needed</th>
         <?php
-
         $packages = $mysqli->query("SELECT * FROM Packages WHERE consumer_name = '$consumer_name'");
         while ($packages_row = mysqli_fetch_array($packages)) {
             $package_ID = $packages_row['package_ID'];
@@ -59,7 +42,8 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
     </table>
 
 
-    <h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of Your Operations</h5>
+    <h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i
+            class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of Your Operations</h5>
 
     <div class="row justify-content-end">
         <table border='2px' style="margin-left:150px; font-size:medium">
