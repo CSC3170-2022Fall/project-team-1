@@ -20,8 +20,9 @@
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="#">Chip Land</a><button data-bs-toggle="collapse"
-                class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle
+        <div class="container"><a class="navbar-brand logo" href="index.php">Chip Land</a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span
+                    class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">

@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-include "shared/signup-shared.php"
+include "shared/signin-signup-shared.php"
 ?>
 
 
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$consumer_name = $mysqli->real_escape_string($_POST['username']);
 	$password = $mysqli->real_escape_string($_POST['password']);
 
-	$query = $mysqli->query("SELECT * FROM Plants WHERE `consumer_name` = '$consumer_name'");
+	$query = $mysqli->query("SELECT * FROM Consumers WHERE `consumer_name` = '$consumer_name'");
 	$num_row = mysqli_num_rows($query);
 	echo $num_row;
 	if ($num_row == 1) {
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$mysqli->query("INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('$consumer_name','$password')");
 		print '<script>alert("Successfully signed up and logged in!");</script>';
 		$_SESSION['consumer_name'] = $consumer_name;
-		print '<script>window.location.assign("consumer-publish.php");</script>';
+		print '<script>window.location.assign("consumer-appoint.php");</script>';
 	}
 }
 ?>

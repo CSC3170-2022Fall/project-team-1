@@ -6,10 +6,8 @@ if ($requiring_file_name == "consumer-signin.php") {
 	$signup_file_name = "plant-signup.php";
 	$title = "Plant Signin";
 } elseif ($requiring_file_name == "consumer-signup.php") {
-	$signup_file_name = $requiring_file_name;
 	$title = "Consumer Signup";
 } else {
-	$signup_file_name = $requiring_file_name;
 	$title = "Plant Signup";
 }
 ?>
@@ -31,8 +29,9 @@ if ($requiring_file_name == "consumer-signin.php") {
 
 <body>
 	<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-		<div class="container"><a class="navbar-brand logo" href="#">Chip Land</a><button data-bs-toggle="collapse"
-				class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle
+		<div class="container"><a class="navbar-brand logo" href="index.php">Chip Land</a><button
+				data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span
+					class="visually-hidden">Toggle
 					navigation</span><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
@@ -70,9 +69,11 @@ if ($requiring_file_name == "consumer-signin.php") {
 	</main>
 	<footer class="page-footer">
 		<div class="container">
-			<div class="links">
-				<a href=<?php echo "$signup_file_name" ?>>Signup</a>
-			</div>
+			<?php if ($signup_file_name) {
+	            echo "<div class=\"links\"><a href=\"$signup_file_name\">Signup</a></div>";
+            }
+            ?>
+
 		</div>
 	</footer>
 	<script src="assets/bootstrap/bootstrap.min.js"></script>
