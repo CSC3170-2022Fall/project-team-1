@@ -78,7 +78,7 @@ After thorough discussion, our team made the choice and the specification inform
  	- 王广
  - Presentation
  - Report
-
+ 	- 颜钰劼
 
 ## Historical Progress
 
