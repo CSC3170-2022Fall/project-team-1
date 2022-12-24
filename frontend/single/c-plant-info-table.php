@@ -5,7 +5,7 @@ if ($_SESSION['consumer_name']) {
 } else {
     echo '<script>window.location.assign("consumer-login.php");</script>';
 }
-$mysqli = new mysqli("localhost", 'root', '', "chip_website");
+$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 ?>
 
 
