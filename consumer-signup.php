@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-include "shared/signin-singup-shared.php"
+include "shared/signup-shared.php"
 ?>
 
 
