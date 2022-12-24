@@ -10,15 +10,17 @@
     <meta content="Themesbrand" name="author">
 
     <style>
-        .mainm{
+        .mainm {
             background-color: transparent;
             width: 100%;
-            height:60px;
+            height: 60px;
         }
-        #ccc{
+
+        #ccc {
             float: left;
         }
-        #topp{
+
+        #topp {
             height: auto;
         }
     </style>
@@ -57,116 +59,116 @@
                     </div>
 
                     <!--Back to index-->
-                    </div class="Back to index" href="index.php">
-                        <button  type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <a href="index.php">
-                            <h4 >Back to Index</h4>
-                            </a>
-                        </button>
-                    </div>
+                </div class="Back to index" href="index.php">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="index.php">
+                        <h4>Back to Index</h4>
+                    </a>
+                </button>
+            </div>
 
+    </div>
+    </div>
+
+    </header>
+
+    <!-- ========== Left Sidebar Start ========== -->
+
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <div class="mainm"></div>
+    <div>
+
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="page-title-box">
+                            <h4>Chip Model Information</h4>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-        </header>
+                <!-- end page title -->
 
-        <!-- ========== Left Sidebar Start ========== -->
+                <div class="row">
 
-        <!-- ============================================================== -->
-        <!-- Start right Content here -->
-        <!-- ============================================================== -->
-        <div class = "mainm"></div>
-        <div >
-
-            <div class="page-content">
-                <div class="container-fluid">
-
-                    <!-- start page title -->
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="page-title-box">
-                                <h4>Chip Model Information</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end page title -->
-
-                    <div class="row">
-
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card directory-card">
-                                <div>
-                                    <div class="directory-bg text-center">
-                                        <div class="directory-overlay">
-                                            <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i5.jpg"
-                                                alt="Generic placeholder image">
-                                        </div>
-                                    </div>
-
-                                    <div class="directory-content text-center p-4">
-                                        <p class=" mt-4">Chip</p>
-                                        <h5 class="font-size-16">i5</h5>
-                                        <p class="text-muted">I5 is a mid tier product. It has no problem playing most
-                                            games, and its basic functions are fully adequate.</p>
-
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card directory-card">
+                            <div>
+                                <div class="directory-bg text-center">
+                                    <div class="directory-overlay">
+                                        <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i5.jpg"
+                                            alt="Generic placeholder image">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
 
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card directory-card">
-                                <div >
-                                    <div class="directory-bg text-center">
-                                        <div class="directory-overlay">
-                                            <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i7.jpg"
-                                                alt="Generic placeholder image">
-                                        </div>
-                                    </div>
+                                <div class="directory-content text-center p-4">
+                                    <p class=" mt-4">Chip</p>
+                                    <h5 class="font-size-16">i5</h5>
+                                    <p class="text-muted">I5 is a mid tier product. It has no problem playing most
+                                        games, and its basic functions are fully adequate.</p>
 
-                                    <div class="directory-content text-center p-4">
-                                        <p class=" mt-4">Chip</p>
-                                        <h5 class="font-size-16">i7</h5>
-                                        <p class="text-muted">The i7 is a high-end product. There is basically no problem in
-                                            playing games with the i7. Most product software will not be stuck when used.
-                                        </p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end col -->
-
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card directory-card">
-                                <div>
-                                    <div class="directory-bg text-center">
-                                        <div class="directory-overlay">
-                                            <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i9.jpg"
-                                                alt="Generic placeholder image">
-                                        </div>
-                                    </div>
-
-                                    <div class="directory-content text-center p-4">
-                                        <p class=" mt-4">Chip</p>
-                                        <h5 class="font-size-16">i9</h5>
-                                        <p class="text-muted">I9 is a top product. For example, heavy modeling or 4K video
-                                            editing lead to insufficient productivity.</p>
-
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end row -->
+                    <!-- end col -->
 
-                </div> <!-- container-fluid -->
-            </div>
-            <!-- End Page-content -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card directory-card">
+                            <div>
+                                <div class="directory-bg text-center">
+                                    <div class="directory-overlay">
+                                        <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i7.jpg"
+                                            alt="Generic placeholder image">
+                                    </div>
+                                </div>
+
+                                <div class="directory-content text-center p-4">
+                                    <p class=" mt-4">Chip</p>
+                                    <h5 class="font-size-16">i7</h5>
+                                    <p class="text-muted">The i7 is a high-end product. There is basically no problem in
+                                        playing games with the i7. Most product software will not be stuck when used.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-xl-4 col-md-6">
+                        <div class="card directory-card">
+                            <div>
+                                <div class="directory-bg text-center">
+                                    <div class="directory-overlay">
+                                        <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i9.jpg"
+                                            alt="Generic placeholder image">
+                                    </div>
+                                </div>
+
+                                <div class="directory-content text-center p-4">
+                                    <p class=" mt-4">Chip</p>
+                                    <h5 class="font-size-16">i9</h5>
+                                    <p class="text-muted">I9 is a top product. For example, heavy modeling or 4K video
+                                        editing lead to insufficient productivity.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+            </div> <!-- container-fluid -->
         </div>
-        <!-- end main content-->
+        <!-- End Page-content -->
+    </div>
+    <!-- end main content-->
 
     </div>
     <!-- END layout-wrapper -->

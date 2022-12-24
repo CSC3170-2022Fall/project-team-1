@@ -20,15 +20,15 @@
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="index.php">Chip Land</a><button
+        <div class="container"><a class="navbar-brand logo" href="index.php">ChipLand</a><button
                 data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span
                     class="visually-hidden">Toggle
                     navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="consumer-appoint.php">Consumer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="plant-publish.php">Plant Owner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="c-appoint.php">Consumer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="p-publish.php">Plant Owner</a></li>
                 </ul>
             </div>
         </div>
@@ -37,15 +37,25 @@
         <section class="portfolio-block block-intro">
             <div class="container">
                 <div class="avatar" style="background-image:url(images/index/robot1.png);"></div>
+                <div class="about-me" style="font-size:large;"></div>
+                <h1>The bridge between chip owner and producer.
+                </h1>
+            </div>
+            </div>
+            <div class="container">
                 <div class="about-me">
-                    <p>Hi! Welcome to <strong>Chip Land</strong>! I am your personal assitant <strong>CCC</strong>. You
-                        can get your chips just by retrieving in our database based on your personal needs.
-                        We will provide the optimal plants that satisfy your condition. If you own a plant, hurry up to
-                        sign up and get your order. <strong>Come and Join Us!</strong>
-                        Click the following buttons to sign in or sign up.</p>
-                    <a class="btn btn-outline-primary" role="button" href="consumer-appoint.php"
+                    <p>Hi! Welcome to ChipLand! I am your personal assistant CCC.
+                        <br>
+                        You
+                        can appoint <strong>specified plants</strong> to produce chips for you.
+                        <br>
+                        If you own a plant, hurry up to
+                        sign up and <strong>get your orders</strong>.
+                        <br>
+                    </p>
+                    <a class="btn btn-outline-primary" role="button" href="c-appoint.php"
                         style="margin-right: 10px;">I'm a consumer</a>
-                    <a class="btn btn-outline-primary" role="button" href="plant-publish.php"
+                    <a class="btn btn-outline-primary" role="button" href="p-publish.php"
                         style="margin-left: 10px;">I'm a plant owner</a>
                 </div>
             </div>
@@ -83,7 +93,7 @@
                                 <h3 class="card-title">ALL FREE!</h3>
                                 <p class="card-text">All the resources including plants information and consumer posts
                                     are available for free.
-                                    You can easily get what you need by using Chip Land.
+                                    You can easily get what you need by using ChipLand.
                                 </p>
                             </div>
                         </div>
@@ -150,10 +160,10 @@
             <span>// No product or component can be absolutely secure.
                 // Your costs and results may vary.
                 // See our complete legal Notices and Disclaimers.
-                // Chip Land is committed to respecting human rights and
+                // ChipLand is committed to respecting human rights and
                 avoiding complicity in human rights abuses.
-                See Chip Land's Global Human Rights Principles.
-                Chip Land's products and software are intended only to be
+                See ChipLand's Global Human Rights Principles.
+                ChipLand's products and software are intended only to be
                 used in applications that do not cause or contribute to a
                 violation of an internationally recognized human right.Copyright @ 2022</span><br>
         </div>
