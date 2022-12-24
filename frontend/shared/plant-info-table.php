@@ -11,15 +11,18 @@
         <th>Available Number</th>
 
         <?php
-        $machines = $mysqli->query("SELECT * FROM machines_in_Plants WHERE `available` = 1 ORDER BY `plant_name` ASC, `machine_model` ASC");
+        $machines = $mysqli->query("SELECT * FROM Machines_in_Plants WHERE `available` = 1 ORDER BY `plant_name` ASC, `machine_model` ASC");
+        $available_number = 0;
         while ($machines_row = mysqli_fetch_array($machines)) {
-            $available_number = 0;
+            $available_number = $available_number > 0 ? 2 : 1;
             $plant_name = $machines_row['plant_name'];
             $machine_model = $machines_row['machine_model'];
 
             while ($machines_row = mysqli_fetch_array($machines)) {
                 if ($plant_name == $machines_row['plant_name'] && $machine_model == $machines_row['machine_model']) {
                     $available_number++;
+                } else {
+                    break;
                 }
             }
 

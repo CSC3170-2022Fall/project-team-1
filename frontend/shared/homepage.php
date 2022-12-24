@@ -80,10 +80,8 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
 </head>
 
 <body data-sidebar="dark">
-
     <!-- Begin page -->
     <div id="layout-wrapper">
-
         <header id="page-topbar">
             <div class="navbar-header">
                 <div class="d-flex">
@@ -100,16 +98,12 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                         </a>
                         <div>ChipLand</div>
                     </div>
-
                     <button type="button"
                         class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
                         <i class="mdi mdi-menu"></i>
                     </button>
-
                 </div>
-
                 <div class="d-flex">
-
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -124,29 +118,21 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                                 Sign out</a>
                         </div>
                     </div>
-
-
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                             <i class="mdi mdi-spin mdi-cog"></i>
                         </button>
                     </div>
-
-
                 </div>
             </div>
         </header>
-
         <!-- ========== Left Sidebar Start ========== -->
         <div class="vertical-menu">
-
             <div data-simplebar="" class="h-100">
-
                 <!--- Sidemenu -->
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
                     <ul class="metismenu list-unstyled" id="side-menu">
-
                         <?php
                         if ($client == "consumer") {
                             echo '
@@ -221,10 +207,8 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
         <!-- Start right Content here -->
         <!-- ============================================================== -->
         <div class="main-content">
-
             <div class="page-content">
                 <div class="container-fluid">
-
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-sm-6">
@@ -241,7 +225,6 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                         </div>
                     </div>
                     <!-- end page title -->
-
                     <!-- form layouts -->
                     <div class="row">
                         <div class="col-lg-12">
@@ -253,11 +236,9 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                                     </div>
                                 </div>
                                 <!-- containing single select -->
-
                             </div>
                         </div>
                         <!-- End Form Layout -->
-
 
                     </div> <!-- container-fluid -->
                 </div>
@@ -265,31 +246,22 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                 <!-- originally footer -->
             </div>
             <!-- end main content-->
-
         </div>
         <!-- END layout-wrapper -->
-
         <!-- Right Sidebar -->
         <div class="right-bar">
             <div data-simplebar="" class="h-100">
-
                 <div class="rightbar-title d-flex align-items-center px-3 py-4">
-
                     <h5 class="m-0 me-2">Settings</h5>
-
                     <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                         <i class="mdi mdi-close noti-icon"></i>
                     </a>
                 </div>
-
-
             </div> <!-- end slimscroll-menu-->
         </div>
         <!-- /Right-bar -->
-
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-
         <!-- JAVASCRIPT -->
         <script src="assets/js/js/jquery.min.js"></script>
         <script src="assets/js/js/bootstrap.bundle.min.js"></script>
@@ -297,7 +269,6 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
         <script src="assets/js/js/simplebar.min.js"></script>
         <script src="assets/js/js/waves.min.js"></script>
         <script src="assets/js/js/jquery.sparkline.min.js"></script>
-
         <!-- App js -->
         <script src="assets/js/js/app.js"></script>
 </body>

@@ -70,12 +70,12 @@
 
         var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
-        <?php
-        if ($processing_ID > 0) {
-            echo "chart.draw(data, options);";
+            <?php
+            if ($processing_ID > 0) {
+                echo "chart.draw(data, options);";
+            }
+            ?>
         }
-        ?>
-    }
 </script>
 
 <div id="chart_div" style="margin: 0 auto; width:1400px" ;></div>

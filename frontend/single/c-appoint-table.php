@@ -1,7 +1,6 @@
 <div class="col-lg-3"></div>
 <div class="col-lg-6">
     <div class="mt-4">
-
         <h5 class="font-size-20 mb-4" style="margin-top: 20px"><i
                 class="mdi mdi-arrow-right text-primary me-1"></i>Appointment Form</h5>
 
@@ -51,7 +50,6 @@
                     <output>3</output>
                 </div>
             </div>
-
             <div class="row justify-content-end" id="aaa">
                 <!-- editable tables -->
                 <!-- ----------      start        -------------- -->
@@ -64,7 +62,6 @@
                                 <th>Plant</th>
                                 <!-- <th>Edit</th> -->
                             </tr>
-
                         </thead>
                         <tbody>
                             <?php
@@ -86,19 +83,13 @@
                                     </tr>';
                             }
                             ?>
-
                         </tbody>
                     </table>
                 </div>
-                <!-- editable tables -->
-                <!-- ----------      end       -------------- -->
-
-
                 <div style="margin-top:20px;">
                     <button type="submit" class="btn btn-primary w-md" style="font-size:larger">Appoint</button>
                 </div>
             </div>
         </form>
-
     </div>
 </div>

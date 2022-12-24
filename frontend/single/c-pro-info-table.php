@@ -41,7 +41,6 @@
         ?>
     </table>
 
-
     <h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i
             class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of Your Operations</h5>
 
@@ -76,5 +75,5 @@
             }
             ?>
         </table>
-
     </div>
+</div>

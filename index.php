@@ -172,7 +172,7 @@ if (!$mysqli) {
                         Contact us directly if you have any suggestions
                         about our website.<br>
                         Phone directory: 0755-88886666<br>
-                        Email: 120000000@link.cuhk.edu.cn<br>
+                        Email: 120090000@link.cuhk.edu.cn<br>
                         Address: The Chinese University of Hong Kong, Shenzhen, China
                     </p>
                 </div>
@@ -204,7 +204,6 @@ if (!$mysqli) {
     <script src="assets/bootstrap/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
     <script src="assets/js/theme.js"></script>
-
 </body>
 
 </html>

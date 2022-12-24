@@ -9,7 +9,6 @@ $appointment_num = mysqli_num_rows($appointed_operations);
 <div class="col-lg-3"></div>
 <div class="col-lg-6">
 	<div class="mt-4">
-
 		<form action="p-accept.php" method="post">
 			<h5 class="font-size-20 mb-4" style="margin-top: 20px"><i class="mdi text-primary me-1"></i>
 				You have received
@@ -39,6 +38,5 @@ $appointment_num = mysqli_num_rows($appointed_operations);
 				</table>
 			</div>
 		</form>
-
 	</div>
 </div>

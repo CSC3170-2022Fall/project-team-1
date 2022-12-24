@@ -2,7 +2,6 @@
     Your Operations</h5>
 
 <div class="row justify-content-end">
-
     <div class="row justify-content-end">
         <table border='2px' style="margin-left:150px; font-size:medium">
             <th>Package ID</th>
@@ -32,5 +31,5 @@
             }
             ?>
         </table>
-
     </div>
+</div>›
