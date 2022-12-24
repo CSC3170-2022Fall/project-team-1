@@ -1,11 +1,11 @@
 <?php
-if ($requiring_file_name == "consumer-signin.php") {
-	$signup_file_name = "consumer-signup.php";
+if ($requiring_file_name == "c-signin.php") {
+	$signup_file_name = "c-signup.php";
 	$title = "Consumer Signin";
-} elseif ($requiring_file_name == "plant-signin.php") {
-	$signup_file_name = "plant-signup.php";
+} elseif ($requiring_file_name == "p-signin.php") {
+	$signup_file_name = "p-signup.php";
 	$title = "Plant Signin";
-} elseif ($requiring_file_name == "consumer-signup.php") {
+} elseif ($requiring_file_name == "c-signup.php") {
 	$title = "Consumer Signup";
 } else {
 	$title = "Plant Signup";

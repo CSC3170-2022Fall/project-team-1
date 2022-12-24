@@ -1,44 +1,47 @@
 <?php
 $client = "consumer";
 
-if ($requiring_file_name == "consumer-appoint.php") {
+if ($requiring_file_name == "c-appoint.php") {
     $title = "Consumer Appoint";
-    $required_file_name = "consumer-appoint-form-included.php";
-} elseif ($requiring_file_name == "consumer-processing-records.php") {
+    $required_file_name = "frontend/single/c-appoint-table.php";
+} elseif ($requiring_file_name == "c-plant-info.php") {
+    $title = "Plant Information";
+    $required_file_name = "frontend/single/c-plant-info-table.php";
+} elseif ($requiring_file_name == "c-pro-records.php") {
     $title = "Consumer Processing Records";
-    $required_file_name = "shared/processing-records-shared.php";
-} elseif ($requiring_file_name == "consumer-processing-info.php") {
+    $required_file_name = "frontend/shared/pro-records-chart.php";
+} elseif ($requiring_file_name == "c-pro-info.php") {
     $title = "Consumer Processing Information";
-    $required_file_name = "consumer-processing-info-included.php";
-} elseif ($requiring_file_name == "plant-publish.php") {
+    $required_file_name = "frontend/single/c-pro-info-table.php";
+} elseif ($requiring_file_name == "p-publish.php") {
     $client = "plant";
     $title = "Plant Publish";
-    $required_file_name = "plant-publish-form-included.php";
-} elseif ($requiring_file_name == "plant-accept.php") {
+    $required_file_name = "frontend/single/p-publish-table.php";
+} elseif ($requiring_file_name == "p-accept.php") {
     $client = "plant";
     $title = "Plant Accept";
-    $required_file_name = "plant-accept-form-included.php";
-} elseif ($requiring_file_name == "plant-processing-records.php") {
+    $required_file_name = "frontend/single/p-accept-table.php";
+} elseif ($requiring_file_name == "p-pro-records.php") {
     $client = "plant";
     $title = "Plant Processing Records";
-    $required_file_name = "shared/processing-records-shared.php";
-} elseif ($requiring_file_name == "plant-processing-info.php") {
+    $required_file_name = "frontend/shared/pro-records-chart.php";
+} elseif ($requiring_file_name == "p-pro-info.php") {
     $client = "plant";
     $title = "Plant Processing Information";
-    $required_file_name = "plant-processing-info-included.php";
+    $required_file_name = "frontend/single/p-pro-info-table.php";
 }
 
 if ($client == "consumer") {
     session_start();
     if (!$_SESSION['consumer_name']) {
-        echo '<script>window.location.assign("consumer-signin.php");</script>';
+        echo '<script>window.location.assign("c-signin.php");</script>';
     }
     $_SESSION['plant_name'] = null;
     $name = $_SESSION['consumer_name'];
 } elseif ($client == "plant") {
     session_start();
     if (!$_SESSION['plant_name']) {
-        echo '<script>window.location.assign("plant-signin.php");</script>';
+        echo '<script>window.location.assign("p-signin.php");</script>';
     }
     $_SESSION['consumer_name'] = null;
     $name = $_SESSION['plant_name'];
@@ -46,6 +49,7 @@ if ($client == "consumer") {
 
 $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 ?>
+
 
 
 
@@ -141,19 +145,25 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
                         if ($client == "consumer") {
                             echo '
                                     <li>
-                                        <a href="consumer-appoint.php" class="waves-effect">
+                                        <a href="c-appoint.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Appoint</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="consumer-processing-records.php" class="waves-effect">
+                                        <a href="c-plant-info.php" class="waves-effect">
+                                            <i class="mdi mdi-clipboard-outline"></i>
+                                            <span>Plant Information</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="c-pro-records.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Processing Records</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="consumer-processing-info.php" class="waves-effect">
+                                        <a href="c-pro-info.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Processing Information</span>
                                         </a>
@@ -162,25 +172,25 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
                         } elseif ($client == "plant") {
                             echo '
                                     <li>
-                                        <a href="plant-publish.php" class="waves-effect">
+                                        <a href="p-publish.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Publish</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="plant-accept.php" class="waves-effect">
+                                        <a href="p-accept.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Accept</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="plant-processing-records.php" class="waves-effect">
+                                        <a href="p-pro-records.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Processing Records</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="plant-processing-info.php" class="waves-effect">
+                                        <a href="p-pro-info.php" class="waves-effect">
                                             <i class="mdi mdi-clipboard-outline"></i>
                                             <span>Processing Information</span>
                                         </a>

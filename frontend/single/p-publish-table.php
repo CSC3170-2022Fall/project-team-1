@@ -1,13 +1,12 @@
-
-
 <div class="col-lg-2" id="big"></div>
 <div class="col-lg-8" id="aaa">
     <div class="mt-4">
 
 
-        <h5 class="font-size-20 mb-4" style="margin-top: 20px"><i class="mdi mdi-arrow-right text-primary me-1"></i>Publish A New Machine Model</h5>
+        <h5 class="font-size-20 mb-4" style="margin-top: 20px"><i
+                class="mdi mdi-arrow-right text-primary me-1"></i>Publish A New Machine Model</h5>
 
-        <form action="plant-publish.php" method="post">
+        <form action="p-publish.php" method="post">
 
             <div class="row mb-4">
                 <label for="horizontal-firstname-input" class="col-sm-3 col-form-label">Model name</label>
@@ -29,24 +28,24 @@
             <div class="row justify-content-end col-md-28" id="bbb">
                 <!-- editable tables -->
                 <!-- ----------      start        -------------- -->
-                <div class="table-responsive" id = "ttt">
+                <div class="table-responsive" id="ttt">
                     <table class="table table-editable table-nowrap align-middle table-edits">
                         <thead>
                             <tr>
-                            <th>Chip Model</th>
-                            <th>Operation Type</th>
-                            <th>Time</th>
-                            <th>Expense</th>
+                                <th>Chip Model</th>
+                                <th>Operation Type</th>
+                                <th>Time</th>
+                                <th>Expense</th>
                             </tr>
 
                         </thead>
                         <tbody>
-                        <?php
-                            $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
-                            $name = 1;
-                            $time = 10;
-                            $expense = 100;
-                            while ($operation_type_row = mysqli_fetch_array($operation_types)) {
+                            <?php
+                        $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
+                        $name = 1;
+                        $time = 10;
+                        $expense = 100;
+                        while ($operation_type_row = mysqli_fetch_array($operation_types)) {
                             echo '<tr>
                             <td data-field="Chip Model" style="width: 80px">' . "$operation_type_row[chip_model]" . '</td>
                             <td data-field="Operation Type">' . "$operation_type_row[operation_type]" . '</td>
@@ -57,11 +56,11 @@
                             $name++;
                             $expense = $expense + 50;
                             echo '</tr>';
-                            }
+                        }
                         ?>
 
                         </tbody>
-                        </table>
+                    </table>
                 </div>
                 <!-- editable tables -->
                 <!-- -------      end     -------- -->

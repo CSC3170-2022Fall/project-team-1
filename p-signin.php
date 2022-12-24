@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-require "shared/signin-signup-shared.php"
+require "frontend/shared/signin-signup.php"
 ?>
 
 
@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$row = mysqli_fetch_assoc($query);
 	if (($plant_name == $row['plant_name']) && ($password == $row['password'])) {
 		$_SESSION['plant_name'] = $plant_name;
-		print '<script>window.location.assign("plant-publish.php");</script>';
+		print '<script>window.location.assign("p-publish.php");</script>';
 	} else {
 		print '<script>alert("Username or password incorrect!");</script>';
-		print '<script>window.location.assign("plant-login.php");</script>';
+		print '<script>window.location.assign("p-login.php");</script>';
 	}
 }
 ?>

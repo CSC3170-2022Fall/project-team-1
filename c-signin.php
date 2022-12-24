@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-include "shared/signin-signup-shared.php"
+include "frontend/shared/signin-signup.php"
 ?>
 
 
@@ -18,10 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$row = mysqli_fetch_assoc($query);
 	if (($consumer_name == $row['consumer_name']) && ($password == $row['password'])) {
 		$_SESSION['consumer_name'] = $consumer_name;
-		print '<script>window.location.assign("consumer-appoint.php");</script>';
+		print '<script>window.location.assign("c-appoint.php");</script>';
 	} else {
 		print '<script>alert("Username or password incorrect!");</script>';
-		print '<script>window.location.assign("consumer-login.php");</script>';
+		print '<script>window.location.assign("c-login.php");</script>';
 	}
 }
 ?>

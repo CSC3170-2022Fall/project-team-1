@@ -8,7 +8,7 @@ $appointment_num = mysqli_num_rows($appointed_operations);
 <div class="col-lg-6">
 	<div class="mt-4">
 
-		<form action="plant-accept.php" method="post">
+		<form action="p-accept.php" method="post">
 			<h5 class="font-size-20 mb-4" style="margin-top: 20px"><i class="mdi text-primary me-1"></i>Congratulations!
 				You have received
 				<?php echo "$appointment_num"; ?> appointments! Click to accept!</h5>

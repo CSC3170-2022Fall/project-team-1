@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-include "shared/signin-signup-shared.php"
+include "frontend/shared/signin-signup.php"
 ?>
 
 
@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	echo $num_row;
 	if ($num_row == 1) {
 		print '<script>alert("Username has been taken!");</script>';
-		print '<script>window.location.assign("consumer-signup.php");</script>';
+		print '<script>window.location.assign("c-signup.php");</script>';
 	} else {
 		$mysqli->query("INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('$consumer_name','$password')");
 		print '<script>alert("Successfully signed up and logged in!");</script>';
 		$_SESSION['consumer_name'] = $consumer_name;
-		print '<script>window.location.assign("consumer-appoint.php");</script>';
+		print '<script>window.location.assign("c-appoint.php");</script>';
 	}
 }
 ?>

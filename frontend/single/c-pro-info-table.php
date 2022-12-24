@@ -14,8 +14,8 @@ $mysqli = new mysqli("localhost", 'root', '', "chip_website");
 ?>
 
 
-<h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of Your Packages</h5>
 
+<h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of Your Packages</h5>
 
 <div class="row justify-content-end">
     <table border='2px' style="margin-left:150px; font-size:medium">
