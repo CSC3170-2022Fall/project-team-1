@@ -41,23 +41,23 @@
                         </thead>
                         <tbody>
                             <?php
-                        $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
-                        $name = 1;
-                        $time = 10;
-                        $expense = 100;
-                        while ($operation_type_row = mysqli_fetch_array($operation_types)) {
-                            echo '<tr>
+                            $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
+                            $name = 1;
+                            $time = 10;
+                            $expense = 100;
+                            while ($operation_type_row = mysqli_fetch_array($operation_types)) {
+                                echo '<tr>
                             <td data-field="Chip Model" style="width: 80px">' . "$operation_type_row[chip_model]" . '</td>
                             <td data-field="Operation Type">' . "$operation_type_row[operation_type]" . '</td>
                             <td data-field="Time">' . "<input type='range' min='1' max='100' value='$time' oninput='this.nextElementSibling.value = this.value' name='$name'/>" . "<output>$time</output>" . '</td>';
-                            $name++;
-                            $time = $time + 5;
-                            echo '<td data-field="Expense">' . "<input type='range' min='10' max='1000' value='$expense' oninput='this.nextElementSibling.value = this.value' name='$name'/>" . "<output>$expense</output>" . '</td>';
-                            $name++;
-                            $expense = $expense + 50;
-                            echo '</tr>';
-                        }
-                        ?>
+                                $name++;
+                                $time = $time + 5;
+                                echo '<td data-field="Expense">' . "<input type='range' min='10' max='1000' value='$expense' oninput='this.nextElementSibling.value = this.value' name='$name'/>" . "<output>$expense</output>" . '</td>';
+                                $name++;
+                                $expense = $expense + 50;
+                                echo '</tr>';
+                            }
+                            ?>
 
                         </tbody>
                     </table>
