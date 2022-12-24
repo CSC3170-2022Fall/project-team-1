@@ -98,7 +98,7 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                                 <img src="images/index/robot1.png" alt="" height="35">
                             </span>
                         </a>
-                        <div>Chip Land</div>
+                        <div>ChipLand</div>
                     </div>
 
                     <button type="button"

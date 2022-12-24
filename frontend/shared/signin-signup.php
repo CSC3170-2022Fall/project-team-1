@@ -32,7 +32,7 @@ if ($requiring_file_name == "c-signin.php") {
 
 <body>
 	<nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-		<div class="container"><a class="navbar-brand logo" href="index.php">Chip Land</a><button
+		<div class="container"><a class="navbar-brand logo" href="index.php">ChipLand</a><button
 				data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span
 					class="visually-hidden">Toggle
 					navigation</span><span class="navbar-toggler-icon"></span></button>
