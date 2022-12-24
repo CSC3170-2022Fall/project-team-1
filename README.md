@@ -37,12 +37,50 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Project Abstract
 
-## Database Design (Temporary)
+### Database Design (Temporary)
 
 <img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
 
 
-### Historical Progress
+### Function Points (Temporary)
+
+- The following are fixed (unchangable by consumers or plant owners):
+	- Possible chip models: i5, i7, i9
+	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types 
+- What consumers can do:
+	- Sign in
+	- Appoint plants for configurable packages
+- What plant owners can do:
+	- Sign in
+	- Accept appointments
+	- Publish machines 
+- What everybody can see:
+	- Chip model introduction (different chip models have different operations, which are of different types) 
+	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
+	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
+	- Processing information (the time, expense, and machines related to the operations)
+
+
+## Contribution (Temporary)
+
+ - Database design
+ 	- 王广
+ 	- 颜钰劼
+ - Frontend
+ 	- 郭好
+ 	- 宫燕亮
+ 	- 颜钰劼
+ - Backend
+ 	- 王广
+ 	- 宫燕亮
+ - Visluzation
+ 	- 乔雨柔	
+ 	- 王广
+ - Presentation
+ - Report
+
+
+## Historical Progress
 
 - Nov 23, 2022
 	- Initial commit
@@ -128,20 +166,3 @@ After thorough discussion, our team made the choice and the specification inform
 - Dec 24, 2022
 	- Update README.md
 
-
-### Function Points (Temporary)
-
-- The following are fixed (unchangable by consumers or plant owners):
-	- Possible chip models: i5, i7, i9
-	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types 
-- What consumers can do:
-	- Register and log in
-	- Appoint plants for configurable packages
-- What plant owners can do:
-	- Register and log in
-	- Accept appointments
-	- Publish machines 
-- What everybody can see:
-	- Chip model introduction (different chip models have different operations, which are of different types) 
-	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
