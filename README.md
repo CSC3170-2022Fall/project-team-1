@@ -37,29 +37,16 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Contribution (Temporary)
 
- - Database design
- 	- 王广
- 	- 颜钰劼
- - Frontend
- 	- 郭好
- 	- 宫燕亮
-	- 王广
- 	- 颜钰劼
- - Backend
- 	- 王广
- 	- 宫燕亮
- - Visluzation
-	- 郭好
- 	- 乔雨柔	
- 	- 王广
+ - Database design: 王广, 颜钰劼
+ - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
+ - Backend: 王广, 宫燕亮
+ - Visluzation: 郭好, 乔雨柔, 王广
  - Presentation
-	- Script
-		- 王广
-	- Slides
+	- Script: 王广
+	- Slides:
  - Report
-	- Difficulties Encountered & Solutions
-	- Historical Progress
-		- 颜钰劼
+	- Difficulties Encountered & Solutions:
+	- Historical Progress: 颜钰劼
 
 ## Implemented Functions (Temporary)
 
@@ -79,13 +66,13 @@ After thorough discussion, our team made the choice and the specification inform
 	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
 	- Processing information (the time, expense, and machines related to the operations)
 
+## Program Design
+
 ## Directory Structure Explanation
 
 ## Database Design
 
 <img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
-
-## Program Design
 
 ## How to Execute
 
