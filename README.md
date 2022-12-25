@@ -44,6 +44,7 @@ After thorough discussion, our team made the choice and the specification inform
  - Presentation
 	- Script: 王广
 	- Slides:
+	- Recording:
  - Report
 	- Difficulties Encountered & Solutions:
 	- Historical Progress: 颜钰劼
