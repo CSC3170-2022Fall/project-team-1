@@ -81,7 +81,7 @@ After thorough discussion, our team made the choice and the specification inform
 2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
 3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
 4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
-5. If you have phpmyadmin installed, you may check the changes of your database in `http://localhost/phpmyadmin` in a GUI way after some actions.
+5. If you have phpMyAdmin installed, you may check the changes of your database in `http://localhost/phpmyadmin` in a GUI way after some actions.
 
 ## Report
 
