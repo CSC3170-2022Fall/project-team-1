@@ -41,7 +41,6 @@ After thorough discussion, our team made the choice and the specification inform
 
 <img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
 
-
 ### Function Points (Temporary)
 
 - The following are fixed (unchangable by consumers or plant owners):
@@ -79,6 +78,14 @@ After thorough discussion, our team made the choice and the specification inform
  - Presentation
  - Report
  	- 颜钰劼
+
+## How to Execute
+
+1. Install an AMP package such as XAMPP.
+2. Start a MySQL/MariaDB server and a Apache web server in the AMP.
+3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
+4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database when you visit `index.php` for the first time so you don't have to do so manually).
+5. You may check the changes of your database in `http://localhost/phpmyadmin` if you have one after some actions.
 
 ## Historical Progress
 
