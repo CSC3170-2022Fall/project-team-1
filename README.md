@@ -83,7 +83,7 @@ After thorough discussion, our team made the choice and the specification inform
 4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
 5. To test all the functinality of the program, first appoint plants as a consumer, then publish machines as a plant owner, and then accept the appointments. At last, check the database:
 	- Easier way: Check the the webpages: Plant Information, Processing Records, and Processing Information.
-	- More fundamental way: If you have phpMyAdmin installed, you may check the changes of your database in `http://localhost/phpmyadmin` in a GUI way after some actions.
+	- More fundamental way: If you have phpMyAdmin installed, view your database on `http://localhost/phpmyadmin` in a GUI way.
 
 ## Report
 
