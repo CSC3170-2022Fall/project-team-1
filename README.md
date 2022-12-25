@@ -75,6 +75,8 @@ After thorough discussion, our team made the choice and the specification inform
 
 <img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
 
+Click [[History of Database Design.md|here]] to see the history of the database design
+
 ## How to Execute
 
 1. Install an AMP package such as XAMPP.
