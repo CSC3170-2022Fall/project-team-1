@@ -113,7 +113,7 @@ $mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="backend/signout.php"><i
+                            <a class="dropdown-item text-danger" href="signout.php"><i
                                     class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i>
                                 Sign out</a>
                         </div>

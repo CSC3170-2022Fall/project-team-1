@@ -18,7 +18,7 @@ if ($requiring_file_name == "c-signin.php") {
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -76,7 +76,6 @@ if ($requiring_file_name == "c-signin.php") {
 	            echo "<div class=\"links\"><a href=\"$signup_file_name\">Signup</a></div>";
             }
             ?>
-
 		</div>
 	</footer>
 	<script src="assets/bootstrap/bootstrap.min.js"></script>

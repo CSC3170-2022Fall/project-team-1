@@ -36,7 +36,6 @@
                 $chip_model = $processing_record_row['chip_model'];
                 $start_time = $processing_record_row['start_time'];
                 $end_time = $processing_record_row['end_time'];
-                $chip_model = $processing_record_row['chip_model'];
 
                 $duration = $mysqli->query("SELECT DATEDIFF('$end_time', '$start_time')");
                 $duration = mysqli_fetch_array($duration)[0];
