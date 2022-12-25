@@ -35,31 +35,6 @@ After thorough discussion, our team made the choice and the specification inform
 - Our branch choice is: **Branch 1**
 - The difficulty level is: **Normal**
 
-## Project Abstract
-
-### Database Design (Temporary)
-
-<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
-
-### Function Points (Temporary)
-
-- The following are fixed (unchangable by consumers or plant owners):
-	- Possible chip models: i5, i7, i9
-	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types 
-- What consumers can do:
-	- Sign in
-	- Appoint plants for configurable packages
-- What plant owners can do:
-	- Sign in
-	- Accept appointments
-	- Publish machines 
-- What everybody can see:
-	- Chip model introduction (different chip models have different operations, which are of different types) 
-	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
-	- Processing information (the time, expense, and machines related to the operations)
-
-
 ## Contribution (Temporary)
 
  - Database design
@@ -82,10 +57,35 @@ After thorough discussion, our team made the choice and the specification inform
 		- 王广
 	- Slides
  - Report
+	- Difficulties Encountered & Solutions
 	- Historical Progress
 		- 颜钰劼
-	- Program Design
-		- 王广
+
+## Implemented Functions (Temporary)
+
+- The following are fixed (unchangable by consumers or plant owners):
+	- Possible chip models: i5, i7, i9
+	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types
+- What consumers can do:
+	- Sign in
+	- Appoint plants for configurable packages
+- What plant owners can do:
+	- Sign in
+	- Accept appointments
+	- Publish machines
+- What everybody can see:
+	- Chip model introduction (different chip models have different operations, which are of different types)
+	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
+	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
+	- Processing information (the time, expense, and machines related to the operations)
+
+## Directory Structure Explanation
+
+## Database Design
+
+<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
+
+## Program Design
 
 ## How to Execute
 
@@ -95,9 +95,11 @@ After thorough discussion, our team made the choice and the specification inform
 4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database when you visit `index.php` for the first time so you don't have to do so manually).
 5. If you have phpmyadmin installed, you may check the changes of your database in `http://localhost/phpmyadmin` in a GUI way after some actions.
 
-## Program Design
+## Report
 
-## Historical Progress
+### Difficulties Encountered & Solutions
+
+### Historical Progress
 
 - Nov 23, 2022
 	- Initial commit
