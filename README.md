@@ -68,16 +68,25 @@ After thorough discussion, our team made the choice and the specification inform
  - Frontend
  	- 郭好
  	- 宫燕亮
+	- 王广
  	- 颜钰劼
  - Backend
  	- 王广
  	- 宫燕亮
  - Visluzation
+	- 郭好
  	- 乔雨柔	
  	- 王广
  - Presentation
+	- Script
+		- 王广
+	- Slides
+		- 
  - Report
- 	- 颜钰劼
+	- Historical Progress
+		- 颜钰劼
+	- Program Design
+		- 王广
 
 ## How to Execute
 
@@ -86,6 +95,8 @@ After thorough discussion, our team made the choice and the specification inform
 3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
 4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database when you visit `index.php` for the first time so you don't have to do so manually).
 5. If you have phpmyadmin installed, you may check the changes of your database in `http://localhost/phpmyadmin` in a GUI way after some actions.
+
+## Program Design
 
 ## Historical Progress
 
@@ -173,3 +184,4 @@ After thorough discussion, our team made the choice and the specification inform
 - Dec 24, 2022
 	- Update README.md
 
+	
