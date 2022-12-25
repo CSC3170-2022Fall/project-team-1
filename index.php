@@ -13,7 +13,7 @@ if (!$mysqli) {
     $mysqli = mysqli_connect("localhost", 'root', ''); //connect to DBMS
     $mysqli->query("CREATE DATABASE chip_website"); //create database
     $mysqli->select_db('chip_website'); //select database
-    $lines = file("sql/initialization.sql"); //create tables by loading the SQL file (Note: the SQL CAN'T can't contain comments)
+    $lines = file("database/initialization.sql"); //create tables by loading the SQL file (Note: the SQL CAN'T can't contain comments)
     $templine = '';
     foreach ($lines as $line) { //loop through each line
         if (substr($line, 0, 2) == '--' || $line == '') {
