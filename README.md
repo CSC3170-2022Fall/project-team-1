@@ -81,7 +81,6 @@ After thorough discussion, our team made the choice and the specification inform
 	- Script
 		- 王广
 	- Slides
-		- 
  - Report
 	- Historical Progress
 		- 颜钰劼
