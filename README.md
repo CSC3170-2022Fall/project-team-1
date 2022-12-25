@@ -37,7 +37,7 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Contribution (Temporary)
 
- - Database design: 王广, 颜钰劼
+ - Database Design: 王广, 颜钰劼
  - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
  - Backend: 王广, 宫燕亮
  - Visluzation: 郭好, 乔雨柔, 王广
