@@ -83,9 +83,9 @@ See also [the history of the database design](database/history-of-database-desig
 2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
 3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
 4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
-5. To test all the functinality of the program, first appoint plants as a consumer, then publish machines as a plant owner, and then accept the appointments. At last, check the database:
-	- Easier way: Check the the webpages: Plant Information, Processing Records, and Processing Information.
-	- More fundamental way: If you have phpMyAdmin installed, view your database on `http://localhost/phpmyadmin` in a GUI way.
+5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
+	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
+	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting `http://localhost/phpmyadmin`).
 
 ## Report
 
