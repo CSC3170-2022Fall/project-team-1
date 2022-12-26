@@ -55,7 +55,7 @@
                                 <img src="images/index/robot1.png" alt="" height="35">
                             </span>
                         </a>
-                        <div>Chip Land</div>
+                        <div>ChipLand</div>
                     </div>
 
                     <!--Back to index-->

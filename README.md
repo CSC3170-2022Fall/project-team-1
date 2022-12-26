@@ -35,52 +35,63 @@ After thorough discussion, our team made the choice and the specification inform
 - Our branch choice is: **Branch 1**
 - The difficulty level is: **Normal**
 
-## Project Abstract
+## Contribution (Temporary)
 
-### Database Design (Temporary)
+ - Database Design: 王广, 颜钰劼
+ - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
+ - Backend: 王广, 宫燕亮
+ - Visluzation: 郭好, 乔雨柔, 王广
+ - Presentation
+	- Script: 王广
+	- Slides:
+	- Recording:
+ - Report
+	- Difficulties Encountered & Solutions:
+	- Historical Progress: 颜钰劼
 
-<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
-
-
-### Function Points (Temporary)
+## Implemented Functions (Temporary)
 
 - The following are fixed (unchangable by consumers or plant owners):
 	- Possible chip models: i5, i7, i9
-	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types 
+	- Possible operation types: Each chip model has its version of "design-import, etch, bond, drill, test" so totally 15 operation types
 - What consumers can do:
 	- Sign in
 	- Appoint plants for configurable packages
 - What plant owners can do:
 	- Sign in
 	- Accept appointments
-	- Publish machines 
+	- Publish machines
 - What everybody can see:
-	- Chip model introduction (different chip models have different operations, which are of different types) 
+	- Chip model introduction (different chip models have different operations, which are of different types)
 	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
 	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
 	- Processing information (the time, expense, and machines related to the operations)
 
+## Program Design
 
-## Contribution (Temporary)
+## Directory Structure Explanation
 
- - Database design
- 	- 王广
- 	- 颜钰劼
- - Frontend
- 	- 郭好
- 	- 宫燕亮
- 	- 颜钰劼
- - Backend
- 	- 王广
- 	- 宫燕亮
- - Visluzation
- 	- 乔雨柔	
- 	- 王广
- - Presentation
- - Report
- 	- 颜钰劼
+## Database Design
 
-## Historical Progress
+<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
+
+See also [the history of the database design](database/history-of-database-design.md).
+
+## How to Execute
+
+1. Install an AMP package such as XAMPP.
+2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
+3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
+4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
+5. To test all the functinality of the program, first appoint plants as a consumer, then publish machines as a plant owner, and then accept the appointments. At last, check the database:
+	- Easier way: Check the the webpages: Plant Information, Processing Records, and Processing Information.
+	- More fundamental way: If you have phpMyAdmin installed, view your database on `http://localhost/phpmyadmin` in a GUI way.
+
+## Report
+
+### Difficulties Encountered & Solutions
+
+### Historical Progress
 
 - Nov 23, 2022
 	- Initial commit
@@ -166,3 +177,4 @@ After thorough discussion, our team made the choice and the specification inform
 - Dec 24, 2022
 	- Update README.md
 
+	

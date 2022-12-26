@@ -1,21 +1,3 @@
-<?php
-$client = "consumer";
-session_start();
-if ($_SESSION['consumer_name']) {
-    $consumer_name = $_SESSION['consumer_name'];
-} elseif ($_SESSION['plant_name']) {
-    $plant_name = $_SESSION['plant_name'];
-    $client = "plant";
-} else {
-    echo '<script>window.location.assign("index.php");</script>';
-}
-
-$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
-?>
-
-
-
-
 <h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Your
     Processing Records</h5>
 
@@ -47,13 +29,13 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
             }
             $processing_records_num = mysqli_num_rows($processing_records);
 
-            $processing_ID = 1;
+            $processing_ID = 0;
             while ($processing_record_row = mysqli_fetch_array($processing_records)) {
+                $processing_ID++;
                 $processing_name = "Package $processing_record_row[package_ID] - $processing_record_row[chip_model] - Chip $processing_record_row[chip_ID] - $processing_record_row[operation_type]";
                 $chip_model = $processing_record_row['chip_model'];
                 $start_time = $processing_record_row['start_time'];
                 $end_time = $processing_record_row['end_time'];
-                $chip_model = $processing_record_row['chip_model'];
 
                 $duration = $mysqli->query("SELECT DATEDIFF('$end_time', '$start_time')");
                 $duration = mysqli_fetch_array($duration)[0];
@@ -74,8 +56,6 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
                 if ($processing_ID < $processing_records_num) {
                     echo ",";
                 }
-
-                $processing_ID++;
             }
             ?>
         ]);
@@ -85,12 +65,16 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
             gantt: {
                 trackHeight: 30
             }
-    };
+        };
 
-    var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
-    chart.draw(data, options);
-    }
+            <?php
+            if ($processing_ID > 0) {
+                echo "chart.draw(data, options);";
+            }
+            ?>
+        }
 </script>
 
 <div id="chart_div" style="margin: 0 auto; width:1400px" ;></div>

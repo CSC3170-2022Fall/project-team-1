@@ -1,31 +1,15 @@
-<?php
-$client = "consumer";
-session_start();
-if ($_SESSION['consumer_name']) {
-    $consumer_name = $_SESSION['consumer_name'];
-} elseif ($_SESSION['plant_name']) {
-    $plant_name = $_SESSION['plant_name'];
-    $client = "plant";
-} else {
-    echo '<script>window.location.assign("index.php");</script>';
-}
-
-$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
-?>
-
-
-
 <h5 class="font-size-20 mb-4" style="margin-top: 20px;"><i class="mdi mdi-arrow-right text-primary me-1"></i>Analysis of
     Your Operations</h5>
 
 <div class="row justify-content-end">
-
     <div class="row justify-content-end">
         <table border='2px' style="margin-left:150px; font-size:medium">
             <th>Package ID</th>
             <th>Chip Model</th>
             <th>Chip ID</th>
             <th>Operation Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
             <th>Expense</th>
             <th>Machine Model</th>
             <th>Machine ID</th>
@@ -38,6 +22,8 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
                 <td>' . $processing_records_row['chip_model'] . '</td>
                 <td>' . $processing_records_row['chip_ID'] . '</td>
                 <td>' . $processing_records_row['operation_type'] . '</td>
+                <td>' . $processing_records_row['start_time'] . '</td>
+                <td>' . $processing_records_row['end_time'] . '</td>
                 <td>' . $processing_records_row['expense'] . '</td>
                 <td>' . $processing_records_row['machine_model'] . '</td>
                 <td>' . $processing_records_row['machine_ID'] . '</td>
@@ -45,5 +31,5 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
             }
             ?>
         </table>
-
     </div>
+</div>›

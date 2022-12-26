@@ -1,6 +1,6 @@
 <?php
 $requiring_file_name = basename(__FILE__);
-include "frontend/shared/signin-signup.php"
+require_once "frontend/shared/signin-signup.php"
 ?>
 
 
