@@ -5,7 +5,7 @@ if ($_SESSION['plant_name']) {
 } else {
     echo '<script>window.location.assign("p-login.php");</script>';
 }
-$mysqli = new mysqli("localhost", 'root', '', "chip_website");
+$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 
 $appointed_operations = $mysqli->query("SELECT p.package_ID, p.chip_ID, p.operation_type, p.chip_model FROM Processing_Records As p INNER JOIN Operation_Types AS o ON p.chip_model = o.chip_model AND p.operation_type = o.operation_type WHERE p.plant_name = '$plant_name' AND p.start_time IS NULL ORDER BY p.chip_ID ASC, o.priority ASC");
 $appointment_num = mysqli_num_rows($appointed_operations);
