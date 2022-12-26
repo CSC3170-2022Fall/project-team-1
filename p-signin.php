@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		print '<script>window.location.assign("p-publish.php");</script>';
 	} else {
 		print '<script>alert("Username or password incorrect!");</script>';
-		print '<script>window.location.assign("p-login.php");</script>';
+		print '<script>window.location.assign("p-signin.php");</script>';
 	}
 }
 ?>
