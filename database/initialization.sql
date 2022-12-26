@@ -86,8 +86,6 @@ CREATE TABLE Processing_Records
 );
 
 
-
-
 INSERT INTO Chip_Models (`chip_model`) VALUES ('i5');
 INSERT INTO Chip_Models (`chip_model`) VALUES ('i7');
 INSERT INTO Chip_Models (`chip_model`) VALUES ('i9');
@@ -107,6 +105,3 @@ INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES 
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'bond', '30');
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'drill', '40');
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'test', '50');
-
-INSERT INTO Consumers (`consumer_name`, `password`) VALUES ('aaa', '123');
-INSERT INTO Plants (`plant_name`, `password`) VALUES ('apple', '123');
