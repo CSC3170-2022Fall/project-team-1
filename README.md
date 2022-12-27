@@ -102,8 +102,8 @@ See also [the history of the database design](database/history-of-database-desig
 	- single
 		- These frontend files are only `reuiqre`d by a single PHP file.
 - database
-	- `initializaiton.sql`: The file was executed upon creating the database in `index.php`. It create all tables and insert the default chip models and their operations.
-	- `history-of-database-design.md`: The file shows how we get the current database design from scrath.
+	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in `index.php`. It create all tables and insert the default chip models and their operations.
+	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
 - PHP files begginning with `c-` are webpages of consumers. Those with `p-` are for plant owners.
 
 ## Difficulties Encountered & Solutions
@@ -138,12 +138,7 @@ See also [the history of the database design](database/history-of-database-desig
 	- Start: chip model info
 	- Start: processing records
 	- Start: using a shared home and signup/signin webpage
-- Dec 13, 2022
-	- Update plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php, plant-publish.php
-	- Update consumer-appoint-form-included.php, plant-publish-form-included.php, sql/initialization.sql
-	- Delete draft.sql
-	- Update consumer-appoint-form-included.php, consumer-appoint.php, plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php
-- Dec 14-23, 2022
+- Dec 13-23, 2022
 	- Backend: Add functions and fix bugs
 	- Frontend: Improve the appearance
 - Dec 24, 2022
