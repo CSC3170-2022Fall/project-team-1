@@ -18,12 +18,12 @@ Our team consists of the following members, listed in the table below (the team 
 
 | Student ID | Student Name | GitHub Account (in Email)   | GitHub Username |
 | ---------- | ------------ | --------------------------- | --------------- |
-| 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | arydinesen     |
+| 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | arydinesen      |
 | 120090410  | 颜钰劼        | 120090410@link.cuhk.edu.cn  | ZYPRESSEN000    |
 | 120090843  | 郭好          | 726827048@qq.com            | Annaaaa997      |
-| 120090644  | 乔雨柔         | 120090644@link.cuhk.edu.cn | 120090644       |
-| 120090327  | 宫燕亮         | gongdashhuai@gmail.com     | michaelGGGL     |
-| 120090543  | 谭金镇         | 342335897@qq.com           | yishan-13       |
+| 120090644  | 乔雨柔        | 120090644@link.cuhk.edu.cn | 120090644        |
+| 120090327  | 宫燕亮        | gongdashhuai@gmail.com     | michaelGGGL      |
+| 120090543  | 谭金镇        | 342335897@qq.com           | yishan-13        |
 
 ## Project Specification
 
@@ -88,13 +88,13 @@ See also [the history of the database design](database/history-of-database-desig
 	- JavaScript and CSS files here are used in the source code.
 - [frontend](frontend)
 	- [shared](shared)
-		- Since some web pages share the same UI, putting it in a single file and `require`ing it from those files makes it easier to modify the code and maintain the consistency.
+		- Since some webpages share the same UI, putting it in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain its consistency.
 	- [single](shared)
 		- These frontend files are only `reuiqre`d by a single PHP file.
 - [database](database)
-	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and insert the default chip models and their operations.
+	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and inserts the default chip models and their operations.
 	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
-- PHP files begginning with `c-` are webpages for consumers, while those with `p-` are for plant owners.
+- PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners.
 
 ## Difficulties Encountered & Solutions
 
