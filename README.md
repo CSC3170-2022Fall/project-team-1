@@ -35,7 +35,7 @@ After thorough discussion, our team made the choice and the specification inform
 - Our branch choice is: **Branch 1**
 - The difficulty level is: **Normal**
 
-## Contribution (Temporary)
+## Contribution
 
  - Database Design: 王广，颜钰劼
  - Frontend: 郭好，宫燕亮，王广，颜钰劼
