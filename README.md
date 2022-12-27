@@ -47,9 +47,14 @@ After thorough discussion, our team made the choice and the specification inform
 	- Slides: 颜钰劼
 	- Voice Recorded: 
  - Report
-	- Directory Structure Explanation: 郭好
+	- Directory Structure Explanation: 郭好, 王广
 	- Difficulties Encountered & Solutions: 
-	- Historical Progress: 颜钰劼
+	- Historical Progress: 颜钰劼, 王广
+
+## Introduction Presentation
+
+- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction to our website application!
+- Click [here]() for the slides.
 
 ## How to Execute
 
@@ -88,24 +93,18 @@ See also [the history of the database design](database/history-of-database-desig
 ## Program Design
 
 ## Directory Structure Explanation
-The following are the main structure of the directory:
-- project-team-1
-    - assets
-        - Containing js and css files included in source code.
-    - frontend
-        - shared
-          - Since some web pages share the same ui elements or page design, php files under this directory can share those part using require which can maintain code consistency.
-        - single
-          - Different from php in shared, files under this directory draw a distinction of frontend among web pages.
-    - database
-- index.php 
-  - Home of the website.
-- php files having names begginning with "c-"
-  - Functional points for consumer.
-- php files having names begginning with "p-"
-  - Functional points for plant owner.
-- signout.php
-  - signout for both consumer and plant owner.
+
+- assets
+	- JavaScript and CSS files here are used in the source code.
+- frontend
+	- shared
+		- Since some web pages share the same UI, putting it in a single file and `require`ing it from those files makes it easier to modify the code and maintain the consistency.
+	- single
+		- These frontend files are only `reuiqre`d by a single PHP file.
+- database
+	- `initializaiton.sql`: The file was executed upon creating the database in `index.php`. It create all tables and insert the default chip models and their operations.
+	- `history-of-database-design.md`: The file shows how we get the current database design from scrath.
+- PHP files begginning with `c-` are webpages of consumers. Those with `p-` are for plant owners.
 
 ## Difficulties Encountered & Solutions
 
@@ -113,84 +112,53 @@ The following are the main structure of the directory:
 
 - Nov 23, 2022
 	- Initial commit
-	- Add online IDE url
 	- Setting up Github Classroom Feedback
 - Nov 26, 2022
 	- Add member information
-	- Update README.md
 - Dec 5, 2022
-	- Update README.md
+	- Start database design (Update `README.md`)
 - Dec 6, 2022
-	- Update README.md
+	- Database redesign (Update `README.md`)
 - Dec 7, 2022
-	- Update README.md
-	- Add files index images/firefox-icon.png, index.php, scripts/main.js, styles/style.css
+	- Database redesign (Update `README.md`)
+	- Add `index.php`
 - Dec 9, 2022
-	- Update README.md
-	- Delete chip-website directory
-	- Update project-description.md
-	- Delete consumer-appointment.php
-	- Delete plant-home.php
-	- Update consumer-home.php
-	- Delete plant-home.php
-	- Update consumer-appoint.php
-	- Delete consumer-home.php
-	- Update consumer-include.php, consumer-login-check.php, sql/initialization.sql
+	- Database redesign (Update `README.md`)
+	- Strat: initialize database with `database/initialization.sql`
+	- Start: signup and signin
+	- Start: consumer appointment
 - Dec 10, 2022
-	- Add files images/search.png, images/sp_car.png, styles/index.css
-	- Update index.php, styles/style.css, consumer-login.php
-	- Add flie styles/consumer-login.css
-	- Update consumer-login.php, images/bg1.webp
-	- Update consumer-appoint.php, consumer-include.php, sql/initialization.sql, styles/style.css
-	- Update README.md
-	- Add file ER2-2.erdplus
-	- Update consumer-appoint.php, plant-accept.php, sql/draft.sql, sql/initialization.sql
-	- Update README.md
+	- Start: plant accept
 - Dec 11, 2022
-	- Update assets/bootstrap/bootstrap.min.css, assets/bootstrap/bootstrap.min.js, assets/fonts/ionicons.eot, assets/fonts/ionicons.min.css, assets/fonts/ionicons.svg, assets/fonts/ionicons.ttf, assets/fonts/ionicons.woff, assets/js/theme.js, index.php
-	- Add files images/avatars/avatar.jpg, images/index/i5.jpg, images/index/i7.jpg, images/index/i9.jpg, images/nature/image1.jpg, images/nature/image2.jpg, images/nature/image3.jpg, images/nature/image4.jpg, images/nature/image5.jpg, images/nature/image6.jpg, images/nature/image7.jpg, images/nature/image8.jpg, images/nature/image9.jpg, images/tech/image4.jpg, images/tech/image6.png
-	- Update index.php, plant-accept.php, sql/initialization.sql
-	- Update README.md
-	- Delete ER2-2.erdplus
-	- Delete consumer-include.php
-	- Delete consumer-login-check.php
-	- Update consumer-appoint-include-form.php, consumer-appoint.php, consumer-login.php, consumer-register.php, index.php, plant-accept.php, plant-publish-include-form.php, plant-publish.php, sql/initialization.sql
-	- Add plant-login.php, plant-register.php
-	- Update consumer-login.php, consumer-register.php, plant-login.php, plant-register.php
+	- Start: plant publish
+	- Add `assets/bootstrap/bootstrap.min.css`, `assets/bootstrap/bootstrap.min.js`, `assets/fonts/ionicons.eot`, `assets/fonts/ionicons.min.css`, `assets/fonts/ionicons.svg`, `assets/fonts/ionicons.ttf`, `assets/fonts/ionicons.woff`, `assets/js/theme.js`
+	- Add `images/avatars/avatar.jpg`, `images/index/i5.jpg`, `images/index/i7.jpg`, `images/index/i9.jpg`, `images/nature/image1.jpg`, `images/nature/image2.jpg`, `images/nature/image3.jpg`, `images/nature/image4.jpg`, `images/nature/image5.jpg`, `images/nature/image6.jpg`, `images/nature/image7.jpg`, `images/nature/image8.jpg`, `images/nature/image9.jpg`, `images/tech/image4.jpg`, `images/tech/image6.png`
 - Dec 12, 2022
-	- Update assets/css/app.min.css, assets/css/bootstrap-datepicker.min.css, assets/css/bootstrap-editable.css and so on
-	- Update README.md, consumer-appoint.php, consumer-login.php, consumer-register.php, index.php, plant-accept.php, sql/initialization.sql
-	- Delete ER2-2.erdplus, consumer-include.php, consumer-login-check.php
-	- Add flies plant-login.php, plant-publish-include-form.php, plant-publish.php, plant-register.php
-	- Update plant-publish.php
-	- Update consumer-appoint.php, plant-publish.php
-	- Update consumer-appoint.php
-	- Delete consumer-appoint-include-form.php
-	- Add flie chip-model-info.php
-	- Add file process-records.php
-	- Update README.md
-	- Rename process-records.php to processing-records.php
-	- Update chip-model-info.php
-	- Rename plant-register.php to plant-signup.php
-	- Rename consumer-register.php to consumer-signup.php
-	- Rename plant-publish-include-form.php to plant-publish-form-included.php
-	- Add flies consumer-appoint-form-included.php, login-signup-universal-frontend.php, plant-accept-form-included.php
-	- Update consumer-appoint.php, consumer-login.php, consumer-signup.php, index.php, plant-accept.php, plant-login.php, plant-publish-form-included.php, plant-publish.php, plant-signup.php, processing-records.php
-	- Update processing-records.php
+	- Add `assets/css/app.min.css`, `assets/css/bootstrap-datepicker.min.css`, `assets/css/bootstrap-editable.css` and so on
+	- Start: chip model info
+	- Start: processing records
+	- Start: using universal homepage
 - Dec 13, 2022
 	- Update plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php, plant-publish.php
 	- Update consumer-appoint-form-included.php, plant-publish-form-included.php, sql/initialization.sql
 	- Delete draft.sql
 	- Update consumer-appoint-form-included.php, consumer-appoint.php, plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php
-- Dec 15, 2022
-	- Update README.md
-- Dec 22, 2022
-	- Update README.md
-- Dec 23, 2022
-	- Update login-signup-universal-frontend.php
-	- Update consumer-login.php 
-	- Update consumer-signup.php
-	- Update plant-login.php
-	- Update Update plant-signup.php
+- Dec 14-23, 2022
+	- Backend: Add functions and fix bugs
+	- Frontend: Improve the appearance
 - Dec 24, 2022
-	- Update README.md
+	- Start: processing information
+- Dec 25, 2022
+	- Fix bugs
+- Dec 26, 2022
+	- Start to prepare for the presentation
+	- Start to prepare for the report
+	- Improvement of the frontend
+- Dec 27, 2022
+	- Fix bugs of backend and frontend
+	- Version 1.0 finished
+	- Work on the presentation
+	- Work on the report
+- Dec 28, 2022
+	- Finish presentation
+	- Finish report
