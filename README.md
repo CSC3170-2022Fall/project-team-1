@@ -44,7 +44,7 @@ After thorough discussion, our team made the choice and the specification inform
  - Presentation
 	- Script: 王广
 	- Website Demo: 
-	- Slides: 
+	- Slides: 颜钰劼
 	- Voice Recorded: 
  - Report
 	- Directory Structure Explanation: 郭好
