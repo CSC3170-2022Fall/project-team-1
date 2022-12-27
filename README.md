@@ -87,12 +87,12 @@ See also [the history of the database design](database/history-of-database-desig
 - [assets](assets)
 	- JavaScript and CSS files here are used in the source code.
 - [frontend](frontend)
-	- shared
+	- [shared](shared)
 		- Since some web pages share the same UI, putting it in a single file and `require`ing it from those files makes it easier to modify the code and maintain the consistency.
-	- single
+	- [single](shared)
 		- These frontend files are only `reuiqre`d by a single PHP file.
 - [database](database)
-	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in `index.php`. It create all tables and insert the default chip models and their operations.
+	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and insert the default chip models and their operations.
 	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
 - PHP files begginning with `c-` are webpages for consumers, while those with `p-` are for plant owners.
 
@@ -103,10 +103,10 @@ See also [the history of the database design](database/history-of-database-desig
 1. Install an AMP package such as [XAMPP](https://www.apachefriends.org).
 2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
 3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
-4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
+4. Visit http://localhost/project-team-1-main on your browser (The code has been designed to create the database automatically when you visit [index.php](index.php) for the first time so you don't have to do so manually).
 5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
 	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
-	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting `http://localhost/phpmyadmin`).
+	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting http://localhost/phpmyadmin).
 
 ## Historical Progress
 
@@ -116,14 +116,14 @@ See also [the history of the database design](database/history-of-database-desig
 - Nov 26, 2022
 	- Add member information
 - Dec 5, 2022
-	- Start database design (Update `README.md`)
+	- Start database design
 - Dec 6, 2022
-	- Database redesign (Update `README.md`)
+	- Database redesign
 - Dec 7, 2022
-	- Database redesign (Update `README.md`)
+	- Database redesign
 	- Add `index.php`
 - Dec 9, 2022
-	- Database redesign (Update `README.md`)
+	- Database redesign
 	- Strat: initialize database with `database/initialization.sql`
 	- Start: signup and signin
 	- Start: consumer appointment
