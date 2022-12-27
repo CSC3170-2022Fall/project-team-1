@@ -71,7 +71,7 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Presentation
 
-- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction to our website application!
+- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction!
 - Click [here]() for the slides.
 
 ## Database Design
