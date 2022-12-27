@@ -39,8 +39,8 @@ if ($requiring_file_name == "c-signin.php") {
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="consumer-signin.php">Consumer</a></li>
-					<li class="nav-item"><a class="nav-link" href="plant-signin.php">Plant Owner</a></li>
+					<li class="nav-item"><a class="nav-link" href="c-signin.php">Consumer</a></li>
+					<li class="nav-item"><a class="nav-link" href="p-signin.php">Plant Owner</a></li>
 				</ul>
 			</div>
 		</div>

@@ -1,27 +1,28 @@
 <!-- backend: create database if not exists -->
 <?php
 session_start();
-if (!array_key_exists("consumer_name", $_SESSION)) {
+if (!array_key_exists("consumer_name", $_SESSION)) { //if the session variable doesn't exist, create it
     $_SESSION['consumer_name'] = null;
 }
 if (!array_key_exists("plant_name", $_SESSION)) {
     $_SESSION['plant_name'] = null;
 }
 
-$mysqli = mysqli_connect("localhost:3316", 'root', '', 'chip_website'); //connect to database
-if (!$mysqli) {
-    $mysqli = mysqli_connect("localhost:3316", 'root', ''); //connect to DBMS
+try {
+    mysqli_connect("localhost", 'root', '', 'chip_website'); //check if database exists
+} catch (mysqli_sql_exception) { //if dataset doesn't exist, create it
+    $mysqli = mysqli_connect("localhost", 'root', ''); //connect to DBMS
     $mysqli->query("CREATE DATABASE chip_website"); //create database
     $mysqli->select_db('chip_website'); //select database
-    $lines = file("database/initialization.sql"); //create tables by loading the SQL file (Note: the SQL CAN'T can't contain comments)
-    $templine = '';
+    $lines = file("database/initialization.sql"); //create tables by loading the SQL file (Note: the file CAN'T contain comments)
+    $templine = ''; //temporary variable, used to store current query
     foreach ($lines as $line) { //loop through each line
-        if (substr($line, 0, 2) == '--' || $line == '') {
-            continue; //skip it if it's a comment
+        if (substr($line, 0, 2) == '--' || $line == '') { //skip it if it's a comment
+            continue;
         }
         $templine .= $line; //add this line to the current segment
         if (substr(trim($line), -1, 1) == ';') { //if it has a semicolon at the end, it's the end of the query
-            $mysqli->query($templine);
+            $mysqli->query($templine); //perform the query
             $templine = ''; //reset temp variable to empty
         }
     }
