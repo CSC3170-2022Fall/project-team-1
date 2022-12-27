@@ -45,7 +45,7 @@ After thorough discussion, our team made the choice and the specification inform
 	- Script: 王广
 	- Website Demo: 
 	- Slides: 
-	- Voice Recording: 
+	- Voice Recorded: 
  - Report
 	- Directory Structure Explanation: 郭好
 	- Difficulties Encountered & Solutions: 
