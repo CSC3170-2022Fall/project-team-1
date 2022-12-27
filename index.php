@@ -9,7 +9,7 @@ if (!array_key_exists("plant_name", $_SESSION)) {
 }
 
 try {
-    mysqli_connect("localhost", 'root', '', 'chip_website'); //check if database exists
+    mysqli_connect("localhost:3316", 'root', '', 'chip_website'); //check if database exists
 } catch (mysqli_sql_exception) { //if dataset doesn't exist, create it
     $mysqli = mysqli_connect("localhost", 'root', ''); //connect to DBMS
     $mysqli->query("CREATE DATABASE chip_website"); //create database
