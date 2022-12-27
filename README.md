@@ -90,7 +90,7 @@ See also [the history of the database design](database/history-of-database-desig
 	- [shared](shared)
 		- Since some webpages share the same UI, putting it in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain its consistency.
 	- [single](shared)
-		- These frontend files are only `reuiqre`d by a single PHP file.
+		- Every frontend file here is only `reuiqre`d by a single PHP file.
 - [database](database)
 	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and inserts the default chip models and their operations.
 	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
