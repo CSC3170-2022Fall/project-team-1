@@ -94,7 +94,7 @@ See also [the history of the database design](database/history-of-database-desig
 - [database](database)
 	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and inserts the default chip models and their operations.
 	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
-- PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners.
+- PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners (They are not put in to one directory because they are not much and staying here makes us easier see what webpages we have).
 
 ## Difficulties Encountered & Solutions
 
