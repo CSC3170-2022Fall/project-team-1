@@ -23,8 +23,8 @@
             <div class="row justify-content-end col-md-28" id="bbb">
                 <!-- editable tables -->
                 <!-- ----------      start        -------------- -->
-                <div class="table-responsive" id="ttt">
-                    <table class="table table-editable table-nowrap align-middle table-edits">
+                <div class="table" id="ttt">
+                    <table class="table mb-0">
                         <thead>
                             <tr>
                                 <th>Chip Model</th>

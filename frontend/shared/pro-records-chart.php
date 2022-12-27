@@ -65,13 +65,15 @@
             gantt: {
                 trackHeight: 30
             }
-        };
+    };
 
-        var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+    var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
 
             <?php
             if ($processing_ID > 0) {
                 echo "chart.draw(data, options);";
+            } else {
+                echo "<h5 class='font-size-20 mb-4' style='margin-top: 20px;'><i class='mdi text-primary me-1'></i>You have no operations yet!</h5>";
             }
             ?>
         }
