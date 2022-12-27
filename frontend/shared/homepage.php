@@ -70,7 +70,15 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
-
+        
+    <!-- DataTables -->
+    <link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <!-- Responsive datatable examples -->
+    <link href="assets/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"> 
+    <!-- Responsive Table css -->
+    <link href="assets/css/rwd-table.min.css" rel="stylesheet" type="text/css"> 
+    
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
     <!-- Icons Css -->
@@ -262,15 +270,41 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
         <!-- /Right-bar -->
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-        <!-- JAVASCRIPT -->
-        <script src="assets/js/js/jquery.min.js"></script>
-        <script src="assets/js/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/js/metisMenu.min.js"></script>
-        <script src="assets/js/js/simplebar.min.js"></script>
-        <script src="assets/js/js/waves.min.js"></script>
-        <script src="assets/js/js/jquery.sparkline.min.js"></script>
-        <!-- App js -->
-        <script src="assets/js/js/app.js"></script>
 </body>
+<!-- JAVASCRIPT -->
+<script src="assets/js/js/jquery.min.js"></script>
+<script src="assets/js/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/js/metisMenu.min.js"></script>
+<script src="assets/js/js/simplebar.min.js"></script>
+<script src="assets/js/js/waves.min.js"></script>
+<script src="assets/js/js/jquery.sparkline.min.js"></script>
+
+<!-- Required datatable js -->
+<script src="assets/js/js/jquery.dataTables.min.js"></script>
+<script src="assets/js/js/dataTables.bootstrap4.min.js"></script>
+<!-- Buttons examples -->
+<script src="assets/js/js/dataTables.buttons.min.js"></script>
+<script src="assets/js/js/buttons.bootstrap4.min.js"></script>
+<script src="assets/js/js/jszip.min.js"></script>
+<script src="assets/js/js/pdfmake.min.js"></script>
+<script src="assets/js/js/vfs_fonts.js"></script>
+<script src="assets/js/js/buttons.html5.min.js"></script>
+<script src="assets/js/js/buttons.print.min.js"></script>
+<script src="assets/js/js/buttons.colVis.min.js"></script>
+<!-- Responsive examples -->
+<script src="assets/js/js/dataTables.responsive.min.js"></script>
+<script src="assets/js/js/responsive.bootstrap4.min.js"></script>
+
+<!-- Datatable init js -->
+<script src="assets/js/js/datatables.init.js"></script>
+
+<!-- App js -->
+<script src="assets/js/js/app.js"></script>
+
+<!-- Responsive Table js -->
+<script src="assets/js/js/rwd-table.min.js"></script>
+
+<!-- Init js -->
+<script src="assets/js/js/table-responsive.init.js"></script>
 
 </html>
