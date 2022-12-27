@@ -40,7 +40,7 @@ After thorough discussion, our team made the choice and the specification inform
  - Database Design: 王广，颜钰劼
  - Frontend: 郭好，宫燕亮，王广，颜钰劼
  - Backend: 王广，宫燕亮
- - Visluzation: 乔雨柔，王广，郭好
+ - Visualization: 乔雨柔，王广，郭好
  - Presentation
 	- Script: 王广
 	- Website Demo: 
@@ -53,7 +53,7 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Implemented Functions
 
-- Chip models, operation types are fixed in this project(unchangable by consumers or plant owners).
+- Chip models, operation types are fixed in this project (unchangeable by consumers or plant owners).
 	- Possible chip models: i5, i7, i9.
 	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so totally 15 operation types.
 - What consumers can do:
