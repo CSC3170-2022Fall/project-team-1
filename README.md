@@ -51,7 +51,7 @@ After thorough discussion, our team made the choice and the specification inform
 	- Difficulties Encountered & Solutions: 
 	- Historical Progress: 颜钰劼, 王广
 
-## Introduction Presentation
+## Presentation
 
 - Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction to our website application!
 - Click [here]() for the slides.
@@ -137,7 +137,7 @@ See also [the history of the database design](database/history-of-database-desig
 	- Add `assets/css/app.min.css`, `assets/css/bootstrap-datepicker.min.css`, `assets/css/bootstrap-editable.css` and so on
 	- Start: chip model info
 	- Start: processing records
-	- Start: using universal homepage
+	- Start: using a shared home and signup/signin webpage
 - Dec 13, 2022
 	- Update plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php, plant-publish.php
 	- Update consumer-appoint-form-included.php, plant-publish-form-included.php, sql/initialization.sql
