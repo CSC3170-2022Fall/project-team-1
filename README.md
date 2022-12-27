@@ -70,23 +70,20 @@ See also [the history of the database design](database/history-of-database-desig
 ## Implemented Functions
 
 - Chip models, operation types are fixed in this project(unchangable by consumers or plant owners).
-	- Possible chip models: i5, i7, i9
-	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so totally 15 operation types
+	- Possible chip models: i5, i7, i9.
+	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so totally 15 operation types.
 - What consumers can do:
-	- Sign in & Sign up & Sign out
-	- Appoint plants for configurable packages
-	- Check plant information.
-	- Check processing records if there are any packages that have been accepted by plant owners (in responsive tables or visualized charts).
+	- Sign up and sign in.
+	- Appoint plants for configurable packages.
 - What plant owners can do:
-	- Sign in & Sign up & Sign out
+	- Sign up and sign in
+	- Publish new machine models
 	- Accept appointments
-	- Publish machines information
-	- Check processing records of the plant in responsive tables or visualized charts.
 - What everybody can see:
-	- Chip model introduction (different chip models have different operations, which are of different types)
+	- Chip model information
 	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
-	- Processing information (the time, expense, and machines related to the operations)
+	- Processing records (visualization––Gantt Chart) (start and end time)
+	- Processing information (Responsive tables) (the time, expense, and machines related to the operations)
 
 ## Program Design
 
@@ -197,5 +194,3 @@ The following are the main structure of the directory:
 	- Update Update plant-signup.php
 - Dec 24, 2022
 	- Update README.md
-
-	
