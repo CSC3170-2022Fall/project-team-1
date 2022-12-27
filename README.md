@@ -81,9 +81,9 @@ See also [the history of the database design](database/history-of-database-desig
 	- Accept appointments
 - What everybody can see:
 	- Chip model information
-	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Processing records (visualization––Gantt Chart) (start and end time)
-	- Processing information (Responsive tables) (the time, expense, and machines related to the operations)
+	- Plant information (See their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
+	- Processing records (Visualization––Gantt Chart) (Visualize the start and end time)
+	- Processing information (Responsive tables) (See the time, expense, and machines related to the operations)
 
 ## Program Design
 
