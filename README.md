@@ -51,27 +51,6 @@ After thorough discussion, our team made the choice and the specification inform
 	- Difficulties Encountered & Solutions: 
 	- Historical Progress: 颜钰劼, 王广
 
-## Presentation
-
-- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction to our website application!
-- Click [here]() for the slides.
-
-## How to Execute
-
-1. Install an AMP package such as [XAMPP](https://www.apachefriends.org).
-2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
-3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
-4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
-5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
-	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
-	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting `http://localhost/phpmyadmin`).
-
-## Database Design
-
-<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
-
-See also [the history of the database design](database/history-of-database-design.md).
-
 ## Implemented Functions
 
 - Chip models, operation types are fixed in this project(unchangable by consumers or plant owners).
@@ -90,23 +69,44 @@ See also [the history of the database design](database/history-of-database-desig
 	- Processing records (Visualization––Gantt Chart) (Visualize the start and end time).
 	- Processing information (Responsive tables) (See the time, expense, and machines related to the operations).
 
+## Presentation
+
+- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction to our website application!
+- Click [here]() for the slides.
+
+## Database Design
+
+<img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
+
+See also [the history of the database design](database/history-of-database-design.md).
+
 ## Program Design
 
 ## Directory Structure Explanation
 
-- assets
+- [assets](assets)
 	- JavaScript and CSS files here are used in the source code.
-- frontend
+- [frontend](frontend)
 	- shared
 		- Since some web pages share the same UI, putting it in a single file and `require`ing it from those files makes it easier to modify the code and maintain the consistency.
 	- single
 		- These frontend files are only `reuiqre`d by a single PHP file.
-- database
+- [database](database)
 	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in `index.php`. It create all tables and insert the default chip models and their operations.
 	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
 - PHP files begginning with `c-` are webpages of consumers. Those with `p-` are for plant owners.
 
 ## Difficulties Encountered & Solutions
+
+## How to Execute
+
+1. Install an AMP package such as [XAMPP](https://www.apachefriends.org).
+2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
+3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
+4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
+5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
+	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
+	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting `http://localhost/phpmyadmin`).
 
 ## Historical Progress
 
