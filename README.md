@@ -72,15 +72,13 @@ After a thorough discussion, our team made a choice, and the specification infor
 ## Presentation
 
 - Watch our presentation on [YouTube](https://www.youtube.com/watch?v=8CIe2oxAmtI) or [Bilibili](https://www.bilibili.com/video/BV1W84y1x7mS/?vd_source=3d01e3c4e47b7193768490089997d888) for a quick introduction!
-- Click [here]() for the slides.
+- Click [here](presentation/presentation.pdf) for the slides.
 
 ## Database Design
 
 <img width="972" alt="Screenshot 2022-12-11 at 14 31 29" src="https://user-images.githubusercontent.com/90801772/206889785-1ef4b8d8-0247-4211-b135-7b6d78c353df.png">
 
 See also [the history of the database design](database/history-of-database-design.md).
-
-## Program Design
 
 ## Directory Structure Explanation
 
