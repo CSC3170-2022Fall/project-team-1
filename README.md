@@ -51,10 +51,6 @@ After a thorough discussion, our team made a choice, and the specification infor
 	- Difficulties Encountered & Solutions: 王广
 	- Historical Progress: 颜钰劼, 王广
 
-## Video Presentation Link
-https://www.bilibili.com/video/BV1W84y1x7mS/?vd_source=3d01e3c4e47b7193768490089997d888
-
-
 ## Implemented Functions
 
 - Chip models and operation types are fixed in this project (unchangeable by consumers or plant owners).
@@ -75,7 +71,7 @@ https://www.bilibili.com/video/BV1W84y1x7mS/?vd_source=3d01e3c4e47b7193768490089
 
 ## Presentation
 
-- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction!
+- Watch our presentation on [YouTube](https://www.youtube.com/watch?v=8CIe2oxAmtI) or [Bilibili](https://www.bilibili.com/video/BV1W84y1x7mS/?vd_source=3d01e3c4e47b7193768490089997d888) for a quick introduction!
 - Click [here]() for the slides.
 
 ## Database Design
