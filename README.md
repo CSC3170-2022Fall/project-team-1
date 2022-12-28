@@ -29,7 +29,7 @@ Our team consists of the following members, listed in the table below (the team 
 
 <!-- You should remove the terms/sentence that is not necessary considering your option/branch/difficulty choice -->
 
-After thorough discussion, our team made the choice and the specification information is listed below:
+After a thorough discussion, our team made a choice, and the specification information is listed below:
 
 - Our option choice is: **Option 1**
 - Our branch choice is: **Branch 1**
@@ -53,9 +53,9 @@ After thorough discussion, our team made the choice and the specification inform
 
 ## Implemented Functions
 
-- Chip models, operation types are fixed in this project (unchangeable by consumers or plant owners).
+- Chip models and operation types are fixed in this project (unchangeable by consumers or plant owners).
 	- Possible chip models: i5, i7, i9.
-	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so totally 15 operation types.
+	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so a totally 15 operation types.
 - What consumers can do:
 	- Sign up and sign in.
 	- Appoint plants for configurable packages.
@@ -65,7 +65,7 @@ After thorough discussion, our team made the choice and the specification inform
 	- Accept appointments.
 - What everybody can see:
 	- Chip model information.
-	- Plant information (See their machines models' feasibility, time, and expense on every possible operation; available number of each machine model).
+	- Plant information (See their machines models' feasibility, time, and expense on every possible operation; the available number of each machine model).
 	- Processing records (Visualization––Gantt Chart) (Visualize the start and end time).
 	- Processing information (Responsive tables) (See the time, expense, and machines related to the operations).
 
@@ -85,8 +85,8 @@ See also [the history of the database design](database/history-of-database-desig
 ## Directory Structure Explanation
 
 The PHP files were classified into two parts:
-- Webpage part (root directory): PHP fils here directly serve as the webpages the users can visit. Most of their code are backend.
-- Frontend part (frontend directory): Those here don't directly serve as the webpages. Most of their code are frontend. They indirectly serve as the webpages by being `require`d by the PHP files in the root directory.
+- Webpage part (root directory): PHP files here directly serve as the webpages the users can visit. Most of their codeisare backend.
+- Frontend part (frontend directory): Those here don't directly serve as the webpages. Most of their code is frontend. They indirectly serve as webpages by being `require`d by the PHP files in the root directory.
 
 ---
 
@@ -101,7 +101,7 @@ The following are important directories:
 - [database](database)
 	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and inserts the default chip models and their operations.
 	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
-- PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners (They are not put in to one directory because they are not much and staying here makes us easier see what webpages we have).
+- PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners (They are not put into one directory because they are not much and staying here makes us easier to see what webpages we have).
 
 ## Difficulties Encountered & Solutions
 
@@ -112,14 +112,14 @@ The following are important directories:
 3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
 4. Visit http://localhost/project-team-1-main on your browser (The code has been designed to create the database automatically when you visit [index.php](index.php) for the first time so you don't have to do so manually).
 5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
-	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
+	- Easier way: Check these webpages: Plant Information, Processing Records, and Processing Information.
 	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting http://localhost/phpmyadmin).
 
 ## Historical Progress
 
 - Nov 23, 2022
 	- Initial commit
-	- Setting up Github Classroom Feedback
+	- Setting up GitHub Classroom Feedback
 - Nov 26, 2022
 	- Add member information
 - Dec 5, 2022
@@ -157,7 +157,7 @@ The following are important directories:
 	- Start to prepare for the report
 	- Improvement of the frontend
 - Dec 27, 2022
-	- Fix bugs of backend and frontend
+	- Fix bugs of the backend and frontend
 	- Version 1.0 finished
 	- Work on the presentation
 	- Work on the report
