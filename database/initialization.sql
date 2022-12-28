@@ -105,3 +105,5 @@ INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES 
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'bond', '30');
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'drill', '40');
 INSERT INTO Operation_Types (`chip_model`, `operation_type`, `priority`) VALUES ('i9', 'test', '50');
+
+INSERT INTO Plants (`plant_name`, `password`) VALUES ('Zebra', '123');
