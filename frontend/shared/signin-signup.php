@@ -8,8 +8,10 @@ if ($requiring_file_name == "c-signin.php") {
 	$signup_file_name = "p-signup.php";
 	$title = "Plant Signin";
 } elseif ($requiring_file_name == "c-signup.php") {
+	$signup_file_name = null;
 	$title = "Consumer Signup";
 } else {
+	$signup_file_name = null;
 	$title = "Plant Signup";
 }
 ?>
@@ -72,7 +74,8 @@ if ($requiring_file_name == "c-signin.php") {
 	</main>
 	<footer class="page-footer">
 		<div class="container">
-			<?php if ($signup_file_name) {
+			<?php
+            if ($signup_file_name) {
 	            echo "<div class=\"links\"><a href=\"$signup_file_name\">Signup</a></div>";
             }
             ?>
