@@ -9,7 +9,7 @@ if (!array_key_exists("plant_name", $_SESSION)) {
 }
 
 try {
-    mysqli_connect("localhost:3316", 'root', '', 'chip_website'); //check if database exists
+    mysqli_connect("localhost", 'root', '', 'chip_website'); //check if database exists
 } catch (mysqli_sql_exception) { //if dataset doesn't exist, create it
     $mysqli = mysqli_connect("localhost", 'root', ''); //connect to DBMS
     $mysqli->query("CREATE DATABASE chip_website"); //create database
@@ -72,19 +72,17 @@ try {
             <div class="container">
                 <div class="avatar" style="background-image:url(images/index/robot1.png);"></div>
                 <div class="about-me" style="font-size:large;"></div>
-                <h1>The bridge between chip owner and producer.
+                <h1>A bridge between chip consumers and producers.
                 </h1>
             </div>
             </div>
             <div class="container">
                 <div class="about-me">
-                    <p>Hi! Welcome to ChipLand! I am your personal assistant CCC.
+                    <p>Welcome to ChipLand!
                         <br>
-                        You
-                        can appoint <strong>specified plants</strong> to produce chips for you.
+                        If you need chips, <strong>specify your plants</strong>!
                         <br>
-                        If you own a plant, hurry up to
-                        sign up and <strong>get your orders</strong>.
+                        If you own a plant, hurry up to <strong>get your orders</strong>!
                         <br>
                     </p>
                     <a class="btn btn-outline-primary" role="button" href="c-appoint.php"
@@ -101,7 +99,7 @@ try {
                                 class="img-fluid image" src="images/index//i5.jpg"></a></div>
                     <div class="col-md-5 col-lg-4 item zoom-on-hover"><a href="chip-model-info.php"><img
                                 class="img-fluid image" src="images/index//i7.jpg"></a></div>
-                    <div class="col-md-5 col-lg-4 item zoom-on-hover" id="iii"><a href=" chip-model-info.php">
+                    <div class="col-md-5 col-lg-4 item zoom-on-hover" id="iii""><a href=" chip-model-info.php">
                         <img class="img-fluid image" src="images/index//i9.jpg"></a>
                     </div>
                 </div>
@@ -116,7 +114,7 @@ try {
         <section class="portfolio-block skills">
             <div class="container">
                 <div class="heading">
-                    <h2>Special Skills</h2>
+                    <h2>Features</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
@@ -124,10 +122,8 @@ try {
                             <div class="card-header bg-transparent border-0"><i class="icon ion-ios-star-outline"></i>
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title">ALL FREE!</h3>
-                                <p class="card-text">All the resources including plants information and consumer posts
-                                    are available for free.
-                                    You can easily get what you need by using ChipLand.
+                                <h3 class="card-title">All Free</h3>
+                                <p class="card-text">All transactions are free for charge!
                                 </p>
                             </div>
                         </div>
@@ -137,10 +133,9 @@ try {
                             <div class="card-header bg-transparent border-0"><i
                                     class="icon ion-ios-lightbulb-outline"></i></div>
                             <div class="card-body">
-                                <h3 class="card-title">DIAPLAY IN VISUAL DIAGRAM!</h3>
-                                <p class="card-text">You can check the plants information, machine and operation types,
-                                    expense all in
-                                    dynamic visual diagrams. It is more convenient and this may help you decide.
+                                <h3 class="card-title">Informative</h3>
+                                <p class="card-text">Our plant, machine, operation information lets you make the best
+                                    decision!
                                 </p>
                             </div>
                         </div>
@@ -150,12 +145,8 @@ try {
                             <div class="card-header bg-transparent border-0"><i class="icon ion-ios-gear-outline"></i>
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title">REAL-TIME MONITORING!</h3>
-                                <p class="card-text">The processing records are available both for consumers and owners
-                                    of plants.
-                                    You can monitor the process of an order after login. If you have any questions about
-                                    the processing
-                                    record you can contact the consumer/owner of plants at once.
+                                <h3 class="card-title">Real-time Processing</h3>
+                                <p class="card-text">The processing records of every operation are monitored in real time!
                                 </p>
                             </div>
                         </div>
@@ -170,8 +161,6 @@ try {
                 <div class="col-md-12 col-lg-5 offset-lg-1 text">
                     <h3>Contact Us</h3>
                     <p>
-                        Contact us directly if you have any suggestions
-                        about our website.<br>
                         Phone directory: 0755-88886666<br>
                         Email: 120090000@link.cuhk.edu.cn<br>
                         Address: The Chinese University of Hong Kong, Shenzhen, China
@@ -199,7 +188,9 @@ try {
                 See ChipLand's Global Human Rights Principles.
                 ChipLand's products and software are intended only to be
                 used in applications that do not cause or contribute to a
-                violation of an internationally recognized human right.Copyright @ 2022</span><br>
+                violation of an internationally recognized human right.
+                <br>
+                Copyright @ 2022</span><br>
         </div>
     </footer>
     <script src="assets/bootstrap/bootstrap.min.js"></script>
@@ -207,4 +198,4 @@ try {
     <script src="assets/js/theme.js"></script>
 </body>
 
-</html>
+</html>ak

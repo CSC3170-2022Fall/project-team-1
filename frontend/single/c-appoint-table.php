@@ -53,43 +53,43 @@
             <!-- basic table -->
             <div class="row">
                 <div class="col-md-18">
-                            
-                            <div class="table">
-                                <table class="table mb-0">
 
-                                    <thead>
-                                        <tr>
-                                        <th>Chip Model</th>
-                                        <th>Operation Type</th>
-                                        <th>Plant</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                            $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
-                                            $name = 1;
-                                            while ($operation_type_row = mysqli_fetch_array($operation_types)) {
-                                                echo '<tr>
+                    <div class="table">
+                        <table class="table mb-0">
+
+                            <thead>
+                                <tr>
+                                    <th>Chip Model</th>
+                                    <th>Operation Type</th>
+                                    <th>Plant</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                $operation_types = $mysqli->query("SELECT `chip_model`, `operation_type` FROM Operation_Types ORDER BY `chip_model`, `priority`");
+                                $name = 1;
+                                while ($operation_type_row = mysqli_fetch_array($operation_types)) {
+                                    echo '<tr>
                                                     <td data-field="Chip Model" style="width: 80px">' . $operation_type_row['chip_model'] . '</td>
                                                     <td data-field="Operation Type">' . $operation_type_row['operation_type'] . '</td>
                                                     <td data-field="Plant">
                                                     <select name="' . $name . '" class="form-control" required="required">';
-                                                $name++;
-                                                $plants = $mysqli->query("SELECT plant_name FROM Plants");
-                                                while ($plant_row = mysqli_fetch_array($plants)) {
-                                                    echo '<option>' . $plant_row['plant_name'] . '</option>';
-                                                }
-                                                echo '</select>
+                                    $name++;
+                                    $plants = $mysqli->query("SELECT plant_name FROM Plants");
+                                    while ($plant_row = mysqli_fetch_array($plants)) {
+                                        echo '<option>' . $plant_row['plant_name'] . '</option>';
+                                    }
+                                    echo '</select>
                                                     </td>
                                                     </tr>';
-                                            }
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div style="margin-top:20px;">
-                                <button type="submit" class="btn btn-primary w-md" style="font-size:larger">Appoint</button>
-                            </div>
+                                }
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top:20px;">
+                        <button type="submit" class="btn btn-primary w-md" style="font-size:larger">Appoint</button>
+                    </div>
 
                 </div>
             </div>

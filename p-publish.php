@@ -20,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $machine_model_num = $mysqli->real_escape_string($_POST['machine_model_num']);
         $submitted_array = array();
         for ($i = 0; $i < 45; $i++) {
-            if (isset($_POST["$i"])) {
-                array_push($submitted_array, $mysqli->real_escape_string($_POST["$i"]));
+            if (isset($_POST[$i])) {
+                array_push($submitted_array, $mysqli->real_escape_string($_POST[$i]));
             } else {
-                array_push($submitted_array, null);
+                array_push($submitted_array, "off");
             }
         }
         $mysqli->query("INSERT INTO Machine_Models (`machine_model`) VALUES ('$machine_model_name')");
@@ -41,14 +41,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $chip_model = 'i9';
             }
 
-            $reminder = $i % 15;
-            if ($reminder == 0) {
+            $remainder = $i % 15;
+            if ($remainder == 0) {
                 $operation_type = 'design-import';
-            } elseif ($reminder == 3) {
+            } elseif ($remainder == 3) {
                 $operation_type = 'etch';
-            } elseif ($reminder == 6) {
+            } elseif ($remainder == 6) {
                 $operation_type = 'bond';
-            } elseif ($reminder == 9) {
+            } elseif ($remainder == 9) {
                 $operation_type = 'drill';
             } else {
                 $operation_type = 'test';
@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $j = $i + 1;
             $k = $i + 2;
-            if ($submitted_array[$i] != null) {
+            if ($submitted_array[$i] == "on") {
                 $mysqli->query("INSERT INTO Operations_on_Machine_Models (`machine_model`, `chip_model`, `operation_type`, `feasibility`, `time`, `expense`) VALUES ('$machine_model_name', '$chip_model', '$operation_type', '1', '$submitted_array[$j]', '$submitted_array[$k]')");
             } else {
                 $mysqli->query("INSERT INTO Operations_on_Machine_Models (`machine_model`, `chip_model`, `operation_type`, `feasibility`) VALUES ('$machine_model_name', '$chip_model', '$operation_type', '0')");

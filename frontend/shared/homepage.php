@@ -55,7 +55,7 @@ if ($client == "consumer") {
     echo '<script>window.location.assign("index.php");</script>';
 }
 
-$mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
+$mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
 ?>
 
 
@@ -70,21 +70,28 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
-        
+
     <!-- DataTables -->
     <link href="assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    </link>
     <link href="assets/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    </link>
     <!-- Responsive datatable examples -->
-    <link href="assets/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css"> 
+    <link href="assets/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    </link>
     <!-- Responsive Table css -->
-    <link href="assets/css/rwd-table.min.css" rel="stylesheet" type="text/css"> 
-    
+    <link href="assets/css/rwd-table.min.css" rel="stylesheet" type="text/css">
+    </link>
+
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+    </link>
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+    </link>
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+    </link>
 </head>
 
 <body data-sidebar="dark">
@@ -304,7 +311,10 @@ $mysqli = new mysqli("localhost:3316", 'root', '', "chip_website");
 <!-- Responsive Table js -->
 <script src="assets/js/js/rwd-table.min.js"></script>
 
-<!-- Init js -->
+<!-- Init js (but led to a publish feasibility bug)
+<script src="assets/js/js/table-responsive.init.js"></script>
+-->
+
 <script src="assets/js/js/table-responsive.init.js"></script>
 
 </html>

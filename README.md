@@ -18,12 +18,12 @@ Our team consists of the following members, listed in the table below (the team 
 
 | Student ID | Student Name | GitHub Account (in Email)   | GitHub Username |
 | ---------- | ------------ | --------------------------- | --------------- |
-| 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | arydinesen     |
+| 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | arydinesen      |
 | 120090410  | 颜钰劼        | 120090410@link.cuhk.edu.cn  | ZYPRESSEN000    |
 | 120090843  | 郭好          | 726827048@qq.com            | Annaaaa997      |
-| 120090644  | 乔雨柔         | 120090644@link.cuhk.edu.cn | 120090644       |
-| 120090327  | 宫燕亮         | gongdashhuai@gmail.com     | michaelGGGL     |
-| 120090543  | 谭金镇         | 342335897@qq.com           | yishan-13       |
+| 120090644  | 乔雨柔        | 120090644@link.cuhk.edu.cn | 120090644        |
+| 120090327  | 宫燕亮        | gongdashhuai@gmail.com     | michaelGGGL      |
+| 120090543  | 谭金镇        | 342335897@qq.com           | yishan-13        |
 
 ## Project Specification
 
@@ -35,31 +35,44 @@ After thorough discussion, our team made the choice and the specification inform
 - Our branch choice is: **Branch 1**
 - The difficulty level is: **Normal**
 
-## Contribution (Temporary)
+## Contribution
 
- - Database Design: 王广, 颜钰劼
- - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
- - Backend: 王广, 宫燕亮
- - Visluzation: 郭好, 乔雨柔, 王广
+ - Database Design: 王广，颜钰劼
+ - Frontend: 郭好，宫燕亮，王广，颜钰劼
+ - Backend: 王广，宫燕亮
+ - Visualization: 乔雨柔，王广，郭好
  - Presentation
 	- Script: 王广
-	- Slides:
-	- Recording:
+	- Website Demo: 
+	- Slides: 颜钰劼
+	- Voice Recorded: 
  - Report
-	- Difficulties Encountered & Solutions:
-	- Historical Progress: 颜钰劼
+	- Directory Structure Explanation: 郭好, 王广
+	- Difficulties Encountered & Solutions: 
+	- Historical Progress: 颜钰劼, 王广
 
+## Implemented Functions
 
-## How to Execute
+- Chip models, operation types are fixed in this project (unchangeable by consumers or plant owners).
+	- Possible chip models: i5, i7, i9.
+	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so totally 15 operation types.
+- What consumers can do:
+	- Sign up and sign in.
+	- Appoint plants for configurable packages.
+- What plant owners can do:
+	- Sign up and sign in.
+	- Publish new machine models.
+	- Accept appointments.
+- What everybody can see:
+	- Chip model information.
+	- Plant information (See their machines models' feasibility, time, and expense on every possible operation; available number of each machine model).
+	- Processing records (Visualization––Gantt Chart) (Visualize the start and end time).
+	- Processing information (Responsive tables) (See the time, expense, and machines related to the operations).
 
-1. Install an AMP package such as XAMPP.
-2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
-3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
-4. Visit `http://localhost/project-team-1-main` on your browser (The code has been designed to create the database automatically when you visit `index.php` for the first time so you don't have to do so manually).
-5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
-	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
-	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting `http://localhost/phpmyadmin`).
+## Presentation
 
+- Watch our presentation on [YouTube]() or [Bilibili]() for a quick introduction!
+- Click [here]() for the slides.
 
 ## Database Design
 
@@ -68,132 +81,86 @@ After thorough discussion, our team made the choice and the specification inform
 See also [the history of the database design](database/history-of-database-design.md).
 
 ## Program Design
-**Implemented Functions**
-
-- Chip models, operation types are fixed in this project(unchangable by consumers or plant owners).
-	- Possible chip models: i5, i7, i9
-	- Possible operation types: Each chip model has its own version of "design-import, etch, bond, drill, test" so totally 15 operation types
-- What consumers can do:
-	- Sign in & Sign up & Sign out
-	- Appoint plants for configurable packages
-	- Check plant information.
-	- Check processing records if there are any packages that have been accepted by plant owners (in responsive tables or visualized charts).
-- What plant owners can do:
-	- Sign in & Sign up & Sign out
-	- Accept appointments
-	- Publish machines information
-	- Check processing records of the plant in responsive tables or visualized charts.
-- What everybody can see:
-	- Chip model introduction (different chip models have different operations, which are of different types)
-	- Plant information (their machines models' feasibility, time, and expense on every possible operation; available number of each machine model)
-	- Processing records (visualization; start time, end time, and expense) (display non-ending operations too)
-	- Processing information (the time, expense, and machines related to the operations)
 
 ## Directory Structure Explanation
-The following are the main structure of the directory:
-- project-team-1
-    - assets
-        - Containing js and css files included in source code.
-    - frontend
-        - shared
-          - Since some web pages share the same ui elements or page design, php files under this directory can share those part using require which can maintain code consistency.
-        - single
-          - Different from php in shared, files under this directory draw a distinction of frontend among web pages.
-    - database
-- index.php 
-  - Home of the website.
-- php files having names begginning with "c-"
-  - Functional points for consumer.
-- php files having names begginning with "p-"
-  - Functional points for plant owner.
-- signout.php
-  - signout for both consumer and plant owner.
-### Difficulties Encountered & Solutions
 
-### Historical Progress
+The PHP files were calssified into two parts:
+- Webpage part (root directory): PHP fils here directly serve as the webpages the users can visit. Most of their code are backend.
+- Frontend part (frontend directory): Those here don't directly serve as the webpages. Most of their code are frontend. They indirectly serve as the webpages by being `require`d by the PHP files in the root directory.
+
+---
+
+The following are important directories:
+- [assets](assets)
+	- JavaScript and CSS files here are used in the source code.
+- [frontend](frontend)
+	- [shared](shared)
+		- Since some webpages share the same UI, putting it in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain its consistency.
+	- [single](shared)
+		- Every frontend file here is only `reuiqre`d by a single PHP file.
+- [database](database)
+	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and inserts the default chip models and their operations.
+	- [history-of-database-design.md](database/history-of-database-design.md): The file shows how we get the current database design from scrath.
+- PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners (They are not put in to one directory because they are not much and staying here makes us easier see what webpages we have).
+
+## Difficulties Encountered & Solutions
+
+## How to Execute
+
+1. Install an AMP package such as [XAMPP](https://www.apachefriends.org).
+2. Start a MySQL/MariaDB server and an Apache web server in the AMP.
+3. Download and move this repository to the location of your web server (For XAMPP, it's `xamppfiles/htdocs`).
+4. Visit http://localhost/project-team-1-main on your browser (The code has been designed to create the database automatically when you visit [index.php](index.php) for the first time so you don't have to do so manually).
+5. To test all functions of the program, follow the steps: Publish machines as a plant owner, appoint plants as a consumer, accept the appointments as a plant owner, and then check the database:
+	- Easier way: Check the these webpages: Plant Information, Processing Records, and Processing Information.
+	- More fundamental way: Check your database (If you have phpMyAdmin installed, you may do so in a GUI way by visiting http://localhost/phpmyadmin).
+
+## Historical Progress
 
 - Nov 23, 2022
 	- Initial commit
-	- Add online IDE url
 	- Setting up Github Classroom Feedback
 - Nov 26, 2022
 	- Add member information
-	- Update README.md
 - Dec 5, 2022
-	- Update README.md
+	- Start database design
 - Dec 6, 2022
-	- Update README.md
+	- Database redesign
 - Dec 7, 2022
-	- Update README.md
-	- Add files index images/firefox-icon.png, index.php, scripts/main.js, styles/style.css
+	- Database redesign
+	- Add `index.php`
 - Dec 9, 2022
-	- Update README.md
-	- Delete chip-website directory
-	- Update project-description.md
-	- Delete consumer-appointment.php
-	- Delete plant-home.php
-	- Update consumer-home.php
-	- Delete plant-home.php
-	- Update consumer-appoint.php
-	- Delete consumer-home.php
-	- Update consumer-include.php, consumer-login-check.php, sql/initialization.sql
+	- Database redesign
+	- Strat: initialize database with `database/initialization.sql`
+	- Start: signup and signin
+	- Start: consumer appointment
 - Dec 10, 2022
-	- Add files images/search.png, images/sp_car.png, styles/index.css
-	- Update index.php, styles/style.css, consumer-login.php
-	- Add flie styles/consumer-login.css
-	- Update consumer-login.php, images/bg1.webp
-	- Update consumer-appoint.php, consumer-include.php, sql/initialization.sql, styles/style.css
-	- Update README.md
-	- Add file ER2-2.erdplus
-	- Update consumer-appoint.php, plant-accept.php, sql/draft.sql, sql/initialization.sql
-	- Update README.md
+	- Start: plant accept
 - Dec 11, 2022
-	- Update assets/bootstrap/bootstrap.min.css, assets/bootstrap/bootstrap.min.js, assets/fonts/ionicons.eot, assets/fonts/ionicons.min.css, assets/fonts/ionicons.svg, assets/fonts/ionicons.ttf, assets/fonts/ionicons.woff, assets/js/theme.js, index.php
-	- Add files images/avatars/avatar.jpg, images/index/i5.jpg, images/index/i7.jpg, images/index/i9.jpg, images/nature/image1.jpg, images/nature/image2.jpg, images/nature/image3.jpg, images/nature/image4.jpg, images/nature/image5.jpg, images/nature/image6.jpg, images/nature/image7.jpg, images/nature/image8.jpg, images/nature/image9.jpg, images/tech/image4.jpg, images/tech/image6.png
-	- Update index.php, plant-accept.php, sql/initialization.sql
-	- Update README.md
-	- Delete ER2-2.erdplus
-	- Delete consumer-include.php
-	- Delete consumer-login-check.php
-	- Update consumer-appoint-include-form.php, consumer-appoint.php, consumer-login.php, consumer-register.php, index.php, plant-accept.php, plant-publish-include-form.php, plant-publish.php, sql/initialization.sql
-	- Add plant-login.php, plant-register.php
-	- Update consumer-login.php, consumer-register.php, plant-login.php, plant-register.php
+	- Start: plant publish
+	- Add `assets/bootstrap/bootstrap.min.css`, `assets/bootstrap/bootstrap.min.js`, `assets/fonts/ionicons.eot`, `assets/fonts/ionicons.min.css`, `assets/fonts/ionicons.svg`, `assets/fonts/ionicons.ttf`, `assets/fonts/ionicons.woff`, `assets/js/theme.js`
+	- Add `images/avatars/avatar.jpg`, `images/index/i5.jpg`, `images/index/i7.jpg`, `images/index/i9.jpg`, `images/nature/image1.jpg`, `images/nature/image2.jpg`, `images/nature/image3.jpg`, `images/nature/image4.jpg`, `images/nature/image5.jpg`, `images/nature/image6.jpg`, `images/nature/image7.jpg`, `images/nature/image8.jpg`, `images/nature/image9.jpg`, `images/tech/image4.jpg`, `images/tech/image6.png`
 - Dec 12, 2022
-	- Update assets/css/app.min.css, assets/css/bootstrap-datepicker.min.css, assets/css/bootstrap-editable.css and so on
-	- Update README.md, consumer-appoint.php, consumer-login.php, consumer-register.php, index.php, plant-accept.php, sql/initialization.sql
-	- Delete ER2-2.erdplus, consumer-include.php, consumer-login-check.php
-	- Add flies plant-login.php, plant-publish-include-form.php, plant-publish.php, plant-register.php
-	- Update plant-publish.php
-	- Update consumer-appoint.php, plant-publish.php
-	- Update consumer-appoint.php
-	- Delete consumer-appoint-include-form.php
-	- Add flie chip-model-info.php
-	- Add file process-records.php
-	- Update README.md
-	- Rename process-records.php to processing-records.php
-	- Update chip-model-info.php
-	- Rename plant-register.php to plant-signup.php
-	- Rename consumer-register.php to consumer-signup.php
-	- Rename plant-publish-include-form.php to plant-publish-form-included.php
-	- Add flies consumer-appoint-form-included.php, login-signup-universal-frontend.php, plant-accept-form-included.php
-	- Update consumer-appoint.php, consumer-login.php, consumer-signup.php, index.php, plant-accept.php, plant-login.php, plant-publish-form-included.php, plant-publish.php, plant-signup.php, processing-records.php
-	- Update processing-records.php
-- Dec 13, 2022
-	- Update plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php, plant-publish.php
-	- Update consumer-appoint-form-included.php, plant-publish-form-included.php, sql/initialization.sql
-	- Delete draft.sql
-	- Update consumer-appoint-form-included.php, consumer-appoint.php, plant-accept-form-included.php, plant-accept.php, plant-publish-form-included.php
-- Dec 15, 2022
-	- Update README.md
-- Dec 22, 2022
-	- Update README.md
-- Dec 23, 2022
-	- Update login-signup-universal-frontend.php
-	- Update consumer-login.php 
-	- Update consumer-signup.php
-	- Update plant-login.php
-	- Update Update plant-signup.php
+	- Add `assets/css/app.min.css`, `assets/css/bootstrap-datepicker.min.css`, `assets/css/bootstrap-editable.css` and so on
+	- Start: chip model info
+	- Start: processing records
+	- Start: using a shared home and signup/signin webpage
+- Dec 13-23, 2022
+	- Backend: Add functions and fix bugs
+	- Frontend: Improve the appearance
 - Dec 24, 2022
-	- Update README.md
-
-	
+	- Start: processing information
+- Dec 25, 2022
+	- Fix bugs
+- Dec 26, 2022
+	- Start to prepare for the presentation
+	- Start to prepare for the report
+	- Improvement of the frontend
+- Dec 27, 2022
+	- Fix bugs of backend and frontend
+	- Version 1.0 finished
+	- Work on the presentation
+	- Work on the report
+- Dec 28, 2022
+	- Finish presentation
+	- Finish report
