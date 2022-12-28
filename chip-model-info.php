@@ -13,7 +13,9 @@
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
-        <div class="container"><a class="navbar-brand logo" href="index.php">ChipLand</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand logo" href="index.php">ChipLand</a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
@@ -31,41 +33,46 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i5.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="images/index/i5.jpg" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">i5</a></h6>
-                                <p class="text-muted card-text"> 
-                                    Featuring PCIe 5.0 and 4.0 support, DDR5 and DDR4 support, 
-                                    unlocked 13th Gen Intel Core i5 desktop processors are optimized for gamers and 
-                                    productivity and help deliver high performance. Compatible with Intel 700 Series and 
+                                <p class="text-muted card-text">
+                                    Featuring PCIe 5.0 and 4.0 support, DDR5 and DDR4 support,
+                                    unlocked 13th Gen Intel Core i5 desktop processors are optimized for gamers and
+                                    productivity and help deliver high performance. Compatible with Intel 700 Series and
                                     Intel 600 Series Chipset based motherboards. 125W Processor Base Power.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i7.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="images/index/i7.jpg" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">i7</a></h6>
-                                <p class="text-muted card-text"> 
-                                    Featuring Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, 
-                                    DDR5 and DDR4 support, unlocked 13th Gen Intel Core i7 desktop processors are 
-                                    optimized for gamers and productivity and help deliver high performance. Compatible with 
-                                    Intel 700 Series and Intel 600 Series Chipset based motherboards. 125W Processor Base Power.
+                                <p class="text-muted card-text">
+                                    Featuring Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support,
+                                    DDR5 and DDR4 support, unlocked 13th Gen Intel Core i7 desktop processors are
+                                    optimized for gamers and productivity and help deliver high performance. Compatible
+                                    with
+                                    Intel 700 Series and Intel 600 Series Chipset based motherboards. 125W Processor
+                                    Base Power.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
-                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i9_1.jpg" alt="Card Image"></a>
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                    src="images/index/i9_1.jpg" alt="Card Image"></a>
                             <div class="card-body">
                                 <h6><a href="#">i9</a></h6>
-                                <p class="text-muted card-text"> 
-                                    Featuring Intel Adaptive Boost Technology, Intel Thermal Velocity Boost, 
-                                    Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, DDR5 and 
-                                    DDR4 support, unlocked 13th Gen Intel Core i9 desktop processors are optimized for 
-                                    enthusiast gamers and serious creators and help deliver high performance. 
-                                    Compatible with Intel 700 Series and Intel 600 Series Chipset based motherboards. 
+                                <p class="text-muted card-text">
+                                    Featuring Intel Adaptive Boost Technology, Intel Thermal Velocity Boost,
+                                    Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, DDR5 and
+                                    DDR4 support, unlocked 13th Gen Intel Core i9 desktop processors are optimized for
+                                    enthusiast gamers and serious creators and help deliver high performance.
+                                    Compatible with Intel 700 Series and Intel 600 Series Chipset based motherboards.
                                     125W Processor Base Power.
                                 </p>
                             </div>
@@ -93,6 +100,14 @@
     <script src="assets/bootstrap/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
     <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
+</div>
+</footer>
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+<script src="assets/js/theme.js"></script>
 </body>
 
 </html>
