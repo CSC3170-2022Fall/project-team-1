@@ -43,9 +43,9 @@ After a thorough discussion, our team made a choice, and the specification infor
  - Visualization: 乔雨柔，王广，郭好
  - Presentation
 	- Script: 王广
-	- Website Demo: 
+	- Website Demo: 郭好
 	- Slides: 颜钰劼
-	- Voice Recorded: 
+	- Voice Recorded: 宫燕亮, 乔雨柔, ______
  - Report
 	- Directory Structure Explanation: 郭好, 王广
 	- Difficulties Encountered & Solutions: 
