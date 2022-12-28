@@ -33,7 +33,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i5.jpg" alt="Card Image"></a>
                             <div class="card-body">
-                                <h6><a href="#">Intel Core i5 processor</a></h6>
+                                <h6><a href="#">i5</a></h6>
                                 <p class="text-muted card-text"> 
                                     Featuring PCIe 5.0 and 4.0 support, DDR5 and DDR4 support, 
                                     unlocked 13th Gen Intel Core i5 desktop processors are optimized for gamers and 
@@ -46,7 +46,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i7.jpg" alt="Card Image"></a>
                             <div class="card-body">
-                                <h6><a href="#">Intel Core i7 processor</a></h6>
+                                <h6><a href="#">i7</a></h6>
                                 <p class="text-muted card-text"> 
                                     Featuring Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, 
                                     DDR5 and DDR4 support, unlocked 13th Gen Intel Core i7 desktop processors are 
@@ -59,7 +59,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i9_1.jpg" alt="Card Image"></a>
                             <div class="card-body">
-                                <h6><a href="#">Intel Core i9 processor</a></h6>
+                                <h6><a href="#">i9</a></h6>
                                 <p class="text-muted card-text"> 
                                     Featuring Intel Adaptive Boost Technology, Intel Thermal Velocity Boost, 
                                     Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, DDR5 and 
