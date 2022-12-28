@@ -37,15 +37,15 @@ After a thorough discussion, our team made a choice, and the specification infor
 
 ## Contribution
 
- - Database Design: 王广，颜钰劼
- - Frontend: 郭好，宫燕亮，王广，颜钰劼
+ - Database Design: 王广, 颜钰劼
+ - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
  - Backend: 王广，宫燕亮
- - Visualization: 乔雨柔，王广，郭好
+ - Visualization: 乔雨柔, 王广, 郭好
  - Presentation
 	- Script: 王广
 	- Website Demo: 郭好
 	- Slides: 颜钰劼
-	- Voice Recorded: 宫燕亮, 乔雨柔, ______
+	- Voice Recorded: 宫燕亮, 乔雨柔, 颜钰劼
  - Report
 	- Directory Structure Explanation: 郭好, 王广
 	- Difficulties Encountered & Solutions: 王广
@@ -114,7 +114,7 @@ The following are important directories:
 	- Division of work: We divided the work into frontend and backend to make our collaboration more efficient.
 	- Backend debug: For XAMPP, we checked the web server and PHP log files for the warning and error messages to debug.
 	- Frontend improvement: We referred to famous websites for enlightenment.
-	- Using the backend tech to solve the frontend problem: Since many webpages share the same frontend, making it just a copy will let us modify the frontend code and mantain the consistency. This was achieved by `require`ing the shared frontend files.
+	- Using the backend features to solve the frontend problem: Since many webpages share the same frontend, making it just a copy will let us modify the frontend code and mantain the consistency. This was achieved by `require`ing the shared frontend files.
 
 ## How to Execute
 
