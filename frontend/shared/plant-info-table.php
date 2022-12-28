@@ -69,7 +69,7 @@
 
                             echo "<tr>
                                 <td>$plant_name</td>
-                                <td> <form method='post' action='$submit_file'> <button type='submit' name='machine_model' value='$machine_model'>$machine_model </button> </form> </td>
+                                <td> <form method='post' action='$submit_file'> <button type='submit' name='machine_model' value='$machine_model' class='btn btn-link waves-effect'>$machine_model </button> </form> </td>
                                 <td>$available_number</td>
                             </tr>
                             ";
