@@ -48,7 +48,7 @@ After a thorough discussion, our team made a choice, and the specification infor
 	- Voice Recorded: 宫燕亮, 乔雨柔, ______
  - Report
 	- Directory Structure Explanation: 郭好, 王广
-	- Difficulties Encountered & Solutions: 
+	- Difficulties Encountered & Solutions: 王广
 	- Historical Progress: 颜钰劼, 王广
 
 ## Implemented Functions
@@ -88,6 +88,8 @@ The PHP files were classified into two parts:
 - Webpage part (root directory): PHP files here directly serve as the webpages the users can visit. Most of the code is backend.
 - Frontend part (frontend directory): Those here don't directly serve as the webpages. Most of the code is frontend. They indirectly serve as webpages by being `require`d by the PHP files in the root directory.
 
+Distinguishing the frontend and backend makes us easier to divide the work and collaborate more efficiently.
+
 ---
 
 The following are important directories:
@@ -104,6 +106,15 @@ The following are important directories:
 - PHP files begginning with `c-` are webpages for consumers, while `p-` are for plant owners (They are not put into one directory because they are not much and staying here makes us easier to see what webpages we have).
 
 ## Difficulties Encountered & Solutions
+
+- Database design
+	- Overload of high normal forms: The data of a high normal form was not duplicated so table joins were required, which made our queries from PHP files more complicated, and thus read times were slower. Solution: No more normalization.
+	- Overload of indexing: Improperly created indexes adversely affected SELECT queries. Solution: No indexing.
+- Programming
+	- Division of work: We divided the work into frontend and backend to make our collaboration more efficiently.
+	- Backend debug: For XAMPP, we checked the web server and PHP log files for the warning and error messages to debug.
+	- Frontend improvement: We refered to the websites of big companies for enlightment.
+	- Using the backend tech to solve the frontend problem: Since many webpages share the same frontend, making it only a copy will let us modify the frontend code and mantain the consistency. This was achieved by `require`ing the shared frontend files.
 
 ## How to Execute
 
