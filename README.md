@@ -84,7 +84,7 @@ See also [the history of the database design](database/history-of-database-desig
 
 ## Directory Structure Explanation
 
-The PHP files were calssified into two parts:
+The PHP files were classified into two parts:
 - Webpage part (root directory): PHP fils here directly serve as the webpages the users can visit. Most of their code are backend.
 - Frontend part (frontend directory): Those here don't directly serve as the webpages. Most of their code are frontend. They indirectly serve as the webpages by being `require`d by the PHP files in the root directory.
 
