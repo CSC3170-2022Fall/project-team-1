@@ -41,6 +41,7 @@ After a thorough discussion, our team made a choice, and the specification infor
  - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
  - Backend: 王广，宫燕亮
  - Visualization: 王广, 乔羽柔, 郭好
+ - Test: 郭好, 宫燕亮
  - Presentation
 	- Script: 王广
 	- Website Demo: 郭好
@@ -162,7 +163,7 @@ See also [the history of the database design](database/history-of-database-desig
 #### [c-pro-info.php](c-pro-info.php) or [p-pro-info.php](p-pro-info.php)
 <img width="1792" alt="Screenshot 2022-12-29 at 06 36 18" src="https://user-images.githubusercontent.com/90801772/209881636-e47c66de-697c-43e7-a96d-04bbcade189f.png">
 
-#### [c-pro-records.php](c-pro-records.php) or [p-pro-records.php](p-pro-records.php):
+#### [c-pro-records.php](c-pro-records.php) or [p-pro-records.php](p-pro-records.php)
 <img width="1792" alt="Screenshot 2022-12-29 at 06 36 09" src="https://user-images.githubusercontent.com/90801772/209881598-d7bb5d42-63e2-44f8-920b-cd564179cd21.png">
 
 ## Historical Progress
