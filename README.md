@@ -162,5 +162,6 @@ The following are important directories:
 	- Work on the presentation
 	- Work on the report
 - Dec 28, 2022
+	- Fix bugs
 	- Finish presentation
 	- Finish report
