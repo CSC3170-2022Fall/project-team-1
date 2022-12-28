@@ -1,242 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
     <meta charset="utf-8">
-    <title>Form Elements | Lexa - Admin & Dashboard Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
-    <meta content="Themesbrand" name="author">
-
-    <style>
-        .mainm {
-            background-color: transparent;
-            width: 100%;
-            height: 60px;
-        }
-
-        #ccc {
-            float: left;
-        }
-
-        #topp {
-            height: auto;
-        }
-    </style>
-
-    <!-- Bootstrap Css -->
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
-    <!-- Icons Css -->
-    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <!-- App Css-->
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Chip Information</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
 </head>
 
-<body data-sidebar="dark">
-
-    <!-- Begin page -->
-    <div id="layout-wrapper">
-
-        <header id="page-topbar">
-
-            <div class="navbar-header" id="topp">
-
-                <div class="d-flex">
-                    <!-- LOGO -->
-                    <div class="navbar-brand-box" id="ccc">
-
-                        <a href="index.php" class="logo logo-light">
-                            <span class="logo-sm">
-                                <img src="images/index/robot1.png" alt="" height="45">
-                            </span>
-                            <span class="logo-lg">
-                                <img src="images/index/robot1.png" alt="" height="35">
-                            </span>
-                        </a>
-                        <div>ChipLand</div>
-                    </div>
-
-                    <!--Back to index-->
-                </div class="Back to index" href="index.php">
-                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <a href="index.php">
-                        <h4>Back to Index</h4>
-                    </a>
-                </button>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="index.php">ChipLand</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="c-appoint.php">Consumer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="p-publish.php">Plant Owner</a></li>
+                </ul>
             </div>
-
-    </div>
-    </div>
-
-    </header>
-
-    <!-- ========== Left Sidebar Start ========== -->
-
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
-    <div class="mainm"></div>
-    <div>
-
-        <div class="page-content">
-            <div class="container-fluid">
-
-                <!-- start page title -->
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="page-title-box">
-                            <h4>Chip Model Information</h4>
-                        </div>
-                    </div>
-                </div>
-                <!-- end page title -->
-
-                <div class="row">
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="card directory-card">
-                            <div>
-                                <div class="directory-bg text-center">
-                                    <div class="directory-overlay">
-                                        <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i5.jpg"
-                                            alt="Generic placeholder image">
-                                    </div>
-                                </div>
-
-                                <div class="directory-content text-center p-4">
-                                    <p class=" mt-4">Chip</p>
-                                    <h5 class="font-size-16">i5</h5>
-                                    <p class="text-muted">I5 is a mid tier product. It has no problem playing most
-                                        games, and its basic functions are fully adequate.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="card directory-card">
-                            <div>
-                                <div class="directory-bg text-center">
-                                    <div class="directory-overlay">
-                                        <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i7.jpg"
-                                            alt="Generic placeholder image">
-                                    </div>
-                                </div>
-
-                                <div class="directory-content text-center p-4">
-                                    <p class=" mt-4">Chip</p>
-                                    <h5 class="font-size-16">i7</h5>
-                                    <p class="text-muted">The i7 is a high-end product. There is basically no problem in
-                                        playing games with the i7. Most product software will not be stuck when used.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end col -->
-
-                    <div class="col-xl-4 col-md-6">
-                        <div class="card directory-card">
-                            <div>
-                                <div class="directory-bg text-center">
-                                    <div class="directory-overlay">
-                                        <img class="rounded-circle avatar-lg img-thumbnail" src="images/index/i9.jpg"
-                                            alt="Generic placeholder image">
-                                    </div>
-                                </div>
-
-                                <div class="directory-content text-center p-4">
-                                    <p class=" mt-4">Chip</p>
-                                    <h5 class="font-size-16">i9</h5>
-                                    <p class="text-muted">I9 is a top product. For example, heavy modeling or 4K video
-                                        editing lead to insufficient productivity.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end row -->
-
-            </div> <!-- container-fluid -->
         </div>
-        <!-- End Page-content -->
-    </div>
-    <!-- end main content-->
-
-    </div>
-    <!-- END layout-wrapper -->
-
-    <!-- Right Sidebar -->
-    <div class="right-bar">
-        <div data-simplebar="" class="h-100">
-
-            <div class="rightbar-title d-flex align-items-center px-3 py-4">
-
-                <h5 class="m-0 me-2">Settings</h5>
-
-                <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
-                    <i class="mdi mdi-close noti-icon"></i>
-                </a>
+    </nav>
+    <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <div class="container">
+                <div class="heading">
+                    <h2>Chip Model Information</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i5.jpg" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Intel Core i5 processor</a></h6>
+                                <p class="text-muted card-text"> 
+                                    Featuring PCIe 5.0 and 4.0 support, DDR5 and DDR4 support, 
+                                    unlocked 13th Gen Intel Core i5 desktop processors are optimized for gamers and 
+                                    productivity and help deliver high performance. Compatible with Intel 700 Series and 
+                                    Intel 600 Series Chipset based motherboards. 125W Processor Base Power.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i7.jpg" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Intel Core i7 processor</a></h6>
+                                <p class="text-muted card-text"> 
+                                    Featuring Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, 
+                                    DDR5 and DDR4 support, unlocked 13th Gen Intel Core i7 desktop processors are 
+                                    optimized for gamers and productivity and help deliver high performance. Compatible with 
+                                    Intel 700 Series and Intel 600 Series Chipset based motherboards. 125W Processor Base Power.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="images/index/i9_1.jpg" alt="Card Image"></a>
+                            <div class="card-body">
+                                <h6><a href="#">Intel Core i9 processor</a></h6>
+                                <p class="text-muted card-text"> 
+                                    Featuring Intel Adaptive Boost Technology, Intel Thermal Velocity Boost, 
+                                    Intel Turbo Boost Max Technology 3.0, and PCIe 5.0 and 4.0 support, DDR5 and 
+                                    DDR4 support, unlocked 13th Gen Intel Core i9 desktop processors are optimized for 
+                                    enthusiast gamers and serious creators and help deliver high performance. 
+                                    Compatible with Intel 700 Series and Intel 600 Series Chipset based motherboards. 
+                                    125W Processor Base Power.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- Settings -->
-            <hr class="mt-0">
-            <h6 class="text-center mb-0">Choose Layouts</h6>
-
-            <div class="p-4">
-                <div class="mb-2">
-                    <img src="static/picture/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="form-check form-switch mb-3">
-                    <input type="checkbox" class="form-check-input theme-choice" id="light-mode-switch" checked="">
-                    <label class="form-check-label" for="light-mode-switch">Light Mode</label>
-                </div>
-
-                <div class="mb-2">
-                    <img src="static/picture/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="form-check form-switch mb-3">
-                    <input type="checkbox" class="form-check-input theme-choice" id="dark-mode-switch"
-                        data-bsstyle="assets/css/bootstrap-dark.min.css" data-appstyle="assets/css/app-dark.min.css">
-                    <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
-                </div>
-
-                <div class="mb-2">
-                    <img src="static/picture/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="form-check form-switch mb-5">
-                    <input type="checkbox" class="form-check-input theme-choice" id="rtl-mode-switch"
-                        data-appstyle="assets/css/app-rtl.min.css">
-                    <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
-                </div>
-
-
-            </div>
-
-        </div> <!-- end slimscroll-menu-->
-    </div>
-    <!-- /Right-bar -->
-
-    <!-- Right bar overlay-->
-    <div class="rightbar-overlay"></div>
-
-    <!-- JAVASCRIPT -->
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/metisMenu.min.js"></script>
-    <script src="static/js/simplebar.min.js"></script>
-    <script src="static/js/waves.min.js"></script>
-    <script src="static/js/jquery.sparkline.min.js"></script>
-
-    <!-- App js -->
-    <script src="static/js/app.js"></script>
+        </section>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <span>// No product or component can be absolutely secure.
+                // Your costs and results may vary.
+                // See our complete legal Notices and Disclaimers.
+                // ChipLand is committed to respecting human rights and
+                avoiding complicity in human rights abuses.
+                See ChipLand's Global Human Rights Principles.
+                ChipLand's products and software are intended only to be
+                used in applications that do not cause or contribute to a
+                violation of an internationally recognized human right.
+                <br>
+                Copyright @ 2022</span><br>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
