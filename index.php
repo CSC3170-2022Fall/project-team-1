@@ -170,7 +170,7 @@ try {
                     <div class="portfolio-laptop-mockup">
                         <div class="screen">
                             <div class="screen-content"
-                                style="background-image:url(&quot;images/tech/image6.png&quot;);"></div>
+                                style="background-image:url(&quot;images/index/image6.png&quot;);"></div>
                         </div>
                         <div class="keyboard"></div>
                     </div>
