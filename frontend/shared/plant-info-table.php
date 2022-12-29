@@ -25,27 +25,6 @@
 
                     <tbody>
                         <?php
-
-                        /*
-                        $machines = $mysqli->query("SELECT * FROM machines_in_Plants WHERE `available` = 1 ORDER BY `plant_name` ASC, `machine_model` ASC");
-                        while ($machines_row = mysqli_fetch_array($machines)) {
-                        $available_number = 0;
-                        $plant_name = $machines_row['plant_name'];
-                        $machine_model = $machines_row['machine_model'];
-                        while ($machines_row = mysqli_fetch_array($machines)) {
-                        if ($plant_name == $machines_row['plant_name'] && $machine_model == $machines_row['machine_model']) {
-                        $available_number++;
-                        }
-                        }
-                        echo "<tr>
-                        <td>$plant_name</td>
-                        <td> <form method='post' action='c-plant-info.php'> <button type='submit' name='machine_model' value='$machine_model' class='btn btn-link waves-effect'>$machine_model </button> </form> </td>
-                        <td>$available_number</td>
-                        </tr>
-                        ";
-                        }
-                        */
-
                         $machines = $mysqli->query("SELECT * FROM Machines_in_Plants WHERE `available` = 1 ORDER BY `plant_name` ASC, `machine_model` ASC");
                         $available_number = 0;
                         while ($machines_row = mysqli_fetch_array($machines)) {
@@ -74,7 +53,6 @@
                             </tr>
                             ";
                         }
-
                         ?>
 
                     </tbody>
