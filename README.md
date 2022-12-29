@@ -39,7 +39,7 @@ After a thorough discussion, our team made a choice, and the specification infor
 
  - Database Design: 王广, 颜钰劼
  - Frontend: 郭好, 宫燕亮, 王广, 颜钰劼
- - Backend: 王广，宫燕亮
+ - Backend: 王广, 宫燕亮
  - Visualization: 王广, 乔羽柔, 郭好
  - Test: 郭好, 宫燕亮
  - Presentation
