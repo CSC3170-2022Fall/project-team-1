@@ -16,14 +16,14 @@ Our team consists of the following members, listed in the table below (the team 
 
 <!-- change the info below to be the real case -->
 
-| Student ID | Student Name | GitHub Account (in Email)   | GitHub Username |
-| ---------- | ------------ | --------------------------- | --------------- |
-| 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | arydinesen      |
-| 120090410  | 颜钰劼        | 120090410@link.cuhk.edu.cn  | ZYPRESSEN000    |
-| 120090843  | 郭好          | 726827048@qq.com            | Annaaaa997      |
-| 120090644  | 乔雨柔        | 120090644@link.cuhk.edu.cn | 120090644        |
-| 120090327  | 宫燕亮        | gongdashhuai@gmail.com     | michaelGGGL      |
-| 120090543  | 谭金镇        | 342335897@qq.com           | yishan-13        |
+| Student ID | Student Name | GitHub Account (in Email)   | GitHub Username                                |
+| ---------- | ------------ | --------------------------- | ---------------------------------------------- |
+| 120090011  | 王广 🚩       | ary.dinesen@icloud.com      | [arydinesen](https://github.com/arydinesen)    |
+| 120090410  | 颜钰劼        | 120090410@link.cuhk.edu.cn  | [ZYPRESSEN000](https://github.com/ZYPRESSEN000) |
+| 120090843  | 郭好          | 726827048@qq.com            | [Annaaaa997](https://github.com/Annaaaa997)     |
+| 120090644  | 乔雨柔        | 120090644@link.cuhk.edu.cn | [120090644](https://github.com/120090644)        |
+| 120090327  | 宫燕亮        | gongdashhuai@gmail.com     | [michaelGGGL](https://github.com/michaelGGGL)    |
+| 120090543  | 谭金镇        | 342335897@qq.com           | [yishan-13](https://github.com/yishan-13)        |
 
 ## Project Specification
 
