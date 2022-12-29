@@ -88,7 +88,7 @@ Distinguishing the frontend and backend makes us easier to divide the work and c
 
 Explanation of important directories:
 - [assets](assets)
-	- JavaScript and CSS files here are used in the source code.
+	- JavaScript and CSS files are put here.
 - [frontend](frontend)
 	- [shared](shared)
 		- Since many webpages share the same UIs (e.g., [homepage.php](frontend/shared/homepage.php), shared by 9 webpages, as shown in the [Function Demo](#consumers)), putting a shared UI in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain the consistency across the webpages.
