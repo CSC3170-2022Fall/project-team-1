@@ -90,9 +90,9 @@ Explanation of important directories:
 - [assets](assets)
 	- JavaScript and CSS files stay here.
 - [frontend](frontend)
-	- [shared](shared)
+	- [shared](frontend/shared)
 		- Since many webpages share the same UIs (e.g., [homepage.php](frontend/shared/homepage.php), shared by 9 webpages, as shown in the [Function Demo](#consumers)), putting a shared UI in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain the consistency across the webpages.
-	- [single](shared)
+	- [single](frontend/single)
 		- Every frontend file here is only `reuiqre`d by a single PHP file.
 - [database](database)
 	- [initializaiton.sql](database/initialization.sql): The file was executed upon creating the database in [index.php](index.php). It creates all tables and inserts the default chip models and their operation types.
