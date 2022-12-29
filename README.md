@@ -103,13 +103,13 @@ Explanation of important directories:
 ## Difficulties Encountered & Solutions
 
 - Database design
-	- Overload of high normal forms: The data of a high normal form was not duplicated so table joins were required, which made our queries from PHP files more complicated, and thus read times were slower. Solution: No more normalization.
+	- Overload of high normal forms: In a highly normalized database we tried, the data was not duplicated so table `JOIN`s were required, which made our queries from PHP files more complicated, and thus read times were slower. Solution: No more normalization.
 	- Overload of indexing: Improperly created indexes adversely affected `SELECT` queries. Solution: No indexing.
 - Programming
 	- Division of work: We divided the work into frontend and backend to make our collaboration more efficient.
 	- Backend debug: For XAMPP, we checked the web server and PHP log files for the warning and error messages to debug.
 	- Frontend improvement: We referred to famous websites for enlightenment.
-	- Using the backend features to solve the frontend problem: Since many webpages share the same frontend, making it just a copy will let us modify the frontend code and mantain consistency. This was achieved by `require`ing the shared frontend files.
+	- Using the backend features to solve the frontend problem: Since many webpages shared the same frontend, making it just a copy let us modify the frontend code and mantain consistency. This was achieved by `require`ing the shared frontend files.
 
 ## How to Run
 
