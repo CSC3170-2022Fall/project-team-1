@@ -46,10 +46,11 @@ After a thorough discussion, our team made a choice, and the specification infor
 	- Script: 王广
 	- Website Demo: 郭好
 	- Slides: 颜钰劼
-	- Voice Recorded: 宫燕亮, 乔雨柔, 颜钰劼
+	- Speakers: 郭好, 宫燕亮, 乔雨柔, 颜钰劼
  - Report
 	- Directory Structure Explanation: 郭好, 王广
 	- Difficulties Encountered & Solutions: 王广
+	- How to Run: 王广
 	- Historical Progress: 颜钰劼, 王广
 
 ## Implemented Functions
@@ -122,7 +123,7 @@ Explanation of important directories:
 
 ### Known Issues and Solutions
 The code was successfully tested on macOS with PHP 8.1.13 but failed on two Windows machines and some other conditions. Here were the successful solutions:
-- Failing to connect a DBMS:
+- Failing to connect the DBMS:
 	- Check if you have set a password for your DBMS. If so, change the PHP statement, `$mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
 `, in all files of its occurrence, into `$mysqli = mysqli_connect("localhost", 'root', '<your password>', "chip_website");`. 
 	- Change the PHP statement, `$mysqli = mysqli_connect("localhost", 'root', '', "chip_website");
