@@ -91,7 +91,7 @@ Explanation of important directories:
 	- JavaScript and CSS files here are used in the source code.
 - [frontend](frontend)
 	- [shared](shared)
-		- Since some webpages share the same UI, putting it in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain its consistency.
+		- Since many webpages share the same UIs (e.g., [homepage.php](frontend/shared/homepage.php), shared by 9 webpages, as shown in the [Function Demo](#consumers)), putting a shared UI in a single file and `require`ing it from those webpages makes us easier to modify the UI code and maintain the consistency across the webpages.
 	- [single](shared)
 		- Every frontend file here is only `reuiqre`d by a single PHP file.
 - [database](database)
@@ -148,7 +148,7 @@ See also [the history of the database design](database/history-of-database-desig
 #### [c-appoint.php](c-appoint.php)
 <img width="1792" alt="Screenshot 2022-12-29 at 06 35 45" src="https://user-images.githubusercontent.com/90801772/209881460-872f04ff-1b09-4728-b092-e4e3bb6fe595.png">
 
-## Plant Owners
+### Plant Owners
 
 #### [p-publish.php](p-publish.php)
 <img width="1792" alt="Screenshot 2022-12-29 at 06 37 15" src="https://user-images.githubusercontent.com/90801772/209881484-d2c6d34e-2ce6-4b2d-a9ee-fc136d640a6c.png">
@@ -171,7 +171,7 @@ See also [the history of the database design](database/history-of-database-desig
 
 - Nov 23, 2022
 	- Initial commit
-	- Setting up GitHub Classroom Feedback
+	- Set up GitHub Classroom Feedback
 - Nov 26, 2022
 	- Add member information
 - Dec 5, 2022
